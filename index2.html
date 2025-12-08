@@ -1,234 +1,310 @@
 <!DOCTYPE html>
 <html lang="en" dir="ltr" class="scroll-smooth">
+
 <head>
   <meta charset="UTF-8" />
   <meta name="viewport" content="width=device-width, initial-scale=1.0" />
   <title>Eventia Summit - Alt Landing</title>
   <link rel="preconnect" href="https://fonts.googleapis.com" />
   <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
-  <link href="https://fonts.googleapis.com/css2?family=Inter:wght@400;500;600;700;800&display=swap" rel="stylesheet" />
-  <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.5.1/css/all.min.css" crossorigin="anonymous" referrerpolicy="no-referrer" />
+  <link
+    href="https://fonts.googleapis.com/css2?family=Inter:wght@400;500;600;700;800&family=Noto+Sans+Arabic:wght@400;500;600;700&family=Noto+Sans:wght@400;500;600;700&display=swap"
+    rel="stylesheet" />
+  <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.5.1/css/all.min.css"
+    crossorigin="anonymous" referrerpolicy="no-referrer" />
   <script src="https://cdn.tailwindcss.com"></script>
-  <style>body{font-family:'Inter',sans-serif}</style>
+  <style>
+    body {
+      font-family: 'Inter', 'Noto Sans', 'Noto Sans Arabic', sans-serif
+    }
+  </style>
 </head>
+
 <body class="bg-slate-950 text-slate-100">
-  <a href="#main" class="sr-only focus:not-sr-only focus:absolute focus:top-4 focus:left-4 focus:bg-white focus:text-slate-900 focus:px-4 focus:py-2 focus:rounded">Skip to main content</a>
-  <header data-header class="fixed top-0 left-0 z-50 w-full transition-all duration-300">
+  <a href="#main"
+    class="sr-only focus:not-sr-only focus:absolute focus:top-4 focus:left-4 focus:bg-white focus:text-slate-900 focus:px-4 focus:py-2 focus:rounded">Skip
+    to main content</a>
+  <header data-header data-header-mode="light" class="fixed top-0 left-0 z-50 w-full transition-all duration-300">
     <nav class="mx-auto flex max-w-7xl items-center justify-between px-4 py-4 lg:px-8">
       <a href="index.html" class="text-xl font-bold text-white">Eventia</a>
-      <button type="button" data-nav-toggle class="inline-flex items-center justify-center rounded bg-white/10 px-3 py-2 text-white shadow lg:hidden" aria-label="Toggle navigation"><i class="fa-solid fa-bars"></i></button>
-      <div data-nav-menu class="fixed inset-x-4 top-20 hidden flex-col gap-4 rounded-2xl bg-white/95 border border-slate-200 p-6 shadow-2xl backdrop-blur lg:static lg:flex lg:w-auto lg:flex-row lg:items-center lg:gap-8 lg:bg-transparent lg:border-0 lg:p-0 lg:shadow-none">
+      <button type="button" data-nav-toggle
+        class="inline-flex items-center justify-center rounded bg-white/10 px-3 py-2 text-white shadow lg:hidden"
+        aria-label="Toggle navigation"><i class="fa-solid fa-bars"></i></button>
+      <div data-nav-menu
+        class="fixed inset-x-4 top-20 hidden flex-col gap-4 space-y-2 rounded-2xl bg-white/95 border border-slate-200 p-6 shadow-2xl backdrop-blur lg:static lg:flex lg:w-auto lg:flex-row lg:items-center lg:gap-8 lg:space-y-0 lg:bg-transparent lg:border-0 lg:p-0 lg:shadow-none">
         <div class="relative inline-block" data-home-switch>
-          <button type="button" class="flex w-full items-center justify-between gap-2 rounded-full border border-white/20 px-4 py-2 text-sm font-semibold text-white transition hover:border-white/40 lg:w-auto lg:justify-start">
+          <button type="button"
+            class="flex w-full items-center justify-between gap-2 rounded-full border border-white/20 px-4 py-2 text-sm font-semibold text-white transition hover:border-white/40 lg:w-auto lg:justify-start">
             Home
             <i class="fa-solid fa-chevron-down text-xs"></i>
           </button>
-          <div class="absolute left-0 top-full mt-2 hidden w-48 rounded-2xl border border-white/20 bg-slate-900/95 shadow-xl z-[120]" data-home-menu>
-            <a href="index.html" class="block px-4 py-3 text-sm font-semibold text-white hover:bg-white/10 transition">Home Version 1</a>
-            <a href="home2.html" class="block px-4 py-3 text-sm font-semibold text-white hover:bg-white/10 transition">Home Version 2</a>
+          <div
+            class="absolute left-0 top-full mt-2 hidden w-48 rounded-2xl border border-white/20 bg-slate-900/95 shadow-xl z-[120]"
+            data-home-menu>
+            <a href="index.html"
+              class="block px-4 py-3 text-sm font-semibold text-white hover:bg-white/10 transition">Home Version 1</a>
+            <a href="home2.html"
+              class="block px-4 py-3 text-sm font-semibold text-white hover:bg-white/10 transition">Home Version 2</a>
           </div>
         </div>
-        <a href="event-details.html" class="block w-full text-start text-sm font-semibold hover:text-sky-300 lg:w-auto">Event Details</a>
-        <a href="schedule.html" class="block w-full text-start text-sm font-semibold hover:text-sky-300 lg:w-auto">Schedule</a>
-        <a href="register.html" class="block w-full text-start text-sm font-semibold hover:text-sky-300 lg:w-auto">Register</a>
-        <a href="contact.html" class="block w-full text-start text-sm font-semibold hover:text-sky-300 lg:w-auto">Contact</a>
-        <a href="user-dashboard.html" class="block w-full text-start text-sm font-semibold hover:text-sky-300 lg:w-auto">Dashboard</a>
-        <button type="button" data-rtl-toggle class="flex w-full items-center justify-start gap-2 rounded-full border border-white/20 px-4 py-2 text-xs font-semibold uppercase tracking-wide text-white transition hover:border-white/40 lg:w-auto lg:justify-center"><i class="fa-solid fa-language"></i><span>RTL</span></button>
-        <a href="login.html" class="inline-flex w-full items-center justify-center rounded-full bg-orange-500 px-5 py-2 text-sm font-semibold text-white shadow-lg shadow-orange-500/30 transition hover:bg-orange-400 lg:w-auto">Login</a>
+        <a href="event-details.html"
+          class="block w-full text-start text-sm font-semibold hover:text-sky-300 lg:w-auto">Event Details</a>
+        <a href="schedule.html"
+          class="block w-full text-start text-sm font-semibold hover:text-sky-300 lg:w-auto">Schedule</a>
+        <a href="register.html"
+          class="block w-full text-start text-sm font-semibold hover:text-sky-300 lg:w-auto">Register</a>
+        <a href="contact.html"
+          class="block w-full text-start text-sm font-semibold hover:text-sky-300 lg:w-auto">Contact</a>
+        <a href="user-dashboard.html"
+          class="block w-full text-start text-sm font-semibold hover:text-sky-300 lg:w-auto">Dashboard</a>
+        <button type="button" data-rtl-toggle
+          class="flex h-10 w-10 items-center justify-center rounded-full border border-white/20 bg-white/5 text-slate-900 transition hover:bg-white/10 hover:border-white/40 lg:w-10">
+          <i class="fa-solid fa-globe"></i>
+        </button>
+        <a href="login.html"
+          class="inline-flex w-full items-center justify-center rounded-full bg-gradient-to-r from-orange-500 to-rose-500 px-6 py-2.5 text-sm font-bold text-white shadow-lg shadow-orange-500/30 transition hover:from-orange-400 hover:to-rose-400 hover:shadow-orange-500/50 lg:w-auto">Login</a>
       </div>
     </nav>
   </header>
-
-  <main id="main" class="pt-24">
-    <section class="relative overflow-hidden bg-gradient-to-br from-orange-500/60 via-purple-600/50 to-sky-500/60">
-      <div class="absolute inset-0 bg-[radial-gradient(circle_at_20%_20%,rgba(255,255,255,0.08),transparent_30%),radial-gradient(circle_at_80%_0%,rgba(255,255,255,0.08),transparent_25%)]"></div>
-      <div class="mx-auto grid max-w-7xl items-center gap-12 px-4 py-20 lg:grid-cols-2 lg:px-8">
-        <div class="space-y-6">
-          <p class="inline-flex items-center gap-2 rounded-full bg-white/15 px-4 py-1 text-xs uppercase tracking-[0.3em] text-white">April 22-25 • Dubai</p>
-          <h1 class="text-4xl font-bold leading-tight text-white sm:text-5xl">Where visionary leaders reimagine the future of experiences.</h1>
-          <p class="text-lg text-slate-100/90">A bold, design-forward summit with immersive breakouts, live tech labs, and curated networking across 4 days.</p>
-          <div class="flex flex-wrap gap-4">
-            <a href="register.html" class="rounded-full bg-white px-6 py-3 text-sm font-semibold text-slate-900 shadow-lg shadow-white/30 transition hover:bg-slate-100">Register Now</a>
-            <a href="schedule.html" class="rounded-full border border-white/70 px-6 py-3 text-sm font-semibold text-white transition hover:bg-white/10">See Schedule</a>
-          </div>
-          <div class="grid gap-4 sm:grid-cols-3">
-            <div class="rounded-2xl bg-white/10 p-4 text-white">
-              <p class="text-3xl font-bold">5k+</p><p class="text-xs uppercase tracking-widest">Attendees</p>
-            </div>
-            <div class="rounded-2xl bg-white/10 p-4 text-white">
-              <p class="text-3xl font-bold">80+</p><p class="text-xs uppercase tracking-widest">Speakers</p>
-            </div>
-            <div class="rounded-2xl bg-white/10 p-4 text-white">
-              <p class="text-3xl font-bold">140</p><p class="text-xs uppercase tracking-widest">Sessions</p>
-            </div>
-          </div>
+  <section class="relative overflow-hidden bg-gradient-to-br from-orange-600/60 via-purple-700/50 to-sky-600/60">
+    <div
+      class="absolute inset-0 bg-[radial-gradient(circle_at_20%_20%,rgba(255,255,255,0.08),transparent_30%),radial-gradient(circle_at_80%_0%,rgba(255,255,255,0.08),transparent_25%)]">
+    </div>
+    <div class="mx-auto grid max-w-7xl items-center gap-12 px-4 py-20 lg:grid-cols-2 lg:px-8">
+      <div class="space-y-6">
+        <p
+          class="inline-flex items-center gap-2 rounded-full bg-white/15 px-4 py-1 text-xs uppercase tracking-[0.3em] text-white">
+          April 22-25 • Dubai</p>
+        <h1 class="text-4xl font-bold leading-tight text-white sm:text-5xl">Where visionary leaders reimagine the
+          future of experiences.</h1>
+        <p class="text-lg text-slate-100/90">A bold, design-forward summit with immersive breakouts, live tech
+          labs,
+          and curated networking across 4 days.</p>
+        <div class="flex flex-wrap gap-4">
+          <a href="register.html"
+            class="rounded-full bg-white px-6 py-3 text-sm font-semibold text-slate-900 shadow-lg shadow-white/30 transition hover:bg-slate-100">Register
+            Now</a>
+          <a href="schedule.html"
+            class="rounded-full border border-white/70 px-6 py-3 text-sm font-semibold text-white transition hover:bg-white/10">See
+            Schedule</a>
         </div>
-        <div class="relative">
-          <div class="overflow-hidden rounded-3xl border border-white/30 bg-white/10 shadow-2xl">
-            <img src="assets/images/placeholder-event.svg" alt="Venue" class="h-full w-full object-cover" />
+        <div class="grid gap-4 sm:grid-cols-3">
+          <div class="rounded-2xl bg-white/10 p-4 text-white">
+            <p class="text-3xl font-bold">5k+</p>
+            <p class="text-xs uppercase tracking-widest">Attendees</p>
           </div>
-          <div class="absolute -bottom-10 right-6 w-64 rounded-3xl bg-slate-900/80 p-4 text-white shadow-xl">
-            <p class="text-xs uppercase tracking-widest text-orange-200">Live & Hybrid</p>
-            <p class="mt-2 text-lg font-semibold">Broadcast-ready stages with experiential lounges.</p>
+          <div class="rounded-2xl bg-white/10 p-4 text-white">
+            <p class="text-3xl font-bold">80+</p>
+            <p class="text-xs uppercase tracking-widest">Speakers</p>
           </div>
-        </div>
-      </div>
-    </section>
-
-    <section class="mx-auto max-w-6xl px-4 py-16 lg:px-8" id="why">
-      <div class="grid gap-8 lg:grid-cols-2">
-        <div class="space-y-4">
-          <h2 class="text-3xl font-semibold text-white">Why attend Eventia?</h2>
-          <p class="text-slate-300">A curated blend of thought leadership, tactical workshops, and experiential showcases to elevate your event strategy.</p>
-          <div class="grid gap-4 sm:grid-cols-2">
-            <div class="rounded-2xl border border-white/10 bg-white/5 p-4">
-              <div class="mb-3 flex h-10 w-10 items-center justify-center rounded-lg bg-orange-500/20 text-orange-300"><i class="fa-solid fa-microphone"></i></div>
-              <p class="text-white font-semibold">Keynotes</p>
-              <p class="text-sm text-slate-300">Visionary stories on design, tech, and human connection.</p>
-            </div>
-            <div class="rounded-2xl border border-white/10 bg-white/5 p-4">
-              <div class="mb-3 flex h-10 w-10 items-center justify-center rounded-lg bg-purple-500/20 text-purple-300"><i class="fa-solid fa-flask"></i></div>
-              <p class="text-white font-semibold">Labs</p>
-              <p class="text-sm text-slate-300">Hands-on builds with production teams and creative technologists.</p>
-            </div>
-            <div class="rounded-2xl border border-white/10 bg-white/5 p-4">
-              <div class="mb-3 flex h-10 w-10 items-center justify-center rounded-lg bg-sky-500/20 text-sky-300"><i class="fa-solid fa-handshake"></i></div>
-              <p class="text-white font-semibold">Networking</p>
-              <p class="text-sm text-slate-300">Executive lounges, curated roundtables, and AI matches.</p>
-            </div>
-            <div class="rounded-2xl border border-white/10 bg-white/5 p-4">
-              <div class="mb-3 flex h-10 w-10 items-center justify-center rounded-lg bg-emerald-500/20 text-emerald-300"><i class="fa-solid fa-tree"></i></div>
-              <p class="text-white font-semibold">Sustainability</p>
-              <p class="text-sm text-slate-300">Low-impact builds with circular materials and carbon insights.</p>
-            </div>
-          </div>
-        </div>
-        <div class="rounded-3xl border border-white/10 bg-white/5 p-8 shadow-lg">
-          <h3 class="text-xl font-semibold text-white">Venue & Access</h3>
-          <p class="mt-3 text-slate-300">Dubai World Trade Centre • Hybrid streaming</p>
-          <div class="mt-6 space-y-4">
-            <div class="rounded-2xl bg-slate-900/60 p-4">
-              <p class="text-sm text-slate-200">Direct metro access, premium lounges, prayer rooms, and on-site wellness pods.</p>
-            </div>
-            <div class="rounded-2xl bg-slate-900/60 p-4">
-              <p class="text-sm text-slate-200">Partner hotels within walking distance with shuttle service every 15 minutes.</p>
-            </div>
-          </div>
-          <div class="mt-6 flex items-center gap-3 text-sm text-slate-300">
-            <i class="fa-solid fa-map-pin text-orange-300"></i>
-            <span>Interactive map available on arrival</span>
+          <div class="rounded-2xl bg-white/10 p-4 text-white">
+            <p class="text-3xl font-bold">140</p>
+            <p class="text-xs uppercase tracking-widest">Sessions</p>
           </div>
         </div>
       </div>
-    </section>
-
-    <section class="bg-slate-900/40 py-16" id="sessions">
-      <div class="mx-auto max-w-6xl px-4 lg:px-8">
-        <div class="flex flex-col gap-4 text-center">
-          <h2 class="text-3xl font-semibold text-white">Featured sessions</h2>
-          <p class="text-slate-300">A snapshot of what awaits.</p>
+      <div class="relative">
+        <div class="overflow-hidden rounded-3xl border border-white/30 bg-white/10 shadow-2xl">
+          <img src="assets/images/placeholder-event.svg" alt="Venue" class="h-full w-full object-cover" />
         </div>
-        <div class="mt-10 grid gap-6 lg:grid-cols-3">
-          <article class="rounded-3xl border border-white/10 bg-white/5 p-6 shadow">
-            <p class="text-xs uppercase tracking-[0.3em] text-orange-300">Keynote</p>
-            <h3 class="mt-2 text-lg font-semibold text-white">Designing human-first hybrid experiences</h3>
-            <p class="mt-2 text-sm text-slate-300">With Dr. Laila Hassan</p>
-            <p class="mt-4 text-sm text-slate-400">Hall A • 10:00</p>
-          </article>
-          <article class="rounded-3xl border border-white/10 bg-white/5 p-6 shadow">
-            <p class="text-xs uppercase tracking-[0.3em] text-sky-300">Workshop</p>
-            <h3 class="mt-2 text-lg font-semibold text-white">Live production in a modular world</h3>
-            <p class="mt-2 text-sm text-slate-300">With Skyline Studios</p>
-            <p class="mt-4 text-sm text-slate-400">Hall B • 13:30</p>
-          </article>
-          <article class="rounded-3xl border border-white/10 bg-white/5 p-6 shadow">
-            <p class="text-xs uppercase tracking-[0.3em] text-purple-300">Panel</p>
-            <h3 class="mt-2 text-lg font-semibold text-white">Sustainable builds & circularity</h3>
-            <p class="mt-2 text-sm text-slate-300">Hosted by Verde Gatherings</p>
-            <p class="mt-4 text-sm text-slate-400">Hall C • 15:00</p>
-          </article>
+        <div class="absolute -bottom-10 right-6 w-64 rounded-3xl bg-slate-900/80 p-4 text-white shadow-xl">
+          <p class="text-xs uppercase tracking-widest text-orange-200">Live & Hybrid</p>
+          <p class="mt-2 text-lg font-semibold">Broadcast-ready stages with experiential lounges.</p>
         </div>
       </div>
-    </section>
+    </div>
+  </section>
 
-    <section class="mx-auto max-w-6xl px-4 py-16 lg:px-8" id="pricing">
-      <div class="flex flex-col gap-3 text-center">
-        <h2 class="text-3xl font-semibold text-white">Passports & perks</h2>
-        <p class="text-slate-300">Choose the experience that fits your goals.</p>
+  <section class="mx-auto max-w-6xl px-4 py-16 lg:px-8" id="why">
+    <div class="grid gap-8 lg:grid-cols-2">
+      <div class="space-y-4">
+        <h2 class="text-3xl font-semibold text-white">Why attend Eventia?</h2>
+        <p class="text-slate-300">A curated blend of thought leadership, tactical workshops, and experiential
+          showcases to elevate your event strategy.</p>
+        <div class="grid gap-4 sm:grid-cols-2">
+          <div class="rounded-2xl border border-white/10 bg-white/5 p-4">
+            <div class="mb-3 flex h-10 w-10 items-center justify-center rounded-lg bg-orange-500/20 text-orange-300">
+              <i class="fa-solid fa-microphone"></i>
+            </div>
+            <p class="text-white font-semibold">Keynotes</p>
+            <p class="text-sm text-slate-300">Visionary stories on design, tech, and human connection.</p>
+          </div>
+          <div class="rounded-2xl border border-white/10 bg-white/5 p-4">
+            <div class="mb-3 flex h-10 w-10 items-center justify-center rounded-lg bg-purple-500/20 text-purple-300">
+              <i class="fa-solid fa-flask"></i>
+            </div>
+            <p class="text-white font-semibold">Labs</p>
+            <p class="text-sm text-slate-300">Hands-on builds with production teams and creative technologists.
+            </p>
+          </div>
+          <div class="rounded-2xl border border-white/10 bg-white/5 p-4">
+            <div class="mb-3 flex h-10 w-10 items-center justify-center rounded-lg bg-sky-500/20 text-sky-300"><i
+                class="fa-solid fa-handshake"></i></div>
+            <p class="text-white font-semibold">Networking</p>
+            <p class="text-sm text-slate-300">Executive lounges, curated roundtables, and AI matches.</p>
+          </div>
+          <div class="rounded-2xl border border-white/10 bg-white/5 p-4">
+            <div class="mb-3 flex h-10 w-10 items-center justify-center rounded-lg bg-emerald-500/20 text-emerald-300">
+              <i class="fa-solid fa-tree"></i>
+            </div>
+            <p class="text-white font-semibold">Sustainability</p>
+            <p class="text-sm text-slate-300">Low-impact builds with circular materials and carbon insights.</p>
+          </div>
+        </div>
+      </div>
+      <div class="rounded-3xl border border-white/10 bg-white/5 p-8 shadow-lg">
+        <h3 class="text-xl font-semibold text-white">Venue & Access</h3>
+        <p class="mt-3 text-slate-300">Dubai World Trade Centre • Hybrid streaming</p>
+        <div class="mt-6 space-y-4">
+          <div class="rounded-2xl bg-slate-900/60 p-4">
+            <p class="text-sm text-slate-200">Direct metro access, premium lounges, prayer rooms, and on-site
+              wellness
+              pods.</p>
+          </div>
+          <div class="rounded-2xl bg-slate-900/60 p-4">
+            <p class="text-sm text-slate-200">Partner hotels within walking distance with shuttle service every 15
+              minutes.</p>
+          </div>
+        </div>
+        <div class="mt-6 flex items-center gap-3 text-sm text-slate-300">
+          <i class="fa-solid fa-map-pin text-orange-300"></i>
+          <span>Interactive map available on arrival</span>
+        </div>
+      </div>
+    </div>
+  </section>
+
+  <section class="bg-slate-900/40 py-16" id="sessions">
+    <div class="mx-auto max-w-6xl px-4 lg:px-8">
+      <div class="flex flex-col gap-4 text-center">
+        <h2 class="text-3xl font-semibold text-white">Featured sessions</h2>
+        <p class="text-slate-300">A snapshot of what awaits.</p>
       </div>
       <div class="mt-10 grid gap-6 lg:grid-cols-3">
-        <div class="rounded-3xl border border-white/10 bg-white/5 p-8 shadow">
-          <p class="text-xs uppercase tracking-[0.3em] text-slate-300">Explorer</p>
-          <p class="mt-3 text-3xl font-bold text-white">$499</p>
-          <ul class="mt-4 space-y-2 text-sm text-slate-300">
-            <li>Keynotes + expo</li><li>Community lounges</li><li>On-demand recordings</li>
-          </ul>
-          <a href="register.html" class="mt-6 inline-flex w-full items-center justify-center rounded-full bg-white px-4 py-3 text-sm font-semibold text-slate-900 transition hover:bg-slate-100">Select</a>
-        </div>
-        <div class="rounded-3xl border border-orange-400/40 bg-orange-500/10 p-8 shadow-lg shadow-orange-500/20">
-          <p class="text-xs uppercase tracking-[0.3em] text-orange-300">Executive</p>
-          <p class="mt-3 text-3xl font-bold text-white">$899</p>
-          <ul class="mt-4 space-y-2 text-sm text-slate-100">
-            <li>All Explorer benefits</li><li>Workshops + labs</li><li>Executive lounge access</li>
-          </ul>
-          <a href="register.html" class="mt-6 inline-flex w-full items-center justify-center rounded-full bg-orange-500 px-4 py-3 text-sm font-semibold text-white transition hover:bg-orange-400">Select</a>
-        </div>
-        <div class="rounded-3xl border border-white/10 bg-white/5 p-8 shadow">
-          <p class="text-xs uppercase tracking-[0.3em] text-sky-300">Virtual</p>
-          <p class="mt-3 text-3xl font-bold text-white">$249</p>
-          <ul class="mt-4 space-y-2 text-sm text-slate-300">
-            <li>Live stream keynotes</li><li>Interactive chat + Q&A</li><li>30-day recordings</li>
-          </ul>
-          <a href="register.html" class="mt-6 inline-flex w-full items-center justify-center rounded-full bg-white px-4 py-3 text-sm font-semibold text-slate-900 transition hover:bg-slate-100">Select</a>
-        </div>
+        <article class="rounded-3xl border border-white/10 bg-white/5 p-6 shadow">
+          <p class="text-xs uppercase tracking-[0.3em] text-orange-300">Keynote</p>
+          <h3 class="mt-2 text-lg font-semibold text-white">Designing human-first hybrid experiences</h3>
+          <p class="mt-2 text-sm text-slate-300">With Dr. Laila Hassan</p>
+          <p class="mt-4 text-sm text-slate-400">Hall A • 10:00</p>
+        </article>
+        <article class="rounded-3xl border border-white/10 bg-white/5 p-6 shadow">
+          <p class="text-xs uppercase tracking-[0.3em] text-sky-300">Workshop</p>
+          <h3 class="mt-2 text-lg font-semibold text-white">Live production in a modular world</h3>
+          <p class="mt-2 text-sm text-slate-300">With Skyline Studios</p>
+          <p class="mt-4 text-sm text-slate-400">Hall B • 13:30</p>
+        </article>
+        <article class="rounded-3xl border border-white/10 bg-white/5 p-6 shadow">
+          <p class="text-xs uppercase tracking-[0.3em] text-purple-300">Panel</p>
+          <h3 class="mt-2 text-lg font-semibold text-white">Sustainable builds & circularity</h3>
+          <p class="mt-2 text-sm text-slate-300">Hosted by Verde Gatherings</p>
+          <p class="mt-4 text-sm text-slate-400">Hall C • 15:00</p>
+        </article>
       </div>
-    </section>
+    </div>
+  </section>
 
-    <section class="bg-slate-900/50 py-16" id="faq">
-      <div class="mx-auto max-w-4xl px-4 lg:px-8">
-        <div class="text-center">
-          <h2 class="text-3xl font-semibold text-white">FAQ</h2>
-          <p class="mt-2 text-slate-300">Your top questions, answered.</p>
-        </div>
-        <div class="mt-8 space-y-4" data-accordion>
-          <div class="rounded-2xl border border-white/10 bg-white/5">
-            <button class="flex w-full items-center justify-between px-4 py-3 text-left text-sm font-semibold text-white" data-accordion-toggle>What is the dress code?<i class="fa-solid fa-plus"></i></button>
-            <div class="hidden px-4 pb-4 text-sm text-slate-300">Smart casual; bring layers for studio temperatures.</div>
-          </div>
-          <div class="rounded-2xl border border-white/10 bg-white/5">
-            <button class="flex w-full items-center justify-between px-4 py-3 text-left text-sm font-semibold text-white" data-accordion-toggle>Can I transfer my pass?<i class="fa-solid fa-plus"></i></button>
-            <div class="hidden px-4 pb-4 text-sm text-slate-300">Yes, transfers allowed until April 10.</div>
-          </div>
-          <div class="rounded-2xl border border-white/10 bg-white/5">
-            <button class="flex w-full items-center justify-between px-4 py-3 text-left text-sm font-semibold text-white" data-accordion-toggle>Are sessions recorded?<i class="fa-solid fa-plus"></i></button>
-            <div class="hidden px-4 pb-4 text-sm text-slate-300">Most sessions are recorded and available on-demand.</div>
-          </div>
-          <div class="rounded-2xl border border-white/10 bg-white/5">
-            <button class="flex w-full items-center justify-between px-4 py-3 text-left text-sm font-semibold text-white" data-accordion-toggle>How do I access virtual content?<i class="fa-solid fa-plus"></i></button>
-            <div class="hidden px-4 pb-4 text-sm text-slate-300">Log in with your registration email to the virtual hub.</div>
-          </div>
-          <div class="rounded-2xl border border-white/10 bg-white/5">
-            <button class="flex w-full items-center justify-between px-4 py-3 text-left text-sm font-semibold text-white" data-accordion-toggle>Do you offer group discounts?<i class="fa-solid fa-plus"></i></button>
-            <div class="hidden px-4 pb-4 text-sm text-slate-300">Group rates available for 5+ passes.</div>
-          </div>
-          <div class="rounded-2xl border border-white/10 bg-white/5">
-            <button class="flex w-full items-center justify-between px-4 py-3 text-left text-sm font-semibold text-white" data-accordion-toggle>Accessibility accommodations?<i class="fa-solid fa-plus"></i></button>
-            <div class="hidden px-4 pb-4 text-sm text-slate-300">We provide ramps, captioning, and quiet rooms.</div>
-          </div>
-        </div>
+  <section class="mx-auto max-w-6xl px-4 py-16 lg:px-8" id="pricing">
+    <div class="flex flex-col gap-3 text-center">
+      <h2 class="text-3xl font-semibold text-white">Passports & perks</h2>
+      <p class="text-slate-300">Choose the experience that fits your goals.</p>
+    </div>
+    <div class="mt-10 grid gap-6 lg:grid-cols-3">
+      <div class="rounded-3xl border border-white/10 bg-white/5 p-8 shadow">
+        <p class="text-xs uppercase tracking-[0.3em] text-slate-300">Explorer</p>
+        <p class="mt-3 text-3xl font-bold text-white">$499</p>
+        <ul class="mt-4 space-y-2 text-sm text-slate-300">
+          <li>Keynotes + expo</li>
+          <li>Community lounges</li>
+          <li>On-demand recordings</li>
+        </ul>
+        <a href="register.html"
+          class="mt-6 inline-flex w-full items-center justify-center rounded-full bg-white px-4 py-3 text-sm font-semibold text-slate-900 transition hover:bg-slate-100">Select</a>
       </div>
-    </section>
+      <div class="rounded-3xl border border-orange-400/40 bg-orange-500/10 p-8 shadow-lg shadow-orange-500/20">
+        <p class="text-xs uppercase tracking-[0.3em] text-orange-300">Executive</p>
+        <p class="mt-3 text-3xl font-bold text-white">$899</p>
+        <ul class="mt-4 space-y-2 text-sm text-slate-100">
+          <li>All Explorer benefits</li>
+          <li>Workshops + labs</li>
+          <li>Executive lounge access</li>
+        </ul>
+        <a href="register.html"
+          class="mt-6 inline-flex w-full items-center justify-center rounded-full bg-orange-500 px-4 py-3 text-sm font-semibold text-white transition hover:bg-orange-400">Select</a>
+      </div>
+      <div class="rounded-3xl border border-white/10 bg-white/5 p-8 shadow">
+        <p class="text-xs uppercase tracking-[0.3em] text-sky-300">Virtual</p>
+        <p class="mt-3 text-3xl font-bold text-white">$249</p>
+        <ul class="mt-4 space-y-2 text-sm text-slate-300">
+          <li>Live stream keynotes</li>
+          <li>Interactive chat + Q&A</li>
+          <li>30-day recordings</li>
+        </ul>
+        <a href="register.html"
+          class="mt-6 inline-flex w-full items-center justify-center rounded-full bg-white px-4 py-3 text-sm font-semibold text-slate-900 transition hover:bg-slate-100">Select</a>
+      </div>
+    </div>
+  </section>
 
-    <section class="mx-auto max-w-6xl px-4 py-16 lg:px-8">
-      <div class="flex flex-col items-center gap-4 rounded-3xl bg-gradient-to-r from-orange-500/20 via-purple-500/20 to-sky-500/20 p-10 text-center shadow-lg">
-        <h2 class="text-3xl font-semibold text-white">Ready to build the next era of events?</h2>
-        <p class="text-slate-200">Secure your seat and receive the curated prep kit.</p>
-        <div class="flex flex-wrap justify-center gap-3">
-          <a href="register.html" class="rounded-full bg-white px-6 py-3 text-sm font-semibold text-slate-900 shadow hover:bg-slate-100">Register</a>
-          <a href="contact.html" class="rounded-full border border-white/60 px-6 py-3 text-sm font-semibold text-white hover:bg-white/10">Talk to us</a>
+  <section class="bg-slate-900/50 py-16" id="faq">
+    <div class="mx-auto max-w-4xl px-4 lg:px-8">
+      <div class="text-center">
+        <h2 class="text-3xl font-semibold text-white">FAQ</h2>
+        <p class="mt-2 text-slate-300">Your top questions, answered.</p>
+      </div>
+      <div class="mt-8 space-y-4" data-accordion>
+        <div class="rounded-2xl border border-white/10 bg-white/5">
+          <button class="flex w-full items-center justify-between px-4 py-3 text-left text-sm font-semibold text-white"
+            data-accordion-toggle>What is the dress code?<i class="fa-solid fa-plus"></i></button>
+          <div class="hidden px-4 pb-4 text-sm text-slate-300">Smart casual; bring layers for studio temperatures.
+          </div>
+        </div>
+        <div class="rounded-2xl border border-white/10 bg-white/5">
+          <button class="flex w-full items-center justify-between px-4 py-3 text-left text-sm font-semibold text-white"
+            data-accordion-toggle>Can I transfer my pass?<i class="fa-solid fa-plus"></i></button>
+          <div class="hidden px-4 pb-4 text-sm text-slate-300">Yes, transfers allowed until April 10.</div>
+        </div>
+        <div class="rounded-2xl border border-white/10 bg-white/5">
+          <button class="flex w-full items-center justify-between px-4 py-3 text-left text-sm font-semibold text-white"
+            data-accordion-toggle>Are sessions recorded?<i class="fa-solid fa-plus"></i></button>
+          <div class="hidden px-4 pb-4 text-sm text-slate-300">Most sessions are recorded and available on-demand.
+          </div>
+        </div>
+        <div class="rounded-2xl border border-white/10 bg-white/5">
+          <button class="flex w-full items-center justify-between px-4 py-3 text-left text-sm font-semibold text-white"
+            data-accordion-toggle>How do I access virtual content?<i class="fa-solid fa-plus"></i></button>
+          <div class="hidden px-4 pb-4 text-sm text-slate-300">Log in with your registration email to the virtual
+            hub.
+          </div>
+        </div>
+        <div class="rounded-2xl border border-white/10 bg-white/5">
+          <button class="flex w-full items-center justify-between px-4 py-3 text-left text-sm font-semibold text-white"
+            data-accordion-toggle>Do you offer group discounts?<i class="fa-solid fa-plus"></i></button>
+          <div class="hidden px-4 pb-4 text-sm text-slate-300">Group rates available for 5+ passes.</div>
+        </div>
+        <div class="rounded-2xl border border-white/10 bg-white/5">
+          <button class="flex w-full items-center justify-between px-4 py-3 text-left text-sm font-semibold text-white"
+            data-accordion-toggle>Accessibility accommodations?<i class="fa-solid fa-plus"></i></button>
+          <div class="hidden px-4 pb-4 text-sm text-slate-300">We provide ramps, captioning, and quiet rooms.
+          </div>
         </div>
       </div>
-    </section>
+    </div>
+  </section>
+
+  <section class="mx-auto max-w-6xl px-4 py-16 lg:px-8">
+    <div
+      class="flex flex-col items-center gap-4 rounded-3xl bg-gradient-to-r from-orange-500/20 via-purple-500/20 to-sky-500/20 p-10 text-center shadow-lg">
+      <h2 class="text-3xl font-semibold text-white">Ready to build the next era of events?</h2>
+      <p class="text-slate-200">Secure your seat and receive the curated prep kit.</p>
+      <div class="flex flex-wrap justify-center gap-3">
+        <a href="register.html"
+          class="rounded-full bg-white px-6 py-3 text-sm font-semibold text-slate-900 shadow hover:bg-slate-100">Register</a>
+        <a href="contact.html"
+          class="rounded-full border border-white/60 px-6 py-3 text-sm font-semibold text-white hover:bg-white/10">Talk
+          to us</a>
+      </div>
+    </div>
+  </section>
   </main>
 
   <footer class="border-t border-white/10 bg-slate-950/80 py-12">
@@ -248,14 +324,16 @@
       </div>
       <div>
         <h3 class="text-sm font-semibold uppercase tracking-widest text-slate-200">Contact</h3>
-        <p class="mt-3 text-sm text-slate-300">hello@eventia.com<br/>+1 (415) 555-0123</p>
+        <p class="mt-3 text-sm text-slate-300">hello@eventia.com<br />+1 (415) 555-0123</p>
       </div>
       <div>
         <h3 class="text-sm font-semibold uppercase tracking-widest text-slate-200">Newsletter</h3>
         <form data-validate novalidate class="mt-3 space-y-2">
-          <input type="email" name="email" required placeholder="you@email.com" class="w-full rounded-full border border-white/40 bg-white/10 px-4 py-3 text-sm text-white placeholder:text-slate-400 focus:border-white" />
+          <input type="email" name="email" required placeholder="you@email.com"
+            class="w-full rounded-full border border-white/40 bg-white/10 px-4 py-3 text-sm text-white placeholder:text-slate-400 focus:border-white" />
           <p class="hidden text-xs text-rose-300" data-error>Email is required.</p>
-          <button type="submit" class="w-full rounded-full bg-orange-500 px-4 py-3 text-sm font-semibold text-white transition hover:bg-orange-400">Join</button>
+          <button type="submit"
+            class="w-full rounded-full bg-orange-500 px-4 py-3 text-sm font-semibold text-white transition hover:bg-orange-400">Join</button>
           <p class="hidden text-xs text-emerald-300" data-success>Welcome aboard!</p>
         </form>
       </div>
@@ -263,11 +341,14 @@
     <div class="mt-8 text-center text-xs text-slate-400">© 2025 Eventia Summit.</div>
   </footer>
 
-  <button type="button" data-scroll-top class="fixed bottom-6 right-6 hidden h-12 w-12 items-center justify-center rounded-full bg-orange-500 text-white shadow-lg shadow-orange-500/40 transition hover:bg-orange-400" aria-label="Scroll to top">
+  <button type="button" data-scroll-top
+    class="fixed bottom-6 right-6 hidden h-12 w-12 items-center justify-center rounded-full bg-orange-500 text-white shadow-lg shadow-orange-500/40 transition hover:bg-orange-400"
+    aria-label="Scroll to top">
     <i class="fa-solid fa-arrow-up"></i>
   </button>
 
   <script src="js/rtl-toggle.js"></script>
   <script src="js/main.js" defer></script>
 </body>
+
 </html>

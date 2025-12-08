@@ -1,4 +1,4 @@
-(function(){
+(function () {
   const STORAGE_KEY = 'eventia_dir';
   const html = document.documentElement;
   const saved = localStorage.getItem(STORAGE_KEY);
@@ -9,8 +9,6 @@
     const dir = html.getAttribute('dir') === 'rtl' ? 'rtl' : 'ltr';
     buttons.forEach(btn => {
       btn.setAttribute('aria-pressed', dir === 'rtl');
-      const label = btn.querySelector('span');
-      if (label) label.textContent = dir === 'rtl' ? 'LTR' : 'RTL';
     });
   };
   syncButtons();

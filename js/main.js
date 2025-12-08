@@ -88,27 +88,28 @@
     const scrolled = window.scrollY > 12;
     const menuOpen = navMenu && !navMenu.classList.contains('hidden');
     const useDarkText = headerMode === 'light'
-      ? (!scrolled || menuOpen) // light headers default to dark text
-      : menuOpen; // dark headers stay light unless menu opens
+      ? true // Light mode always wants dark text (Transparency implies light bg behind, Scroll implies white bg)
+      : menuOpen; // Dark mode only wants dark text if mobile menu is open (white bg)
 
     // Toggle background and blur based on mode
+    // Toggle background and blur based on mode
     if (headerMode === 'light') {
-      header.classList.toggle('bg-slate-950/80', scrolled && !menuOpen);
-      header.classList.toggle('bg-white', !scrolled || menuOpen);
-      header.classList.toggle('border-b', !scrolled || menuOpen);
-      header.classList.toggle('border-slate-200', !scrolled || menuOpen);
-      header.classList.toggle('backdrop-blur', scrolled || menuOpen);
+      // Light Mode (Home 2): Starts transparent/light, becomes White on scroll
+      header.classList.toggle('bg-white/90', scrolled);
+      header.classList.toggle('backdrop-blur-md', scrolled);
+      header.classList.toggle('shadow-sm', scrolled);
+      // Remove valid dark/slate bg if present from other logic
+      header.classList.remove('bg-slate-950/80');
     } else {
-      header.classList.toggle('bg-white', menuOpen);
-      header.classList.toggle('border-b', menuOpen);
-      header.classList.toggle('border-slate-200', menuOpen);
-      header.classList.toggle('bg-slate-950/80', (scrolled || !menuOpen) && !menuOpen);
-      header.classList.toggle('backdrop-blur', scrolled || menuOpen);
-      if (!menuOpen) {
-        header.classList.remove('bg-white');
-        header.classList.remove('border-b');
-        header.classList.remove('border-slate-200');
-      }
+      // Dark Mode (Home 1): Starts transparent/dark, becomes Dark on scroll
+      header.classList.toggle('bg-[#020617]/90', scrolled);
+      header.classList.toggle('backdrop-blur-md', scrolled);
+      header.classList.toggle('border-white/5', scrolled);
+      
+      // Ensure we don't have white bg
+      header.classList.remove('bg-white');
+      header.classList.remove('bg-white/90');
+      header.classList.remove('shadow-sm');
     }
     
     // Toggle text colors for all nav elements
