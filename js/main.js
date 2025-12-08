@@ -13,8 +13,8 @@
   `;
   document.head.appendChild(style);
 
-  const qs = (sel, ctx=document) => ctx.querySelector(sel);
-  const qsa = (sel, ctx=document) => Array.from(ctx.querySelectorAll(sel));
+  const qs = (sel, ctx = document) => ctx.querySelector(sel);
+  const qsa = (sel, ctx = document) => Array.from(ctx.querySelectorAll(sel));
 
   // Animate on scroll
   const animTargets = qsa('section, article, .card, [data-animate]');
@@ -30,7 +30,7 @@
         io.unobserve(entry.target);
       }
     });
-  }, {threshold:0.18});
+  }, { threshold: 0.18 });
   animTargets.forEach(el => io.observe(el));
 
   // Nav + header behavior
@@ -55,17 +55,17 @@
     qsa('[data-home-switch]').forEach(switchContainer => {
       const btn = switchContainer.querySelector('button');
       const menu = switchContainer.querySelector('[data-home-menu]');
-      
+
       if (!btn || !menu) return;
-      
+
       // Toggle menu visibility on button click
       btn.addEventListener('click', (e) => {
         e.stopPropagation();
         const isHidden = menu.classList.contains('hidden');
-        
+
         // Close all other menus first
         qsa('[data-home-menu]').forEach(m => m.classList.add('hidden'));
-        
+
         // Toggle this menu
         if (isHidden) {
           menu.classList.remove('hidden');
@@ -74,7 +74,7 @@
         }
       });
     });
-    
+
     // Close menu when clicking outside
     document.addEventListener('click', (e) => {
       if (!e.target.closest('[data-home-switch]')) {
@@ -105,35 +105,35 @@
       header.classList.toggle('bg-[#020617]/90', scrolled);
       header.classList.toggle('backdrop-blur-md', scrolled);
       header.classList.toggle('border-white/5', scrolled);
-      
+
       // Ensure we don't have white bg
       header.classList.remove('bg-white');
       header.classList.remove('bg-white/90');
       header.classList.remove('shadow-sm');
     }
-    
+
     // Toggle text colors for all nav elements
     const logo = header.querySelector('a[href="index.html"]');
     const navLinks = header.querySelectorAll('[data-nav-menu] a, [data-nav-menu] button');
     const rtlButton = header.querySelector('[data-rtl-toggle]');
     const navToggle = header.querySelector('[data-nav-toggle]');
-    
+
     if (logo) {
       logo.classList.toggle('text-white', !useDarkText);
       logo.classList.toggle('text-slate-900', useDarkText);
     }
-    
+
     navLinks.forEach(link => {
-      // Skip login button
-      if (link.href?.includes('login.html')) return;
-      
+      // Skip login button and Home Dropdown links (they have static colors)
+      if (link.href?.includes('login.html') || link.closest('[data-home-menu]')) return;
+
       // Handle all nav links and buttons
       link.classList.toggle('text-white', !useDarkText);
       link.classList.toggle('text-slate-900', useDarkText);
       link.classList.toggle('hover:text-sky-300', !useDarkText);
       link.classList.toggle('hover:text-sky-600', useDarkText);
     });
-    
+
     if (rtlButton) {
       rtlButton.classList.toggle('border-white/20', !useDarkText);
       rtlButton.classList.toggle('text-white', !useDarkText);
@@ -142,13 +142,13 @@
       rtlButton.classList.toggle('text-slate-900', useDarkText);
       rtlButton.classList.toggle('hover:border-slate-900', useDarkText);
     }
-    
+
     if (navToggle) {
       navToggle.classList.toggle('bg-white/10', !useDarkText);
       navToggle.classList.toggle('text-white', !useDarkText);
       navToggle.classList.toggle('bg-slate-900', useDarkText);
     }
-    
+
     const scrollTopBtn = qs('[data-scroll-top]');
     if (scrollTopBtn) scrollTopBtn.classList.toggle('hidden', window.scrollY < 240);
   };
@@ -164,12 +164,12 @@
       const el = qs(targetId);
       if (el) {
         e.preventDefault();
-        el.scrollIntoView({behavior:'smooth'});
+        el.scrollIntoView({ behavior: 'smooth' });
       }
     });
   });
   const scrollTopBtn = qs('[data-scroll-top]');
-  if (scrollTopBtn) scrollTopBtn.addEventListener('click', () => window.scrollTo({top:0, behavior:'smooth'}));
+  if (scrollTopBtn) scrollTopBtn.addEventListener('click', () => window.scrollTo({ top: 0, behavior: 'smooth' }));
 
   // Form validation (basic)
   qsa('form[data-validate]').forEach(form => {
@@ -181,10 +181,10 @@
         if (!field.value.trim()) {
           valid = false;
           if (errorEl) errorEl.classList.remove('hidden');
-          field.classList.add('ring-2','ring-rose-400');
+          field.classList.add('ring-2', 'ring-rose-400');
         } else {
           if (errorEl) errorEl.classList.add('hidden');
-          field.classList.remove('ring-2','ring-rose-400');
+          field.classList.remove('ring-2', 'ring-rose-400');
         }
       });
       const successEl = form.querySelector('[data-success]');
@@ -197,7 +197,7 @@
     const buttons = qsa('[data-tab]', tabGroup.parentElement || tabGroup);
     buttons.forEach(btn => btn.addEventListener('click', () => {
       const target = btn.dataset.tab;
-      buttons.forEach(b => b.classList.replace('bg-sky-500','bg-white/10'));
+      buttons.forEach(b => b.classList.replace('bg-sky-500', 'bg-white/10'));
       btn.classList.add('bg-sky-500');
       qsa('[data-tab-panel]', tabGroup.parentElement || document).forEach(panel => {
         panel.classList.toggle('hidden', panel.dataset.tabPanel !== target);
@@ -277,7 +277,7 @@
     });
     if (activeFilters) {
       activeFilters.innerHTML = '';
-      [[filterTrack,'Track'],[filterType,'Type'],[filterSpeaker,'Speaker']].forEach(([sel,label]) => {
+      [[filterTrack, 'Track'], [filterType, 'Type'], [filterSpeaker, 'Speaker']].forEach(([sel, label]) => {
         if (sel && sel.value !== 'all') {
           const pill = document.createElement('span');
           pill.className = 'rounded-full bg-white/10 px-3 py-1 text-xs text-white';
@@ -375,9 +375,9 @@
       qsa('[required]', steps[current]).forEach(field => {
         if (!field.value.trim()) {
           valid = false;
-          field.classList.add('ring-2','ring-rose-400');
+          field.classList.add('ring-2', 'ring-rose-400');
         } else {
-          field.classList.remove('ring-2','ring-rose-400');
+          field.classList.remove('ring-2', 'ring-rose-400');
         }
       });
       return valid;
