@@ -36,6 +36,7 @@
   // Nav + header behavior
   const header = qs('[data-header]');
   const headerMode = header?.dataset.headerMode || 'light'; // 'light' expects dark text initially, 'dark' expects light text
+  const forceDark = header?.dataset.headerForceDark === 'true'; // optional flag to keep nav text light even when menu is open
   const navToggle = qs('[data-nav-toggle]');
   const navMenu = qs('[data-nav-menu]');
   if (navToggle && navMenu) {
@@ -87,9 +88,11 @@
     if (!header) return;
     const scrolled = window.scrollY > 12;
     const menuOpen = navMenu && !navMenu.classList.contains('hidden');
-    const useDarkText = headerMode === 'light'
-      ? true // Light mode always wants dark text (Transparency implies light bg behind, Scroll implies white bg)
-      : menuOpen; // Dark mode only wants dark text if mobile menu is open (white bg)
+    const useDarkText = forceDark
+      ? false // Forced dark mode keeps light text regardless of menu state
+      : (headerMode === 'light'
+        ? true // Light mode always wants dark text (Transparency implies light bg behind, Scroll implies white bg)
+        : menuOpen); // Dark mode only wants dark text if mobile menu is open (white bg)
 
     // Toggle background and blur based on mode
     // Toggle background and blur based on mode
