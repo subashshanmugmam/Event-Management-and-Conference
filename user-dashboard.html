@@ -62,12 +62,10 @@
   <header data-header data-header-mode="dark" data-header-force-dark="true"
     class="fixed top-0 left-0 z-50 w-full border-b border-white/10 bg-slate-900/80 backdrop-blur shadow-lg shadow-slate-900/40">
     <nav class="mx-auto flex max-w-7xl items-center justify-between px-4 py-4 lg:px-8">
-      <div class="flex items-center gap-3">
-        <a href="index.html" class="text-xl font-bold text-white">Eventia</a>
-        <button type="button" data-nav-toggle
-          class="inline-flex items-center justify-center rounded bg-white/10 px-3 py-2 text-white shadow lg:hidden"
-          aria-label="Toggle navigation"><i class="fa-solid fa-bars"></i></button>
-      </div>
+      <a href="index.html" class="text-xl font-bold text-white">Eventia</a>
+      <button type="button" data-nav-toggle
+        class="inline-flex items-center justify-center rounded-lg bg-white/10 px-3 py-2.5 text-white shadow lg:hidden"
+        aria-label="Toggle navigation"><i class="fa-solid fa-bars text-base"></i></button>
       <div data-nav-menu
         class="fixed inset-x-4 top-20 hidden flex-col gap-4 space-y-2 rounded-2xl bg-slate-900/95 border border-white/10 p-6 shadow-2xl backdrop-blur lg:static lg:flex lg:w-auto lg:flex-row lg:items-center lg:gap-8 lg:space-y-0 lg:bg-slate-900/70 lg:border-white/10 lg:p-3 lg:rounded-full lg:shadow-lg lg:shadow-slate-900/30">
         <div class="relative inline-block" data-home-switch>
@@ -96,12 +94,13 @@
         <a href="user-dashboard.html"
           class="block w-full text-start text-sm font-semibold text-sky-300 lg:w-auto">Dashboard</a>
         <button type="button" data-rtl-toggle
-          class="flex w-full items-center justify-start gap-2 rounded-full border border-white/20 px-4 py-2 text-xs font-semibold uppercase tracking-wide text-white transition hover:border-white/40 lg:w-auto lg:justify-center"><i
-            class="fa-solid fa-earth-asia"></i><span>RTL</span></button>
+          class="flex h-10 w-10 items-center justify-center rounded-full border border-white/20 bg-white/5 text-white transition hover:bg-white/10 hover:border-white/40 lg:w-10">
+          <i class="fa-solid fa-globe"></i>
+        </button>
         <div
           class="flex w-full flex-col gap-3 border-t border-slate-200/60 pt-3 lg:border-none lg:pt-0 lg:flex-row lg:items-center lg:gap-3">
           <div class="flex items-center gap-2 rounded-full border border-white/10 bg-white/5 px-3 py-1 text-sm text-white"><img
-              src="assets/images/placeholder-speaker-b.svg" class="h-8 w-8 rounded-full" alt="" /><span>Alex</span>
+              src="https://images.unsplash.com/photo-1472099645785-5658abf4ff4e?w=100&h=100&fit=crop" class="h-8 w-8 rounded-full object-cover" alt="" /><span>Alex</span>
           </div>
           <a href="login.html"
             class="inline-flex w-full items-center justify-center rounded-full bg-sky-500 px-4 py-2 text-sm font-semibold text-white shadow-lg shadow-sky-500/30 transition hover:bg-sky-400 lg:w-auto">Logout</a>
