@@ -329,8 +329,8 @@
     const step = Math.max(1, Math.round(target / 60));
     const tick = () => {
       current += step;
-      if (current >= target) { el.textContent = target; return; }
-      el.textContent = current;
+      if (current >= target) { el.textContent = target.toLocaleString() + '+'; return; }
+      el.textContent = current.toLocaleString();
       requestAnimationFrame(tick);
     };
     tick();
