@@ -40,7 +40,7 @@
         </div>
       </nav>
       <div class="flex items-center gap-3">
-        <button id="rtlToggle" class="rounded-full border border-white/20 px-3 py-2 text-sm text-white" aria-label="Toggle RTL"><i class="fa-solid fa-earth-asia"></i></button>
+        <button type="button" data-rtl-toggle class="flex h-10 w-10 items-center justify-center rounded-full border border-white/20 bg-white/5 text-white transition hover:bg-white/10 hover:border-white/40"><i class="fa-solid fa-globe"></i></button>
         <a href="login.html" class="rounded-full bg-sky-500 px-4 py-2 text-sm font-semibold text-white hover:bg-sky-400">Login</a>
       </div>
     </div>
@@ -109,10 +109,10 @@
     </section>
   </main>
 
+  <script src="js/rtl-toggle.js"></script>
   <script>
     const homeA = document.getElementById('homeA');
     const homeB = document.getElementById('homeB');
-    const rtlBtn = document.getElementById('rtlToggle');
 
     const setHome = (choice) => {
       const isA = choice === 'A';
@@ -135,11 +135,6 @@
     });
     document.addEventListener('click', () => {
       document.querySelectorAll('[data-menu-list]').forEach(l => l.classList.add('hidden'));
-    });
-
-    rtlBtn.addEventListener('click', () => {
-      const html = document.documentElement;
-      html.dir = html.dir === 'rtl' ? 'ltr' : 'rtl';
     });
   </script>
 </body>

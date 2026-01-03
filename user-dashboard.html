@@ -55,67 +55,136 @@
     .ring-glow {
       box-shadow: 0 0 0 1px rgba(148, 163, 184, 0.35), 0 20px 80px rgba(59, 130, 246, 0.18);
     }
+
+    /* ===== RTL/LTR Optimization ===== */
+    /* Smooth direction transition */
+    .direction-transition * {
+      transition: margin 0.3s ease, padding 0.3s ease, transform 0.3s ease !important;
+    }
+
+    /* Sidebar positioning for RTL */
+    [dir="rtl"] [data-sidebar] {
+      left: auto;
+      right: 0;
+      border-right: none;
+      border-left: 1px solid rgba(255,255,255,0.1);
+    }
+    [dir="rtl"] [data-sidebar].translate-x-0 {
+      transform: translateX(0);
+    }
+    [dir="rtl"] [data-sidebar].-translate-x-full {
+      transform: translateX(100%);
+    }
+
+    /* Dropdown menu positioning */
+    [dir="rtl"] [data-home-menu],
+    [dir="rtl"] [data-dashboard-menu] {
+      left: auto;
+      right: 0;
+    }
+
+    /* Progress bars and gradients */
+    [dir="rtl"] .bg-gradient-to-r {
+      background-image: linear-gradient(to left, var(--tw-gradient-stops));
+    }
+
+    /* Icon flip for directional icons */
+    [dir="rtl"] .fa-arrow-right,
+    [dir="rtl"] .fa-chevron-right,
+    [dir="rtl"] .fa-angle-right {
+      transform: scaleX(-1);
+    }
+
+    /* Table text alignment */
+    [dir="rtl"] th,
+    [dir="rtl"] td {
+      text-align: right;
+    }
+
+    /* RTL toggle button active state */
+    [dir="rtl"] [data-rtl-toggle] {
+      background: rgba(14, 165, 233, 0.2);
+      border-color: rgba(14, 165, 233, 0.5);
+    }
+
+    /* Keep specific elements LTR (numbers, dates) */
+    [dir="rtl"] .ltr-always {
+      direction: ltr;
+      unicode-bidi: isolate;
+    }
   </style>
 </head>
 
 <body class="bg-aurora text-slate-100 relative">
-  <header data-header data-header-mode="dark" data-header-force-dark="true"
-    class="fixed top-0 left-0 z-50 w-full border-b border-white/10 bg-slate-900/80 backdrop-blur shadow-lg shadow-slate-900/40">
+  <a href="#main"
+    class="sr-only focus:not-sr-only focus:absolute focus:top-4 focus:left-4 focus:bg-white focus:text-slate-900 focus:px-4 focus:py-2 focus:rounded">Skip
+    to main content</a>
+  <header data-header data-header-mode="dark"
+    class="fixed top-0 left-0 w-full z-50 transition-all duration-300 bg-transparent border-b border-transparent">
     <nav class="mx-auto flex max-w-7xl items-center justify-between px-4 py-4 lg:px-8">
-      <a href="index.html" class="text-xl font-bold text-white">Eventia</a>
+      <a href="index.html" class="text-xl font-bold tracking-tight text-white transition-colors duration-300">Eventia</a>
       <button type="button" data-nav-toggle
-        class="inline-flex items-center justify-center rounded-lg bg-white/10 px-3 py-2.5 text-white shadow lg:hidden"
-        aria-label="Toggle navigation"><i class="fa-solid fa-bars text-base"></i></button>
+        class="inline-flex items-center justify-center rounded-lg bg-slate-900 px-3 py-2.5 text-white shadow lg:hidden"
+        aria-label="Toggle navigation">
+        <i class="fa-solid fa-bars text-base"></i>
+      </button>
       <div data-nav-menu
-        class="fixed inset-x-4 top-20 hidden flex-col gap-4 space-y-2 rounded-2xl bg-slate-900/95 border border-white/10 p-6 shadow-2xl backdrop-blur lg:static lg:flex lg:w-auto lg:flex-row lg:items-center lg:gap-8 lg:space-y-0 lg:bg-slate-900/70 lg:border-white/10 lg:p-3 lg:rounded-full lg:shadow-lg lg:shadow-slate-900/30">
+        class="fixed inset-x-4 top-20 hidden flex-col gap-4 space-y-2 rounded-2xl bg-[#0f172a] border border-white/10 p-6 shadow-2xl backdrop-blur lg:static lg:flex lg:w-auto lg:flex-row lg:items-center lg:gap-8 lg:space-y-0 lg:bg-transparent lg:border-0 lg:p-0 lg:shadow-none max-h-[80vh] overflow-y-auto lg:overflow-visible">
         <div class="relative inline-block" data-home-switch>
           <button type="button"
-            class="flex w-full items-center justify-between gap-2 rounded-full border border-white/20 px-4 py-2 text-sm font-semibold text-white transition hover:border-white/40 lg:w-auto lg:justify-start">
+            class="flex w-full items-center justify-between gap-2 rounded-full border border-white/10 px-4 py-2 text-sm font-semibold text-slate-200 transition hover:border-white/30 lg:w-auto lg:justify-start">
             Home
             <i class="fa-solid fa-chevron-down text-xs"></i>
           </button>
           <div
-            class="absolute left-0 top-full mt-2 hidden w-48 rounded-2xl border border-white/20 bg-slate-900/95 shadow-xl z-[120]"
+            class="absolute left-0 top-full mt-2 hidden w-48 rounded-2xl border border-slate-200 bg-white shadow-xl z-[120]"
             data-home-menu>
             <a href="index.html"
-              class="block px-4 py-3 text-sm font-semibold text-white hover:bg-white/10 transition">Home Version 1</a>
+              class="block px-4 py-3 text-sm font-semibold text-slate-900 hover:bg-slate-50 transition">Home Version 1</a>
             <a href="home2.html"
-              class="block px-4 py-3 text-sm font-semibold text-white hover:bg-white/10 transition">Home Version 2</a>
+              class="block px-4 py-3 text-sm font-semibold text-slate-900 hover:bg-slate-50 transition">Home Version 2</a>
           </div>
         </div>
         <a href="event-details.html"
-          class="block w-full text-start text-sm font-semibold hover:text-sky-300 lg:w-auto">Event Details</a>
+          class="block w-full text-start text-sm font-semibold text-white hover:text-cyan-400 transition-colors duration-300 lg:w-auto lg:text-slate-300">Event
+          Details</a>
         <a href="schedule.html"
-          class="block w-full text-start text-sm font-semibold hover:text-sky-300 lg:w-auto">Schedule</a>
+          class="block w-full text-start text-sm font-semibold text-white hover:text-cyan-400 transition-colors duration-300 lg:w-auto lg:text-slate-300">Schedule</a>
         <a href="register.html"
-          class="block w-full text-start text-sm font-semibold hover:text-sky-300 lg:w-auto">Register</a>
+          class="block w-full text-start text-sm font-semibold text-white hover:text-cyan-400 transition-colors duration-300 lg:w-auto lg:text-slate-300">Register</a>
         <a href="contact.html"
-          class="block w-full text-start text-sm font-semibold hover:text-sky-300 lg:w-auto">Contact</a>
-        <a href="user-dashboard.html"
-          class="block w-full text-start text-sm font-semibold text-sky-300 lg:w-auto">Dashboard</a>
+          class="block w-full text-start text-sm font-semibold text-white hover:text-cyan-400 transition-colors duration-300 lg:w-auto lg:text-slate-300">Contact</a>
+        <div class="relative inline-block" data-dashboard-switch>
+          <button type="button"
+            class="flex w-full items-center justify-between gap-2 rounded-full border border-white/10 px-4 py-2 text-sm font-semibold text-slate-200 transition hover:border-white/30 lg:w-auto lg:justify-start">
+            Dashboard
+            <i class="fa-solid fa-chevron-down text-xs"></i>
+          </button>
+          <div
+            class="absolute left-0 top-full mt-2 hidden w-48 rounded-2xl border border-slate-200 bg-white shadow-xl z-[120]"
+            data-dashboard-menu>
+            <a href="admin-dashboard.html"
+              class="block px-4 py-3 text-sm font-semibold text-slate-900 hover:bg-slate-50 transition">Admin Dashboard</a>
+            <a href="user-dashboard.html"
+              class="block px-4 py-3 text-sm font-semibold text-slate-900 hover:bg-slate-50 transition">User Dashboard</a>
+          </div>
+        </div>
         <button type="button" data-rtl-toggle
-          class="flex h-10 w-10 items-center justify-center rounded-full border border-white/20 bg-white/5 text-white transition hover:bg-white/10 hover:border-white/40 lg:w-10">
+          class="flex h-10 w-10 items-center justify-center rounded-full border border-white/10 bg-white/5 text-slate-200 transition-all duration-300 hover:bg-white/10 hover:border-white/30 lg:w-10">
           <i class="fa-solid fa-globe"></i>
         </button>
         <div class="flex w-full items-center gap-3 lg:w-auto lg:gap-2">
           <a href="signup.html"
-            class="inline-flex w-full items-center justify-center rounded-full border border-white/20 bg-white/5 px-6 py-2.5 text-sm font-bold text-white transition hover:bg-white/10 hover:border-white/40 lg:w-auto">Sign Up</a>
+            class="inline-flex w-full items-center justify-center rounded-full border border-white/20 bg-white/5 px-6 py-2.5 text-sm font-bold text-white transition hover:bg-white/10 hover:border-white/40 lg:w-auto">Sign
+            Up</a>
           <a href="login.html"
             class="inline-flex w-full items-center justify-center rounded-full bg-gradient-to-r from-indigo-600 to-violet-600 px-6 py-2.5 text-sm font-bold text-white shadow-lg shadow-indigo-500/20 transition hover:from-indigo-500 hover:to-violet-500 hover:shadow-indigo-500/40 lg:w-auto">Login</a>
-        </div>
-        <div
-          class="flex w-full flex-col gap-3 border-t border-slate-200/60 pt-3 lg:border-none lg:pt-0 lg:flex-row lg:items-center lg:gap-3">
-          <div class="flex items-center gap-2 rounded-full border border-white/10 bg-white/5 px-3 py-1 text-sm text-white"><img
-              src="https://images.unsplash.com/photo-1472099645785-5658abf4ff4e?w=100&h=100&fit=crop" class="h-8 w-8 rounded-full object-cover" alt="" /><span>Alex</span>
-          </div>
-          <a href="login.html"
-            class="inline-flex w-full items-center justify-center rounded-full bg-sky-500 px-4 py-2 text-sm font-semibold text-white shadow-lg shadow-sky-500/30 transition hover:bg-sky-400 lg:w-auto">Logout</a>
         </div>
       </div>
     </nav>
   </header>
 
-  <main class="mx-auto max-w-6xl space-y-10 px-4 pt-28 pb-16 lg:px-8">
+  <main id="main" class="mx-auto max-w-6xl space-y-10 px-4 pt-28 pb-16 lg:px-8">
           <section
             class="rounded-3xl glass-panel ring-glow p-6 shadow-lg shadow-slate-900/40 transition hover:shadow-slate-900/60 card-fade">
             <div class="flex flex-wrap items-center justify-between gap-4">
@@ -167,6 +236,226 @@
               <p class="text-2xl font-bold text-white">1</p>
               <p class="mt-1 text-xs text-slate-400">VIP • Seat B12</p>
             </div>
+          </section>
+
+          <section class="grid gap-6 lg:grid-cols-3" id="insights">
+            <article
+              class="lg:col-span-2 rounded-3xl border border-white/10 bg-gradient-to-br from-white/10 via-white/5 to-transparent p-6 shadow-lg shadow-slate-900/40 transition hover:shadow-slate-900/60 card-fade">
+              <div class="flex flex-wrap items-center justify-between gap-3">
+                <div>
+                  <p class="text-xs uppercase tracking-[0.25em] text-slate-300">Engagement pulse</p>
+                  <h2 class="text-lg font-semibold text-white">Check-ins vs. live viewers</h2>
+                </div>
+                <div class="flex gap-4 text-xs text-slate-300">
+                  <div>
+                    <p class="text-slate-400">Avg check-ins</p>
+                    <p class="text-xl font-semibold text-white">82%</p>
+                  </div>
+                  <div>
+                    <p class="text-slate-400">Live viewers</p>
+                    <p class="text-xl font-semibold text-white">68%</p>
+                  </div>
+                </div>
+              </div>
+              <div class="mt-6">
+                <svg viewBox="0 0 420 200" role="img" aria-label="Engagement trend over the last seven days"
+                  class="h-48 w-full">
+                  <defs>
+                    <linearGradient id="fill-trend" x1="0%" y1="0%" x2="0%" y2="100%">
+                      <stop offset="0%" stop-color="rgba(14,165,233,0.45)" />
+                      <stop offset="100%" stop-color="rgba(14,165,233,0)" />
+                    </linearGradient>
+                    <linearGradient id="stroke-trend" x1="0%" y1="0%" x2="100%" y2="0%">
+                      <stop offset="0%" stop-color="#38bdf8" />
+                      <stop offset="100%" stop-color="#c084fc" />
+                    </linearGradient>
+                  </defs>
+                  <polyline points="0,140 60,110 120,130 180,90 240,100 300,70 360,60 420,80" fill="none" stroke="#1e293b"
+                    stroke-width="2" opacity="0.2" />
+                  <polygon points="0,140 60,110 120,130 180,90 240,100 300,70 360,60 420,80 420,200 0,200" fill="url(#fill-trend)" />
+                  <polyline points="0,140 60,110 120,130 180,90 240,100 300,70 360,60 420,80" fill="none"
+                    stroke="url(#stroke-trend)" stroke-width="4" stroke-linecap="round" />
+                  <g fill="#38bdf8">
+                    <circle cx="180" cy="90" r="5" />
+                    <circle cx="360" cy="60" r="5" />
+                  </g>
+                </svg>
+              </div>
+              <div class="mt-4 flex flex-wrap gap-4 text-xs text-slate-300">
+                <span class="rounded-full border border-sky-300/40 bg-sky-300/10 px-3 py-1 text-sky-100">+12% week over week</span>
+                <span class="rounded-full border border-purple-300/40 bg-purple-300/10 px-3 py-1 text-purple-100">Peak at 11:00 AM</span>
+              </div>
+            </article>
+
+            <article
+              class="space-y-4 rounded-3xl border border-white/10 bg-white/5 p-6 shadow-lg shadow-slate-900/40 transition hover:shadow-slate-900/60 card-fade">
+              <div class="flex items-center justify-between">
+                <h2 class="text-lg font-semibold text-white">Session fill rate</h2>
+                <span class="text-xs text-slate-400">Live</span>
+              </div>
+              <div class="space-y-3">
+                <div>
+                  <div class="flex items-center justify-between text-xs text-slate-300">
+                    <span>Main stage</span>
+                    <span>92%</span>
+                  </div>
+                  <div class="mt-1 h-3 rounded-full bg-white/10">
+                    <div class="h-full rounded-full bg-gradient-to-r from-emerald-400 to-sky-400" style="width:92%"></div>
+                  </div>
+                </div>
+                <div>
+                  <div class="flex items-center justify-between text-xs text-slate-300">
+                    <span>Workshops</span>
+                    <span>74%</span>
+                  </div>
+                  <div class="mt-1 h-3 rounded-full bg-white/10">
+                    <div class="h-full rounded-full bg-gradient-to-r from-sky-400 to-purple-400" style="width:74%"></div>
+                  </div>
+                </div>
+                <div>
+                  <div class="flex items-center justify-between text-xs text-slate-300">
+                    <span>Meetups</span>
+                    <span>61%</span>
+                  </div>
+                  <div class="mt-1 h-3 rounded-full bg-white/10">
+                    <div class="h-full rounded-full bg-gradient-to-r from-cyan-400 to-rose-400" style="width:61%"></div>
+                  </div>
+                </div>
+              </div>
+              <p class="text-xs text-slate-400">Add more seats to the 14:00 sustainability lab to meet demand.</p>
+            </article>
+
+            <article
+              class="space-y-4 rounded-3xl border border-white/10 bg-white/5 p-6 text-center shadow-lg shadow-slate-900/40 transition hover:shadow-slate-900/60 card-fade">
+              <h2 class="text-lg font-semibold text-white">Channel split</h2>
+              <div class="mx-auto w-40">
+                <svg viewBox="0 0 160 160" role="img" aria-label="In-person vs virtual attendance split">
+                  <circle cx="80" cy="80" r="60" stroke="#1e293b" stroke-width="18" fill="none" opacity="0.35" />
+                  <circle cx="80" cy="80" r="60" stroke="#34d399" stroke-width="18" fill="none"
+                    stroke-dasharray="377" stroke-dashoffset="75" stroke-linecap="round" />
+                  <circle cx="80" cy="80" r="60" stroke="#38bdf8" stroke-width="18" fill="none"
+                    stroke-dasharray="377" stroke-dashoffset="240" stroke-linecap="round" />
+                </svg>
+              </div>
+              <div class="flex items-center justify-center gap-6 text-sm text-slate-200">
+                <div>
+                  <p class="text-2xl font-bold text-white">58%</p>
+                  <p class="text-xs text-emerald-200">In-person</p>
+                </div>
+                <div>
+                  <p class="text-2xl font-bold text-white">42%</p>
+                  <p class="text-xs text-sky-200">Virtual</p>
+                </div>
+              </div>
+              <p class="text-xs text-slate-400">Virtual audience grew 9% after last keynote replay drop.</p>
+            </article>
+          </section>
+
+          <section class="grid gap-6 lg:grid-cols-2">
+            <article
+              class="rounded-3xl border border-white/10 bg-white/5 p-6 shadow-lg shadow-slate-900/40 transition hover:shadow-slate-900/60 card-fade">
+              <div class="flex items-center justify-between">
+                <div>
+                  <p class="text-xs uppercase tracking-[0.3em] text-slate-300">Ticket funnel</p>
+                  <h2 class="text-lg font-semibold text-white">Lead → Paid conversion</h2>
+                </div>
+                <span class="text-xs text-emerald-300">+4% this week</span>
+              </div>
+              <div class="mt-6 space-y-4">
+                <div>
+                  <div class="flex items-center justify-between text-xs text-slate-300">
+                    <span>Leads</span>
+                    <span>3,420</span>
+                  </div>
+                  <div class="mt-1 h-3 rounded-full bg-white/10">
+                    <div class="h-full rounded-full bg-gradient-to-r from-cyan-400 to-blue-500" style="width:100%"></div>
+                  </div>
+                </div>
+                <div>
+                  <div class="flex items-center justify-between text-xs text-slate-300">
+                    <span>Qualified</span>
+                    <span>1,980</span>
+                  </div>
+                  <div class="mt-1 h-3 rounded-full bg-white/10">
+                    <div class="h-full rounded-full bg-gradient-to-r from-blue-500 to-indigo-500" style="width:58%"></div>
+                  </div>
+                </div>
+                <div>
+                  <div class="flex items-center justify-between text-xs text-slate-300">
+                    <span>Trial / Demo</span>
+                    <span>940</span>
+                  </div>
+                  <div class="mt-1 h-3 rounded-full bg-white/10">
+                    <div class="h-full rounded-full bg-gradient-to-r from-indigo-500 to-violet-500" style="width:28%"></div>
+                  </div>
+                </div>
+                <div>
+                  <div class="flex items-center justify-between text-xs text-slate-300">
+                    <span>Paid</span>
+                    <span>640</span>
+                  </div>
+                  <div class="mt-1 h-3 rounded-full bg-white/10">
+                    <div class="h-full rounded-full bg-gradient-to-r from-violet-500 to-fuchsia-500" style="width:19%"></div>
+                  </div>
+                </div>
+              </div>
+              <p class="mt-4 text-xs text-slate-400">Most drop-off occurs between demo and payment—surface limited-time bundles.</p>
+            </article>
+
+            <article
+              class="rounded-3xl border border-white/10 bg-white/5 p-6 shadow-lg shadow-slate-900/40 transition hover:shadow-slate-900/60 card-fade">
+              <div class="flex items-center justify-between">
+                <div>
+                  <p class="text-xs uppercase tracking-[0.3em] text-slate-300">Regional mix</p>
+                  <h2 class="text-lg font-semibold text-white">Attendees by region</h2>
+                </div>
+                <span class="text-xs text-slate-400">Rolling 30 days</span>
+              </div>
+              <div class="mt-6 grid gap-4 md:grid-cols-2">
+                <div class="relative mx-auto h-40 w-40">
+                  <svg viewBox="0 0 200 200" role="img" aria-label="Regional distribution donut chart">
+                    <circle cx="100" cy="100" r="70" stroke="#1e293b" stroke-width="24" fill="none" opacity="0.35" />
+                    <circle cx="100" cy="100" r="70" stroke="#34d399" stroke-width="24" fill="none"
+                      stroke-dasharray="439" stroke-dashoffset="70" stroke-linecap="round" />
+                    <circle cx="100" cy="100" r="70" stroke="#38bdf8" stroke-width="24" fill="none"
+                      stroke-dasharray="439" stroke-dashoffset="210" stroke-linecap="round" />
+                    <circle cx="100" cy="100" r="70" stroke="#c084fc" stroke-width="24" fill="none"
+                      stroke-dasharray="439" stroke-dashoffset="330" stroke-linecap="round" />
+                  </svg>
+                  <div class="absolute inset-0 flex flex-col items-center justify-center text-center text-white">
+                    <p class="text-xs uppercase tracking-[0.2em] text-slate-300">Global</p>
+                    <p class="text-2xl font-bold">4.7K</p>
+                  </div>
+                </div>
+                <ul class="space-y-3 text-sm text-slate-200">
+                  <li class="flex items-center justify-between">
+                    <span class="flex items-center gap-2">
+                      <span class="h-2 w-2 rounded-full bg-emerald-300"></span>EMEA
+                    </span>
+                    <span>42%</span>
+                  </li>
+                  <li class="flex items-center justify-between">
+                    <span class="flex items-center gap-2">
+                      <span class="h-2 w-2 rounded-full bg-sky-300"></span>AMER
+                    </span>
+                    <span>31%</span>
+                  </li>
+                  <li class="flex items-center justify-between">
+                    <span class="flex items-center gap-2">
+                      <span class="h-2 w-2 rounded-full bg-violet-300"></span>APAC
+                    </span>
+                    <span>19%</span>
+                  </li>
+                  <li class="flex items-center justify-between">
+                    <span class="flex items-center gap-2">
+                      <span class="h-2 w-2 rounded-full bg-rose-300"></span>LATAM
+                    </span>
+                    <span>8%</span>
+                  </li>
+                </ul>
+              </div>
+              <p class="mt-4 text-xs text-slate-400">APAC registrations are trending +6% week over week after timezone-friendly releases.</p>
+            </article>
           </section>
 
           <section class="grid gap-6 lg:grid-cols-3" id="schedule">
@@ -432,6 +721,69 @@
             </div>
           </section>
         </main>
+
+        <footer class="border-t border-white/10 bg-slate-950/80 py-12 sm:py-16 lg:py-20">
+          <div class="mx-auto grid max-w-7xl gap-10 sm:gap-12 px-4 sm:grid-cols-2 lg:grid-cols-5 lg:px-8">
+            <div class="lg:col-span-2">
+              <a href="index.html" class="text-lg sm:text-xl font-bold text-white">Eventia</a>
+              <p class="mt-3 sm:mt-4 text-xs sm:text-sm text-slate-300">Eventia Summit blends visionary storytelling,
+                immersive technology, and meaningful human connections across four unforgettable days.</p>
+              <div class="mt-4 sm:mt-6 flex gap-2 sm:gap-3 text-slate-300">
+                <a href="#"
+                  class="flex h-8 w-8 sm:h-10 sm:w-10 items-center justify-center rounded-full border border-white/10 transition hover:border-sky-400 hover:text-sky-300"
+                  aria-label="Facebook"><i class="fa-brands fa-facebook-f text-xs sm:text-sm"></i></a>
+                <a href="#"
+                  class="flex h-8 w-8 sm:h-10 sm:w-10 items-center justify-center rounded-full border border-white/10 transition hover:border-sky-400 hover:text-sky-300"
+                  aria-label="Twitter"><i class="fa-brands fa-x-twitter text-xs sm:text-sm"></i></a>
+                <a href="#"
+                  class="flex h-8 w-8 sm:h-10 sm:w-10 items-center justify-center rounded-full border border-white/10 transition hover:border-sky-400 hover:text-sky-300"
+                  aria-label="LinkedIn"><i class="fa-brands fa-linkedin-in text-xs sm:text-sm"></i></a>
+                <a href="#"
+                  class="flex h-8 w-8 sm:h-10 sm:w-10 items-center justify-center rounded-full border border-white/10 transition hover:border-sky-400 hover:text-sky-300"
+                  aria-label="Instagram"><i class="fa-brands fa-instagram text-xs sm:text-sm"></i></a>
+                <a href="#"
+                  class="flex h-8 w-8 sm:h-10 sm:w-10 items-center justify-center rounded-full border border-white/10 transition hover:border-sky-400 hover:text-sky-300"
+                  aria-label="YouTube"><i class="fa-brands fa-youtube text-xs sm:text-sm"></i></a>
+              </div>
+            </div>
+            <div>
+              <h3 class="text-xs sm:text-sm font-semibold uppercase tracking-widest text-slate-200">Explore</h3>
+              <ul class="mt-3 sm:mt-4 space-y-2 text-xs sm:text-sm text-slate-300">
+                <li><a href="event-details.html" class="transition hover:text-white">Event Details</a></li>
+                <li><a href="schedule.html" class="transition hover:text-white">Schedule</a></li>
+                <li><a href="register.html" class="transition hover:text-white">Register</a></li>
+                <li><a href="contact.html" class="transition hover:text-white">Contact</a></li>
+              </ul>
+            </div>
+            <div>
+              <h3 class="text-xs sm:text-sm font-semibold uppercase tracking-widest text-slate-200">Contact</h3>
+              <ul class="mt-3 sm:mt-4 space-y-2 text-xs sm:text-sm text-slate-300">
+                <li>hello@eventia.com</li>
+                <li>+1 (415) 555-0123</li>
+                <li>Dubai World Trade Centre</li>
+              </ul>
+            </div>
+            <div>
+              <h3 class="text-xs sm:text-sm font-semibold uppercase tracking-widest text-slate-200">Newsletter</h3>
+              <form data-validate novalidate class="mt-3 sm:mt-4 space-y-2 sm:space-y-3">
+                <label for="footer-email" class="sr-only">Email</label>
+                <input id="footer-email" name="email" type="email" required placeholder="you@email.com"
+                  class="w-full rounded-full border border-white/40 bg-white/10 px-4 py-2 sm:py-3 text-xs sm:text-sm text-white placeholder:text-slate-300 focus:border-white focus:outline-none" />
+                <p class="hidden text-xs text-rose-300" data-error>Email address is required.</p>
+                <button type="submit"
+                  class="w-full rounded-full bg-sky-500 px-4 py-2 sm:py-3 text-xs sm:text-sm font-semibold text-white transition hover:bg-sky-400">Join</button>
+                <p class="hidden text-xs text-emerald-300" data-success>Welcome to the Eventia collective!</p>
+              </form>
+            </div>
+          </div>
+          <div class="mt-8 sm:mt-12 border-t border-white/10 pt-4 sm:pt-6 text-center text-xs text-slate-400 px-4">
+            <p>&copy; 2025 Eventia Summit. All rights reserved.</p>
+            <div class="mt-2 flex justify-center gap-3 sm:gap-4 text-slate-400">
+              <a href="#" class="hover:text-white">Privacy Policy</a>
+              <a href="#" class="hover:text-white">Terms of Service</a>
+            </div>
+          </div>
+        </footer>
 
         <script src="js/rtl-toggle.js"></script>
         <script src="js/main.js" defer></script>

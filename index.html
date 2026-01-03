@@ -84,11 +84,25 @@
           Details</a>
         <a href="schedule.html"
           class="block w-full text-start text-sm font-semibold text-white hover:text-cyan-400 transition-colors duration-300 lg:w-auto lg:text-slate-300">Schedule</a>
-
+        <a href="register.html"
+          class="block w-full text-start text-sm font-semibold text-white hover:text-cyan-400 transition-colors duration-300 lg:w-auto lg:text-slate-300">Register</a>
         <a href="contact.html"
           class="block w-full text-start text-sm font-semibold text-white hover:text-cyan-400 transition-colors duration-300 lg:w-auto lg:text-slate-300">Contact</a>
-        <a href="user-dashboard.html"
-          class="block w-full text-start text-sm font-semibold text-white hover:text-cyan-400 transition-colors duration-300 lg:w-auto lg:text-slate-300">Dashboard</a>
+        <div class="relative inline-block" data-dashboard-switch>
+          <button type="button"
+            class="flex w-full items-center justify-between gap-2 rounded-full border border-white/10 px-4 py-2 text-sm font-semibold text-slate-200 transition hover:border-white/30 lg:w-auto lg:justify-start">
+            Dashboard
+            <i class="fa-solid fa-chevron-down text-xs"></i>
+          </button>
+          <div
+            class="absolute left-0 top-full mt-2 hidden w-48 rounded-2xl border border-slate-200 bg-white shadow-xl z-[120]"
+            data-dashboard-menu>
+            <a href="admin-dashboard.html"
+              class="block px-4 py-3 text-sm font-semibold text-slate-900 hover:bg-slate-50 transition">Admin Dashboard</a>
+            <a href="user-dashboard.html"
+              class="block px-4 py-3 text-sm font-semibold text-slate-900 hover:bg-slate-50 transition">User Dashboard</a>
+          </div>
+        </div>
         <button type="button" data-rtl-toggle
           class="flex h-10 w-10 items-center justify-center rounded-full border border-white/10 bg-white/5 text-slate-200 transition-all duration-300 hover:bg-white/10 hover:border-white/30 lg:w-10">
           <i class="fa-solid fa-globe"></i>
@@ -153,7 +167,7 @@
         <div class="relative w-full max-w-xl mt-8 lg:mt-0">
           <div
             class="aspect-video overflow-hidden rounded-2xl sm:rounded-3xl border border-white/30 bg-white/10 shadow-2xl">
-            <img class="h-full w-full object-cover"
+            <img class="h-full w-full object-cover object-top"
               src="https://images.unsplash.com/photo-1540575467063-178a50c2df87?w=800&h=600&fit=crop" 
               alt="Conference event with people networking and engaging"
               loading="eager" />
@@ -261,7 +275,7 @@
             class="group rounded-3xl border border-white/10 bg-white/5 p-5 sm:p-6 transition hover:-translate-y-2 hover:border-purple-400/60 hover:shadow-lg hover:shadow-purple-500/20">
             <div class="relative overflow-hidden rounded-2xl aspect-[4/3]">
               <img src="https://images.unsplash.com/photo-1573496359142-b8d87734a5a2?w=400&h=300&fit=crop" alt="Speaker profile"
-                class="h-full w-full object-cover transition duration-500 group-hover:scale-110"
+                class="h-full w-full object-cover object-top transition duration-500 group-hover:scale-110"
                 loading="lazy" />
             </div>
             <h3 class="mt-5 sm:mt-6 text-base sm:text-lg font-bold text-white">Elena Rivera</h3>
@@ -272,7 +286,7 @@
             class="group rounded-3xl border border-white/10 bg-white/5 p-5 sm:p-6 transition hover:-translate-y-2 hover:border-sky-400/60 hover:shadow-lg hover:shadow-sky-500/20">
             <div class="relative overflow-hidden rounded-2xl aspect-[4/3]">
               <img src="https://images.unsplash.com/photo-1507003211169-0a1dd7228f2d?w=400&h=300&fit=crop" alt="Speaker profile"
-                class="h-full w-full object-cover transition duration-500 group-hover:scale-110"
+                class="h-full w-full object-cover object-top transition duration-500 group-hover:scale-110"
                 loading="lazy" />
             </div>
             <h3 class="mt-5 sm:mt-6 text-base sm:text-lg font-bold text-white">Marcus Chen</h3>
@@ -283,7 +297,7 @@
             class="group rounded-3xl border border-white/10 bg-white/5 p-5 sm:p-6 transition hover:-translate-y-2 hover:border-orange-400/60 hover:shadow-lg hover:shadow-orange-500/20">
             <div class="relative overflow-hidden rounded-2xl aspect-[4/3]">
               <img src="https://images.unsplash.com/photo-1580489944761-15a19d654956?w=400&h=300&fit=crop" alt="Speaker profile"
-                class="h-full w-full object-cover transition duration-500 group-hover:scale-110"
+                class="h-full w-full object-cover object-top transition duration-500 group-hover:scale-110"
                 loading="lazy" />
             </div>
             <h3 class="mt-5 sm:mt-6 text-base sm:text-lg font-bold text-white">Dr. Laila Hassan</h3>
@@ -294,7 +308,7 @@
             class="group rounded-3xl border border-white/10 bg-white/5 p-5 sm:p-6 transition hover:-translate-y-2 hover:border-emerald-400/60 hover:shadow-lg hover:shadow-emerald-500/20">
             <div class="relative overflow-hidden rounded-2xl aspect-[4/3]">
               <img src="https://images.unsplash.com/photo-1472099645785-5658abf4ff4e?w=400&h=300&fit=crop" alt="Speaker profile"
-                class="h-full w-full object-cover transition duration-500 group-hover:scale-110"
+                class="h-full w-full object-cover object-top transition duration-500 group-hover:scale-110"
                 loading="lazy" />
             </div>
             <h3 class="mt-5 sm:mt-6 text-base sm:text-lg font-bold text-white">Rohan Patel</h3>
@@ -302,16 +316,10 @@
             <p class="mt-2 text-xs text-slate-400 leading-relaxed">World Cup & Olympics producer • 20+ awards • Web Summit keynote</p>
           </article>
           <article
-            class="group rounded-3xl border border-white/10 bg-white/5 p-6 transition hover:-translate-y-2 hover:border-rose-400/60">
-            <div class="relative overflow-hidden rounded-2xl">
-              <img src="https://images.unsplash.com/photo-1438761681033-6461ffad8d80?w=400&h=300&fit=crop" alt="Speaker profile"
-                class="h-48 w-full object-cover transition duration-500 group-hover:scale-105" />
-            </div>
-          <article
             class="group rounded-3xl border border-white/10 bg-white/5 p-5 sm:p-6 transition hover:-translate-y-2 hover:border-rose-400/60 hover:shadow-lg hover:shadow-rose-500/20">
             <div class="relative overflow-hidden rounded-2xl aspect-[4/3]">
               <img src="https://images.unsplash.com/photo-1438761681033-6461ffad8d80?w=400&h=300&fit=crop" alt="Speaker profile"
-                class="h-full w-full object-cover transition duration-500 group-hover:scale-110"
+                class="h-full w-full object-cover object-top transition duration-500 group-hover:scale-110"
                 loading="lazy" />
             </div>
             <h3 class="mt-5 sm:mt-6 text-base sm:text-lg font-bold text-white">Grace Nakamura</h3>
@@ -322,7 +330,7 @@
             class="group rounded-3xl border border-white/10 bg-white/5 p-5 sm:p-6 transition hover:-translate-y-2 hover:border-cyan-400/60 hover:shadow-lg hover:shadow-cyan-500/20">
             <div class="relative overflow-hidden rounded-2xl aspect-[4/3]">
               <img src="https://images.unsplash.com/photo-1500648767791-00dcc994a43e?w=400&h=300&fit=crop" alt="Speaker profile"
-                class="h-full w-full object-cover transition duration-500 group-hover:scale-110"
+                class="h-full w-full object-cover object-top transition duration-500 group-hover:scale-110"
                 loading="lazy" />
             </div>
             <h3 class="mt-5 sm:mt-6 text-base sm:text-lg font-bold text-white">Hassan El-Masri</h3>
@@ -333,7 +341,7 @@
             class="group rounded-3xl border border-white/10 bg-white/5 p-5 sm:p-6 transition hover:-translate-y-2 hover:border-amber-400/60 hover:shadow-lg hover:shadow-amber-500/20">
             <div class="relative overflow-hidden rounded-2xl aspect-[4/3]">
               <img src="https://images.unsplash.com/photo-1487412720507-e7ab37603c6f?w=400&h=300&fit=crop" alt="Speaker profile"
-                class="h-full w-full object-cover transition duration-500 group-hover:scale-110"
+                class="h-full w-full object-cover object-top transition duration-500 group-hover:scale-110"
                 loading="lazy" />
             </div>
             <h3 class="mt-5 sm:mt-6 text-base sm:text-lg font-bold text-white">Anika Bose</h3>
@@ -344,11 +352,12 @@
             class="group rounded-3xl border border-white/10 bg-white/5 p-5 sm:p-6 transition hover:-translate-y-2 hover:border-lime-400/60 hover:shadow-lg hover:shadow-lime-500/20">
             <div class="relative overflow-hidden rounded-2xl aspect-[4/3]">
               <img src="https://images.unsplash.com/photo-1506794778202-cad84cf45f1d?w=400&h=300&fit=crop" alt="Speaker profile"
-                class="h-full w-full object-cover transition duration-500 group-hover:scale-110"
+                class="h-full w-full object-cover object-top transition duration-500 group-hover:scale-110"
                 loading="lazy" />
             </div>
             <h3 class="mt-5 sm:mt-6 text-base sm:text-lg font-bold text-white">Ravi Singh</h3>
             <p class="text-sm text-lime-200 font-medium">Founder, Experience Foundry</p>
+            <p class="mt-2 text-xs text-slate-400 leading-relaxed">XR-first scenographer • Created 150+ immersive installs • Forbes Creative Council</p>
           </article>
         </div>
       </div>
@@ -398,7 +407,7 @@
                   events can be. I left with a clear playbook, transformational partnerships, and renewed energy."
                 <div class="flex items-center gap-3 sm:gap-4">
                   <img src="https://images.unsplash.com/photo-1494790108377-be9c29b29330?w=100&h=100&fit=crop" alt="Attendee"
-                    class="h-14 w-14 sm:h-12 sm:w-12 rounded-full object-cover"
+                    class="h-14 w-14 sm:h-12 sm:w-12 rounded-full object-cover object-top"
                     loading="lazy" />
                   <div>
                     <p class="text-sm sm:text-base font-bold text-white">Sofia Martinez</p>
@@ -411,7 +420,7 @@
                   tools for scaling our global events footprint. Truly the best industry gathering of the year."</p>
                 <div class="flex items-center gap-3 sm:gap-4">
                   <img src="https://images.unsplash.com/photo-1507003211169-0a1dd7228f2d?w=100&h=100&fit=crop" alt="Attendee"
-                    class="h-14 w-14 sm:h-12 sm:w-12 rounded-full object-cover"
+                    class="h-14 w-14 sm:h-12 sm:w-12 rounded-full object-cover object-top"
                     loading="lazy" />
                   <div>
                     <p class="text-sm sm:text-base font-bold text-white">Noah Williams</p>
@@ -424,7 +433,7 @@
                   Every moment is intentional — from the keynotes to micro-activations."</p>
                 <div class="flex items-center gap-3 sm:gap-4">
                   <img src="https://images.unsplash.com/photo-1580489944761-15a19d654956?w=100&h=100&fit=crop" alt="Attendee"
-                    class="h-14 w-14 sm:h-12 sm:w-12 rounded-full object-cover"
+                    class="h-14 w-14 sm:h-12 sm:w-12 rounded-full object-cover object-top"
                     loading="lazy" />
                   <div>
                     <p class="text-sm sm:text-base font-bold text-white">Amina Rahman</p>

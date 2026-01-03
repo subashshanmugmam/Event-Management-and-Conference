@@ -151,11 +151,25 @@
           Details</a>
         <a href="schedule.html"
           class="block w-full text-start text-sm font-semibold text-slate-900 hover:text-sky-600 transition-colors duration-300 lg:w-auto">Schedule</a>
-
+        <a href="register.html"
+          class="block w-full text-start text-sm font-semibold text-slate-900 hover:text-sky-600 transition-colors duration-300 lg:w-auto">Register</a>
         <a href="contact.html"
           class="block w-full text-start text-sm font-semibold text-slate-900 hover:text-sky-600 transition-colors duration-300 lg:w-auto">Contact</a>
-        <a href="user-dashboard.html"
-          class="block w-full text-start text-sm font-semibold text-slate-900 hover:text-sky-600 transition-colors duration-300 lg:w-auto">Dashboard</a>
+        <div class="relative inline-block" data-dashboard-switch>
+          <button type="button"
+            class="flex w-full items-center justify-between gap-2 rounded-full border border-slate-300 px-4 py-2 text-sm font-semibold text-slate-900 transition hover:border-slate-900 lg:w-auto lg:justify-start">
+            Dashboard
+            <i class="fa-solid fa-chevron-down text-xs"></i>
+          </button>
+          <div
+            class="absolute left-0 top-full mt-2 hidden w-48 rounded-2xl border border-slate-200 bg-white shadow-xl z-[120]"
+            data-dashboard-menu>
+            <a href="admin-dashboard.html"
+              class="block px-4 py-3 text-sm font-semibold text-slate-900 hover:bg-slate-50 transition">Admin Dashboard</a>
+            <a href="user-dashboard.html"
+              class="block px-4 py-3 text-sm font-semibold text-slate-900 hover:bg-slate-50 transition">User Dashboard</a>
+          </div>
+        </div>
         <button type="button" data-rtl-toggle
           class="flex h-10 w-10 items-center justify-center rounded-full border border-slate-200 bg-white text-slate-900 shadow-sm transition hover:bg-slate-50 hover:border-slate-300 lg:w-10">
           <i class="fa-solid fa-globe"></i>

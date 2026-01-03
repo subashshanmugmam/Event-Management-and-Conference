@@ -42,7 +42,16 @@
         <a href="schedule.html" class="block w-full text-start text-sm font-semibold hover:text-sky-300 lg:w-auto">Schedule</a>
         <a href="register.html" class="block w-full text-start text-sm font-semibold text-sky-300 lg:w-auto">Register</a>
         <a href="contact.html" class="block w-full text-start text-sm font-semibold hover:text-sky-300 lg:w-auto">Contact</a>
-        <a href="user-dashboard.html" class="block w-full text-start text-sm font-semibold hover:text-sky-300 lg:w-auto">Dashboard</a>
+        <div class="relative inline-block" data-dashboard-switch>
+          <button type="button" class="flex w-full items-center justify-between gap-2 rounded-full border border-white/20 px-4 py-2 text-sm font-semibold text-white transition hover:border-white/40 lg:w-auto lg:justify-start">
+            Dashboard
+            <i class="fa-solid fa-chevron-down text-xs"></i>
+          </button>
+          <div class="absolute left-0 top-full mt-2 hidden w-48 rounded-2xl border border-white/20 bg-slate-900/95 shadow-xl z-[120]" data-dashboard-menu>
+            <a href="admin-dashboard.html" class="block px-4 py-3 text-sm font-semibold text-white hover:bg-white/10 transition">Admin Dashboard</a>
+            <a href="user-dashboard.html" class="block px-4 py-3 text-sm font-semibold text-white hover:bg-white/10 transition">User Dashboard</a>
+          </div>
+        </div>
         <button type="button" data-rtl-toggle class="flex h-10 w-10 items-center justify-center rounded-full border border-white/20 bg-white/5 text-white transition hover:bg-white/10 hover:border-white/40 lg:w-10"><i class="fa-solid fa-globe"></i></button>
         <div class="flex w-full items-center gap-3 lg:w-auto lg:gap-2">
           <a href="signup.html" class="inline-flex w-full items-center justify-center rounded-full border border-white/20 bg-white/5 px-6 py-2.5 text-sm font-bold text-white transition hover:bg-white/10 hover:border-white/40 lg:w-auto">Sign Up</a>

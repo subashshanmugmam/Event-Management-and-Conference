@@ -66,6 +66,32 @@
 
         // Close all other menus first
         qsa('[data-home-menu]').forEach(m => m.classList.add('hidden'));
+        qsa('[data-dashboard-menu]').forEach(m => m.classList.add('hidden'));
+
+        // Toggle this menu
+        if (isHidden) {
+          menu.classList.remove('hidden');
+        } else {
+          menu.classList.add('hidden');
+        }
+      });
+    });
+
+    // Setup dropdown menus for dashboard switching
+    qsa('[data-dashboard-switch]').forEach(switchContainer => {
+      const btn = switchContainer.querySelector('button');
+      const menu = switchContainer.querySelector('[data-dashboard-menu]');
+
+      if (!btn || !menu) return;
+
+      // Toggle menu visibility on button click
+      btn.addEventListener('click', (e) => {
+        e.stopPropagation();
+        const isHidden = menu.classList.contains('hidden');
+
+        // Close all other menus first
+        qsa('[data-home-menu]').forEach(m => m.classList.add('hidden'));
+        qsa('[data-dashboard-menu]').forEach(m => m.classList.add('hidden'));
 
         // Toggle this menu
         if (isHidden) {
@@ -80,6 +106,9 @@
     document.addEventListener('click', (e) => {
       if (!e.target.closest('[data-home-switch]')) {
         qsa('[data-home-menu]').forEach(menu => menu.classList.add('hidden'));
+      }
+      if (!e.target.closest('[data-dashboard-switch]')) {
+        qsa('[data-dashboard-menu]').forEach(menu => menu.classList.add('hidden'));
       }
     });
   };
@@ -456,11 +485,32 @@
     });
   });
 
-  // Sidebar toggle (admin)
+  // Sidebar toggle (admin) - Enhanced for mobile
   const sidebar = qs('[data-sidebar]');
   const sidebarToggle = qs('[data-sidebar-toggle]');
-  if (sidebar && sidebarToggle) {
-    sidebarToggle.addEventListener('click', () => sidebar.classList.toggle('hidden'));
+  const sidebarClose = qs('[data-sidebar-close]');
+  const sidebarOverlay = qs('[data-sidebar-overlay]');
+  
+  const openSidebar = () => {
+    if (sidebar) sidebar.classList.add('open');
+    if (sidebarOverlay) sidebarOverlay.classList.add('open');
+    document.body.style.overflow = 'hidden';
+  };
+  
+  const closeSidebar = () => {
+    if (sidebar) sidebar.classList.remove('open');
+    if (sidebarOverlay) sidebarOverlay.classList.remove('open');
+    document.body.style.overflow = '';
+  };
+  
+  if (sidebarToggle) {
+    sidebarToggle.addEventListener('click', openSidebar);
+  }
+  if (sidebarClose) {
+    sidebarClose.addEventListener('click', closeSidebar);
+  }
+  if (sidebarOverlay) {
+    sidebarOverlay.addEventListener('click', closeSidebar);
   }
 
   // Countdown (coming soon)
