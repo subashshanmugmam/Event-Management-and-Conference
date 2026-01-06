@@ -1,5 +1,6 @@
 <!DOCTYPE html>
 <html lang="en" dir="ltr" class="scroll-smooth">
+
 <head>
   <meta charset="UTF-8" />
   <meta name="viewport" content="width=device-width, initial-scale=1.0" />
@@ -7,87 +8,158 @@
   <link rel="preconnect" href="https://fonts.googleapis.com" />
   <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
   <link href="https://fonts.googleapis.com/css2?family=Inter:wght@400;500;600;700;800&display=swap" rel="stylesheet" />
-  <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.5.1/css/all.min.css" crossorigin="anonymous" referrerpolicy="no-referrer" />
-    <link rel="icon" type="image/svg+xml" href="assets/images/placeholder-event.svg" />
+  <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.5.1/css/all.min.css"
+    crossorigin="anonymous" referrerpolicy="no-referrer" />
+  <link rel="icon" type="image/svg+xml" href="assets/images/placeholder-event.svg" />
   <script src="https://cdn.tailwindcss.com"></script>
   <style>
-    body{font-family:'Inter',sans-serif}
+    body {
+      font-family: 'Inter', sans-serif
+    }
+
     @keyframes float {
-      0%, 100% { transform: translateY(0); }
-      50% { transform: translateY(-10px); }
+
+      0%,
+      100% {
+        transform: translateY(0);
+      }
+
+      50% {
+        transform: translateY(-10px);
+      }
     }
+
     @keyframes gradient-shift {
-      0%, 100% { background-position: 0% 50%; }
-      50% { background-position: 100% 50%; }
+
+      0%,
+      100% {
+        background-position: 0% 50%;
+      }
+
+      50% {
+        background-position: 100% 50%;
+      }
     }
+
     @keyframes fadeInScale {
-      from { opacity: 0; transform: scale(0.9); }
-      to { opacity: 1; transform: scale(1); }
+      from {
+        opacity: 0;
+        transform: scale(0.9);
+      }
+
+      to {
+        opacity: 1;
+        transform: scale(1);
+      }
     }
-    .float-animation { animation: float 3s ease-in-out infinite; }
+
+    .float-animation {
+      animation: float 3s ease-in-out infinite;
+    }
+
     .gradient-animate {
       background: linear-gradient(135deg, #0ea5e9, #8b5cf6, #f97316);
       background-size: 200% 200%;
       animation: gradient-shift 5s ease infinite;
     }
-    [data-tab-panel] { animation: fadeInScale 0.5s ease-out forwards; }
+
+    [data-tab-panel] {
+      animation: fadeInScale 0.5s ease-out forwards;
+    }
+
     [data-expand-content] {
       max-height: 0;
       overflow: hidden;
       transition: max-height 0.5s cubic-bezier(0.175, 0.885, 0.32, 1.275);
     }
-    [data-expand-content].expanded { max-height: 500px; }
+
+    [data-expand-content].expanded {
+      max-height: 500px;
+    }
+
     .card-hover {
       transition: all 0.3s cubic-bezier(0.175, 0.885, 0.32, 1.275);
     }
+
     .card-hover:hover {
       transform: translateY(-8px) scale(1.03);
       box-shadow: 0 20px 60px rgba(56, 189, 248, 0.3);
     }
+
     .group:hover .group-hover\:block,
     .group .group-hover\:block:hover {
       display: block;
     }
+
     .group .group-hover\:block {
       transition: opacity 0.2s ease-in-out;
     }
   </style>
 </head>
+
 <body class="bg-slate-950 text-slate-100">
-  <a href="#main" class="sr-only focus:not-sr-only focus:absolute focus:top-4 focus:left-4 focus:bg-white focus:text-slate-900 focus:px-4 focus:py-2 focus:rounded">Skip to main content</a>
+  <a href="#main"
+    class="sr-only focus:not-sr-only focus:absolute focus:top-4 focus:left-4 focus:bg-white focus:text-slate-900 focus:px-4 focus:py-2 focus:rounded">Skip
+    to main content</a>
   <header data-header data-header-mode="dark" class="fixed top-0 left-0 z-50 w-full transition-all duration-300">
     <nav class="mx-auto flex max-w-7xl items-center justify-between px-4 py-4 lg:px-8">
       <a href="index.html" class="text-xl font-bold text-white">Eventia</a>
-      <button type="button" data-nav-toggle class="inline-flex items-center justify-center rounded-lg bg-white/10 px-3 py-2.5 text-white shadow lg:hidden" aria-label="Toggle navigation"><i class="fa-solid fa-bars text-base"></i></button>
-      <div data-nav-menu class="fixed inset-x-4 top-20 hidden flex-col gap-4 space-y-2 rounded-2xl bg-white/95 border border-slate-200 p-6 shadow-2xl backdrop-blur lg:static lg:flex lg:w-auto lg:flex-row lg:items-center lg:gap-8 lg:space-y-0 lg:bg-transparent lg:border-0 lg:p-0 lg:shadow-none">
+      <button type="button" data-nav-toggle
+        class="inline-flex items-center justify-center rounded-lg bg-white/10 px-3 py-2.5 text-white shadow lg:hidden"
+        aria-label="Toggle navigation"><i class="fa-solid fa-bars text-base"></i></button>
+      <div data-nav-menu
+        class="fixed inset-x-4 top-20 hidden flex-col gap-4 space-y-2 rounded-2xl bg-white/95 border border-slate-200 p-6 shadow-2xl backdrop-blur lg:static lg:flex lg:w-auto lg:flex-row lg:items-center lg:gap-8 lg:space-y-0 lg:bg-transparent lg:border-0 lg:p-0 lg:shadow-none">
         <div class="relative inline-block" data-home-switch>
-          <button type="button" class="flex w-full items-center justify-between gap-2 rounded-full border border-white/20 px-4 py-2 text-sm font-semibold text-white transition hover:border-white/40 lg:w-auto lg:justify-start">
+          <button type="button"
+            class="flex w-full items-center justify-between gap-2 rounded-full border border-white/20 px-4 py-2 text-sm font-semibold text-white transition hover:border-white/40 lg:w-auto lg:justify-start">
             Home
             <i class="fa-solid fa-chevron-down text-xs"></i>
           </button>
-          <div class="absolute left-0 top-full mt-2 hidden w-48 rounded-2xl border border-white/20 bg-slate-900/95 shadow-xl z-[120]" data-home-menu>
-            <a href="index.html" class="block px-4 py-3 text-sm font-semibold text-white hover:bg-white/10 transition">Home Version 1</a>
-            <a href="home2.html" class="block px-4 py-3 text-sm font-semibold text-white hover:bg-white/10 transition">Home Version 2</a>
+          <div
+            class="absolute left-0 top-full mt-2 hidden w-48 rounded-2xl border border-white/10 bg-slate-900 shadow-xl z-[120]"
+            data-home-menu>
+            <a href="index.html"
+              class="block px-4 py-3 text-sm font-semibold text-slate-200 hover:bg-white/5 transition">Home Version
+              1</a>
+            <a href="home2.html"
+              class="block px-4 py-3 text-sm font-semibold text-slate-200 hover:bg-white/5 transition">Home Version
+              2</a>
           </div>
         </div>
-        <a href="event-details.html" class="block w-full text-start text-sm font-semibold text-sky-300 lg:w-auto">Event Details</a>
-        <a href="schedule.html" class="block w-full text-start text-sm font-semibold hover:text-sky-300 lg:w-auto">Schedule</a>
-        <a href="register.html" class="block w-full text-start text-sm font-semibold hover:text-sky-300 lg:w-auto">Register</a>
-        <a href="contact.html" class="block w-full text-start text-sm font-semibold hover:text-sky-300 lg:w-auto">Contact</a>
+        <a href="event-details.html" class="block w-full text-start text-sm font-semibold text-sky-300 lg:w-auto">Event
+          Details</a>
+        <a href="schedule.html"
+          class="block w-full text-start text-sm font-semibold hover:text-sky-300 lg:w-auto">Schedule</a>
+        <a href="register.html"
+          class="block w-full text-start text-sm font-semibold hover:text-sky-300 lg:w-auto">Register</a>
+        <a href="contact.html"
+          class="block w-full text-start text-sm font-semibold hover:text-sky-300 lg:w-auto">Contact</a>
         <div class="relative inline-block" data-dashboard-switch>
-          <button type="button" class="flex w-full items-center justify-between gap-2 rounded-full border border-white/20 px-4 py-2 text-sm font-semibold text-white transition hover:border-white/40 lg:w-auto lg:justify-start">
+          <button type="button"
+            class="flex w-full items-center justify-between gap-2 rounded-full border border-white/20 px-4 py-2 text-sm font-semibold text-white transition hover:border-white/40 lg:w-auto lg:justify-start">
             Dashboard
             <i class="fa-solid fa-chevron-down text-xs"></i>
           </button>
-          <div class="absolute left-0 top-full mt-2 hidden w-48 rounded-2xl border border-white/20 bg-slate-900/95 shadow-xl z-[120]" data-dashboard-menu>
-            <a href="admin-dashboard.html" class="block px-4 py-3 text-sm font-semibold text-white hover:bg-white/10 transition">Admin Dashboard</a>
-            <a href="user-dashboard.html" class="block px-4 py-3 text-sm font-semibold text-white hover:bg-white/10 transition">User Dashboard</a>
+          <div
+            class="absolute left-0 top-full mt-2 hidden w-48 rounded-2xl border border-white/10 bg-slate-900 shadow-xl z-[120]"
+            data-dashboard-menu>
+            <a href="admin-dashboard.html"
+              class="block px-4 py-3 text-sm font-semibold text-slate-200 hover:bg-white/5 transition">Admin
+              Dashboard</a>
+            <a href="user-dashboard.html"
+              class="block px-4 py-3 text-sm font-semibold text-slate-200 hover:bg-white/5 transition">User
+              Dashboard</a>
           </div>
         </div>
-        <button type="button" data-rtl-toggle class="flex h-10 w-10 items-center justify-center rounded-full border border-white/20 bg-white/5 text-white transition hover:bg-white/10 hover:border-white/40 lg:w-10"><i class="fa-solid fa-globe"></i></button>
+        <button type="button" data-rtl-toggle
+          class="flex h-10 w-10 items-center justify-center rounded-full border border-white/20 bg-white/5 text-white transition hover:bg-white/10 hover:border-white/40 lg:w-10"><i
+            class="fa-solid fa-globe"></i></button>
         <div class="flex w-full items-center gap-3 lg:w-auto lg:gap-2">
-          <a href="signup.html" class="inline-flex w-full items-center justify-center rounded-full border border-white/20 bg-white/5 px-6 py-2.5 text-sm font-bold text-white transition hover:bg-white/10 hover:border-white/40 lg:w-auto">Sign Up</a>
-          <a href="login.html" class="inline-flex w-full items-center justify-center rounded-full bg-sky-500 px-5 py-2 text-sm font-semibold text-white shadow-lg shadow-sky-500/30 transition hover:bg-sky-400 lg:w-auto">Login</a>
+          <a href="signup.html"
+            class="inline-flex w-full items-center justify-center rounded-full border border-white/20 bg-white/5 px-6 py-2.5 text-sm font-bold text-white transition hover:bg-white/10 hover:border-white/40 lg:w-auto">Sign
+            Up</a>
+          <a href="login.html"
+            class="inline-flex w-full items-center justify-center rounded-full bg-sky-500 px-5 py-2 text-sm font-semibold text-white shadow-lg shadow-sky-500/30 transition hover:bg-sky-400 lg:w-auto">Login</a>
         </div>
       </div>
     </nav>
@@ -95,32 +167,44 @@
 
   <main id="main" class="pt-24">
     <section class="relative overflow-hidden bg-slate-900/60">
-      <div class="absolute inset-0 bg-[radial-gradient(circle_at_20%_20%,rgba(56,189,248,0.25),transparent_25%),radial-gradient(circle_at_80%_10%,rgba(139,92,246,0.25),transparent_20%)]"></div>
+      <div
+        class="absolute inset-0 bg-[radial-gradient(circle_at_20%_20%,rgba(56,189,248,0.25),transparent_25%),radial-gradient(circle_at_80%_10%,rgba(139,92,246,0.25),transparent_20%)]">
+      </div>
       <div class="relative mx-auto grid max-w-7xl items-center gap-10 px-4 py-16 lg:grid-cols-2 lg:px-8">
         <div class="space-y-4">
-          <p class="inline-flex items-center gap-2 rounded-full bg-white/10 px-4 py-1 text-xs uppercase tracking-[0.3em] text-sky-200">Event Overview</p>
+          <p
+            class="inline-flex items-center gap-2 rounded-full bg-white/10 px-4 py-1 text-xs uppercase tracking-[0.3em] text-sky-200">
+            Event Overview</p>
           <h1 class="text-4xl font-bold text-white">Eventia Summit 2025</h1>
-          <p class="text-slate-200">Four days of future-ready experiences, bringing together global leaders in live production, design, and technology.</p>
+          <p class="text-slate-200">Four days of future-ready experiences, bringing together global leaders in live
+            production, design, and technology.</p>
           <div class="flex flex-wrap gap-3 text-sm text-slate-200">
-            <span class="inline-flex items-center gap-2 rounded-full bg-white/10 px-3 py-2"><i class="fa-solid fa-calendar"></i> April 22-25</span>
-            <span class="inline-flex items-center gap-2 rounded-full bg-white/10 px-3 py-2"><i class="fa-solid fa-location-dot"></i> Dubai World Trade Centre</span>
-            <span class="inline-flex items-center gap-2 rounded-full bg-white/10 px-3 py-2"><i class="fa-solid fa-video"></i> Hybrid access</span>
+            <span class="inline-flex items-center gap-2 rounded-full bg-white/10 px-3 py-2"><i
+                class="fa-solid fa-calendar"></i> April 22-25</span>
+            <span class="inline-flex items-center gap-2 rounded-full bg-white/10 px-3 py-2"><i
+                class="fa-solid fa-location-dot"></i> Dubai World Trade Centre</span>
+            <span class="inline-flex items-center gap-2 rounded-full bg-white/10 px-3 py-2"><i
+                class="fa-solid fa-video"></i> Hybrid access</span>
           </div>
         </div>
         <div class="rounded-3xl border border-white/10 bg-white/5 p-6 shadow-lg">
           <p class="text-xs uppercase tracking-[0.25em] text-slate-300">Quick facts</p>
           <div class="mt-4 grid gap-4 sm:grid-cols-2">
             <div class="rounded-2xl bg-slate-900/70 p-4">
-              <p class="text-3xl font-bold text-white">5200+</p><p class="text-xs text-slate-300">Attendees</p>
+              <p class="text-3xl font-bold text-white">5200+</p>
+              <p class="text-xs text-slate-300">Attendees</p>
             </div>
             <div class="rounded-2xl bg-slate-900/70 p-4">
-              <p class="text-3xl font-bold text-white">86</p><p class="text-xs text-slate-300">Speakers</p>
+              <p class="text-3xl font-bold text-white">86</p>
+              <p class="text-xs text-slate-300">Speakers</p>
             </div>
             <div class="rounded-2xl bg-slate-900/70 p-4">
-              <p class="text-3xl font-bold text-white">140</p><p class="text-xs text-slate-300">Sessions</p>
+              <p class="text-3xl font-bold text-white">140</p>
+              <p class="text-xs text-slate-300">Sessions</p>
             </div>
             <div class="rounded-2xl bg-slate-900/70 p-4">
-              <p class="text-3xl font-bold text-white">48</p><p class="text-xs text-slate-300">Countries</p>
+              <p class="text-3xl font-bold text-white">48</p>
+              <p class="text-xs text-slate-300">Countries</p>
             </div>
           </div>
         </div>
@@ -131,26 +215,47 @@
       <div class="grid gap-8 lg:grid-cols-4">
         <div class="lg:col-span-3">
           <div class="flex flex-wrap gap-3" data-tabs>
-            <button class="rounded-full bg-sky-500 px-4 py-2 text-xs font-semibold text-white" data-tab="about">About</button>
-            <button class="rounded-full bg-white/10 px-4 py-2 text-xs font-semibold text-white" data-tab="venue">Venue</button>
-            <button class="rounded-full bg-white/10 px-4 py-2 text-xs font-semibold text-white" data-tab="speakers">Speakers</button>
-            <button class="rounded-full bg-white/10 px-4 py-2 text-xs font-semibold text-white" data-tab="tracks">Tracks</button>
-            <button class="rounded-full bg-white/10 px-4 py-2 text-xs font-semibold text-white" data-tab="sponsors">Sponsors</button>
+            <button class="rounded-full bg-sky-500 px-4 py-2 text-xs font-semibold text-white"
+              data-tab="about">About</button>
+            <button class="rounded-full bg-white/10 px-4 py-2 text-xs font-semibold text-white"
+              data-tab="venue">Venue</button>
+            <button class="rounded-full bg-white/10 px-4 py-2 text-xs font-semibold text-white"
+              data-tab="speakers">Speakers</button>
+            <button class="rounded-full bg-white/10 px-4 py-2 text-xs font-semibold text-white"
+              data-tab="tracks">Tracks</button>
+            <button class="rounded-full bg-white/10 px-4 py-2 text-xs font-semibold text-white"
+              data-tab="sponsors">Sponsors</button>
           </div>
           <div class="mt-8 space-y-6">
             <div data-tab-panel="about" class="space-y-4">
               <h3 class="text-2xl font-semibold text-white">About the summit</h3>
-              <p class="text-base text-slate-300 leading-relaxed">Eventia Summit 2025 is the premier gathering for event professionals, bringing together 5,200+ leaders from 48 countries for four transformative days. Experience 60+ mainstage keynotes, 140+ breakout sessions, 25+ hands-on labs, and unlimited networking opportunities.</p>
-              <p class="text-base text-slate-300 leading-relaxed">Explore cutting-edge event technology including AI-powered analytics, immersive AR/VR experiences, real-time engagement platforms, and sustainable event solutions. Earn up to 24 CMP credits across specialized certification tracks while connecting with Fortune 500 executives, innovative startups, and industry associations.</p>
-              <p class="text-base text-slate-300 leading-relaxed">From hybrid event strategies to experiential design, production management to community building, Eventia Summit delivers actionable insights that have driven 300% ROI increases for attendees. Join us to shape the future of events.</p>
+              <p class="text-base text-slate-300 leading-relaxed">Eventia Summit 2025 is the premier gathering for event
+                professionals, bringing together 5,200+ leaders from 48 countries for four transformative days.
+                Experience 60+ mainstage keynotes, 140+ breakout sessions, 25+ hands-on labs, and unlimited networking
+                opportunities.</p>
+              <p class="text-base text-slate-300 leading-relaxed">Explore cutting-edge event technology including
+                AI-powered analytics, immersive AR/VR experiences, real-time engagement platforms, and sustainable event
+                solutions. Earn up to 24 CMP credits across specialized certification tracks while connecting with
+                Fortune 500 executives, innovative startups, and industry associations.</p>
+              <p class="text-base text-slate-300 leading-relaxed">From hybrid event strategies to experiential design,
+                production management to community building, Eventia Summit delivers actionable insights that have
+                driven 300% ROI increases for attendees. Join us to shape the future of events.</p>
             </div>
             <div data-tab-panel="venue" class="hidden space-y-4">
               <h3 class="text-2xl font-semibold text-white">Venue & directions</h3>
-              <p class="text-base text-slate-300 leading-relaxed">Dubai World Trade Centre (DWTC) - Convention Gate, Sheikh Zayed Road, Dubai, UAE. Easily accessible via Dubai Metro (World Trade Centre Station - Red Line), taxi, or ride-sharing services. Ample parking available on-site.</p>
-              <p class="text-base text-slate-300 leading-relaxed"><strong class="text-white">Facilities:</strong> Dedicated registration entrances, prayer rooms, wellness pods, nursing rooms, hybrid broadcast studios, high-speed WiFi throughout, phone charging stations, multiple dining options, and accessibility services including wheelchair access, sign language interpreters, and quiet rooms.</p>
-              <p class="text-base text-slate-300 leading-relaxed"><strong class="text-white">Nearby Hotels:</strong> Partner rates available at Novotel World Trade Centre, Rove Downtown, and Jumeirah Emirates Towers. Free shuttle service provided from select hotels.</p>
+              <p class="text-base text-slate-300 leading-relaxed">Dubai World Trade Centre (DWTC) - Convention Gate,
+                Sheikh Zayed Road, Dubai, UAE. Easily accessible via Dubai Metro (World Trade Centre Station - Red
+                Line), taxi, or ride-sharing services. Ample parking available on-site.</p>
+              <p class="text-base text-slate-300 leading-relaxed"><strong class="text-white">Facilities:</strong>
+                Dedicated registration entrances, prayer rooms, wellness pods, nursing rooms, hybrid broadcast studios,
+                high-speed WiFi throughout, phone charging stations, multiple dining options, and accessibility services
+                including wheelchair access, sign language interpreters, and quiet rooms.</p>
+              <p class="text-base text-slate-300 leading-relaxed"><strong class="text-white">Nearby Hotels:</strong>
+                Partner rates available at Novotel World Trade Centre, Rove Downtown, and Jumeirah Emirates Towers. Free
+                shuttle service provided from select hotels.</p>
               <div class="aspect-video overflow-hidden rounded-2xl bg-slate-900/70">
-                <iframe title="Map placeholder" class="h-full w-full" src="https://www.openstreetmap.org/export/embed.html?bbox=55.273%2C25.223%2C55.284%2C25.232"></iframe>
+                <iframe title="Map placeholder" class="h-full w-full"
+                  src="https://www.openstreetmap.org/export/embed.html?bbox=55.273%2C25.223%2C55.284%2C25.232"></iframe>
               </div>
             </div>
             <div data-tab-panel="speakers" class="hidden space-y-4">
@@ -164,7 +269,11 @@
                     </div>
                     <button class="text-sm text-sky-300" data-expand-toggle>View bio</button>
                   </div>
-                  <p class="mt-2 hidden text-sm text-slate-300 leading-relaxed" data-expand-content>Elena Rivera has 15+ years of experience designing multi-sensory experiences across global venues for Fortune 500 clients. TEDx speaker and author of "Experience First", she's known for transforming attendee engagement through innovative spatial design and immersive storytelling. Her work has won 8 industry awards including Event Marketer Experience Design Award.</p>
+                  <p class="mt-2 hidden text-sm text-slate-300 leading-relaxed" data-expand-content>Elena Rivera has 15+
+                    years of experience designing multi-sensory experiences across global venues for Fortune 500
+                    clients. TEDx speaker and author of "Experience First", she's known for transforming attendee
+                    engagement through innovative spatial design and immersive storytelling. Her work has won 8 industry
+                    awards including Event Marketer Experience Design Award.</p>
                 </div>
                 <div class="rounded-2xl border border-white/10 bg-white/5 p-4" data-expand>
                   <div class="flex items-center justify-between">
@@ -174,7 +283,11 @@
                     </div>
                     <button class="text-sm text-sky-300" data-expand-toggle>View bio</button>
                   </div>
-                  <p class="mt-2 hidden text-sm text-slate-300 leading-relaxed" data-expand-content>Rohan Patel produced ceremonies for the World Cup and Olympics, bringing cutting-edge modular staging and adaptive tech stacks to audiences of millions. With 20+ industry awards and keynote appearances at Web Summit and CES, he specializes in blending live production with hybrid broadcast technology. His innovations have set new standards for large-scale event execution.</p>
+                  <p class="mt-2 hidden text-sm text-slate-300 leading-relaxed" data-expand-content>Rohan Patel produced
+                    ceremonies for the World Cup and Olympics, bringing cutting-edge modular staging and adaptive tech
+                    stacks to audiences of millions. With 20+ industry awards and keynote appearances at Web Summit and
+                    CES, he specializes in blending live production with hybrid broadcast technology. His innovations
+                    have set new standards for large-scale event execution.</p>
                 </div>
                 <div class="rounded-2xl border border-white/10 bg-white/5 p-4" data-expand>
                   <div class="flex items-center justify-between">
@@ -184,7 +297,11 @@
                     </div>
                     <button class="text-sm text-sky-300" data-expand-toggle>View bio</button>
                   </div>
-                  <p class="mt-2 hidden text-sm text-slate-300 leading-relaxed" data-expand-content>Dr. Hassan holds a PhD in Behavioral Psychology and is a pioneer in AI-driven attendee engagement with 100+ patents. Her research on emotional resonance at live events has been published in leading academic journals and implemented at major conferences worldwide. She advises governments and Fortune 100 companies on experience optimization.</p>
+                  <p class="mt-2 hidden text-sm text-slate-300 leading-relaxed" data-expand-content>Dr. Hassan holds a
+                    PhD in Behavioral Psychology and is a pioneer in AI-driven attendee engagement with 100+ patents.
+                    Her research on emotional resonance at live events has been published in leading academic journals
+                    and implemented at major conferences worldwide. She advises governments and Fortune 100 companies on
+                    experience optimization.</p>
                 </div>
                 <div class="rounded-2xl border border-white/10 bg-white/5 p-4" data-expand>
                   <div class="flex items-center justify-between">
@@ -194,20 +311,26 @@
                     </div>
                     <button class="text-sm text-sky-300" data-expand-toggle>View bio</button>
                   </div>
-                  <p class="mt-2 hidden text-sm text-slate-300 leading-relaxed" data-expand-content>Grace Nakamura is a zero-waste event pioneer and UN Climate Summit advisor recognized as a 40 Under 40 Sustainability Leader. She's helped over 500 events achieve carbon neutrality and created the industry-standard Green Event Framework now used globally. Her work proves that sustainability and profitability go hand-in-hand.</p>
+                  <p class="mt-2 hidden text-sm text-slate-300 leading-relaxed" data-expand-content>Grace Nakamura is a
+                    zero-waste event pioneer and UN Climate Summit advisor recognized as a 40 Under 40 Sustainability
+                    Leader. She's helped over 500 events achieve carbon neutrality and created the industry-standard
+                    Green Event Framework now used globally. Her work proves that sustainability and profitability go
+                    hand-in-hand.</p>
                 </div>
               </div>
             </div>
             <div data-tab-panel="tracks" class="hidden space-y-4">
               <h3 class="text-2xl font-semibold text-white">Certification Tracks (CMP Credits Available)</h3>
-              <p class="text-slate-300 leading-relaxed">Choose from 8 specialized tracks, each offering dedicated sessions, networking lounges, and certification opportunities:</p>
+              <p class="text-slate-300 leading-relaxed">Choose from 8 specialized tracks, each offering dedicated
+                sessions, networking lounges, and certification opportunities:</p>
               <div class="grid gap-4 sm:grid-cols-2 mt-4">
                 <div class="rounded-2xl border border-sky-400/40 bg-sky-500/10 p-4">
                   <div class="flex items-center gap-2 mb-2">
                     <i class="fa-solid fa-crown text-sky-300"></i>
                     <span class="font-bold text-sky-200">Strategic Leadership</span>
                   </div>
-                  <p class="text-xs text-slate-300">Executive strategies, team building, ROI optimization • 6 CMP credits</p>
+                  <p class="text-xs text-slate-300">Executive strategies, team building, ROI optimization • 6 CMP
+                    credits</p>
                 </div>
                 <div class="rounded-2xl border border-purple-400/40 bg-purple-500/10 p-4">
                   <div class="flex items-center gap-2 mb-2">
@@ -228,14 +351,16 @@
                     <i class="fa-solid fa-satellite-dish text-orange-300"></i>
                     <span class="font-bold text-orange-200">Hybrid & Virtual Innovation</span>
                   </div>
-                  <p class="text-xs text-slate-300">Streaming tech, engagement platforms, global reach • 5 CMP credits</p>
+                  <p class="text-xs text-slate-300">Streaming tech, engagement platforms, global reach • 5 CMP credits
+                  </p>
                 </div>
                 <div class="rounded-2xl border border-rose-400/40 bg-rose-500/10 p-4">
                   <div class="flex items-center gap-2 mb-2">
                     <i class="fa-solid fa-palette text-rose-300"></i>
                     <span class="font-bold text-rose-200">Experience Design</span>
                   </div>
-                  <p class="text-xs text-slate-300">Immersive storytelling, spatial design, sensory engagement • 4 CMP credits</p>
+                  <p class="text-xs text-slate-300">Immersive storytelling, spatial design, sensory engagement • 4 CMP
+                    credits</p>
                 </div>
                 <div class="rounded-2xl border border-cyan-400/40 bg-cyan-500/10 p-4">
                   <div class="flex items-center gap-2 mb-2">
@@ -249,52 +374,81 @@
                     <i class="fa-solid fa-handshake text-amber-300"></i>
                     <span class="font-bold text-amber-200">Sponsorship & Partnerships</span>
                   </div>
-                  <p class="text-xs text-slate-300">Revenue generation, brand alignment, proposal strategy • 3 CMP credits</p>
+                  <p class="text-xs text-slate-300">Revenue generation, brand alignment, proposal strategy • 3 CMP
+                    credits</p>
                 </div>
                 <div class="rounded-2xl border border-violet-400/40 bg-violet-500/10 p-4">
                   <div class="flex items-center gap-2 mb-2">
                     <i class="fa-solid fa-users text-violet-300"></i>
                     <span class="font-bold text-violet-200">Community Building</span>
                   </div>
-                  <p class="text-xs text-slate-300">Networking strategies, member engagement, retention • 4 CMP credits</p>
+                  <p class="text-xs text-slate-300">Networking strategies, member engagement, retention • 4 CMP credits
+                  </p>
                 </div>
               </div>
             </div>
             <div data-tab-panel="sponsors" class="hidden space-y-4">
               <h3 class="text-2xl font-semibold text-white">Event Partners & Sponsors</h3>
-              <p class="text-slate-300 leading-relaxed">We're proud to partner with industry-leading organizations that share our vision for the future of events.</p>
+              <p class="text-slate-300 leading-relaxed">We're proud to partner with industry-leading organizations that
+                share our vision for the future of events.</p>
               <div class="space-y-6 mt-4">
                 <div>
-                  <h4 class="text-sm font-bold text-yellow-300 mb-3 flex items-center gap-2"><i class="fa-solid fa-star"></i>Platinum Partners</h4>
+                  <h4 class="text-sm font-bold text-yellow-300 mb-3 flex items-center gap-2"><i
+                      class="fa-solid fa-star"></i>Platinum Partners</h4>
                   <div class="grid gap-3 sm:grid-cols-2">
-                    <div class="rounded-2xl border-2 border-yellow-400/60 bg-yellow-500/10 p-4 text-center font-bold text-white">Arcadia Global Events</div>
-                    <div class="rounded-2xl border-2 border-yellow-400/60 bg-yellow-500/10 p-4 text-center font-bold text-white">Vertex Technologies</div>
+                    <div
+                      class="rounded-2xl border-2 border-yellow-400/60 bg-yellow-500/10 p-4 text-center font-bold text-white">
+                      Arcadia Global Events</div>
+                    <div
+                      class="rounded-2xl border-2 border-yellow-400/60 bg-yellow-500/10 p-4 text-center font-bold text-white">
+                      Vertex Technologies</div>
                   </div>
                 </div>
                 <div>
-                  <h4 class="text-sm font-bold text-gray-300 mb-3 flex items-center gap-2"><i class="fa-solid fa-gem"></i>Gold Partners</h4>
+                  <h4 class="text-sm font-bold text-gray-300 mb-3 flex items-center gap-2"><i
+                      class="fa-solid fa-gem"></i>Gold Partners</h4>
                   <div class="grid gap-3 sm:grid-cols-3">
-                    <div class="rounded-2xl border border-gray-300/40 bg-white/5 p-4 text-center font-semibold text-white">SkyLab Studios</div>
-                    <div class="rounded-2xl border border-gray-300/40 bg-white/5 p-4 text-center font-semibold text-white">NovaCast Media</div>
-                    <div class="rounded-2xl border border-gray-300/40 bg-white/5 p-4 text-center font-semibold text-white">Pulse Events</div>
+                    <div
+                      class="rounded-2xl border border-gray-300/40 bg-white/5 p-4 text-center font-semibold text-white">
+                      SkyLab Studios</div>
+                    <div
+                      class="rounded-2xl border border-gray-300/40 bg-white/5 p-4 text-center font-semibold text-white">
+                      NovaCast Media</div>
+                    <div
+                      class="rounded-2xl border border-gray-300/40 bg-white/5 p-4 text-center font-semibold text-white">
+                      Pulse Events</div>
                   </div>
                 </div>
                 <div>
-                  <h4 class="text-sm font-bold text-orange-300 mb-3 flex items-center gap-2"><i class="fa-solid fa-trophy"></i>Silver Partners</h4>
+                  <h4 class="text-sm font-bold text-orange-300 mb-3 flex items-center gap-2"><i
+                      class="fa-solid fa-trophy"></i>Silver Partners</h4>
                   <div class="grid gap-3 sm:grid-cols-4">
-                    <div class="rounded-2xl border border-orange-200/30 bg-white/5 p-3 text-center text-sm text-white">Orbit Tech</div>
-                    <div class="rounded-2xl border border-orange-200/30 bg-white/5 p-3 text-center text-sm text-white">Catalyst Pro</div>
-                    <div class="rounded-2xl border border-orange-200/30 bg-white/5 p-3 text-center text-sm text-white">Lumina Live</div>
-                    <div class="rounded-2xl border border-orange-200/30 bg-white/5 p-3 text-center text-sm text-white">EcoVenue</div>
+                    <div class="rounded-2xl border border-orange-200/30 bg-white/5 p-3 text-center text-sm text-white">
+                      Orbit Tech</div>
+                    <div class="rounded-2xl border border-orange-200/30 bg-white/5 p-3 text-center text-sm text-white">
+                      Catalyst Pro</div>
+                    <div class="rounded-2xl border border-orange-200/30 bg-white/5 p-3 text-center text-sm text-white">
+                      Lumina Live</div>
+                    <div class="rounded-2xl border border-orange-200/30 bg-white/5 p-3 text-center text-sm text-white">
+                      EcoVenue</div>
                   </div>
                 </div>
                 <div>
-                  <h4 class="text-sm font-bold text-sky-300 mb-3 flex items-center gap-2"><i class="fa-solid fa-handshake"></i>Community Partners</h4>
+                  <h4 class="text-sm font-bold text-sky-300 mb-3 flex items-center gap-2"><i
+                      class="fa-solid fa-handshake"></i>Community Partners</h4>
                   <div class="flex flex-wrap gap-2">
-                    <span class="rounded-full border border-sky-400/30 bg-sky-500/10 px-3 py-1 text-xs text-sky-200">Meeting Professionals International</span>
-                    <span class="rounded-full border border-sky-400/30 bg-sky-500/10 px-3 py-1 text-xs text-sky-200">Event Marketing Institute</span>
-                    <span class="rounded-full border border-sky-400/30 bg-sky-500/10 px-3 py-1 text-xs text-sky-200">International Live Events Association</span>
-                    <span class="rounded-full border border-sky-400/30 bg-sky-500/10 px-3 py-1 text-xs text-sky-200">Professional Convention Management Association</span>
+                    <span
+                      class="rounded-full border border-sky-400/30 bg-sky-500/10 px-3 py-1 text-xs text-sky-200">Meeting
+                      Professionals International</span>
+                    <span
+                      class="rounded-full border border-sky-400/30 bg-sky-500/10 px-3 py-1 text-xs text-sky-200">Event
+                      Marketing Institute</span>
+                    <span
+                      class="rounded-full border border-sky-400/30 bg-sky-500/10 px-3 py-1 text-xs text-sky-200">International
+                      Live Events Association</span>
+                    <span
+                      class="rounded-full border border-sky-400/30 bg-sky-500/10 px-3 py-1 text-xs text-sky-200">Professional
+                      Convention Management Association</span>
                   </div>
                 </div>
               </div>
@@ -304,25 +458,38 @@
           <div class="mt-10">
             <h3 class="text-xl font-semibold text-white">Timeline</h3>
             <div class="mt-4 grid gap-4 md:grid-cols-3">
-              <div class="rounded-2xl border border-white/10 bg-white/5 p-4"><p class="text-sm text-slate-300">Early bird closes</p><p class="text-lg font-semibold text-white">Feb 28</p></div>
-              <div class="rounded-2xl border border-white/10 bg-white/5 p-4"><p class="text-sm text-slate-300">Agenda drop</p><p class="text-lg font-semibold text-white">Mar 12</p></div>
-              <div class="rounded-2xl border border-white/10 bg-white/5 p-4"><p class="text-sm text-slate-300">Summit kickoff</p><p class="text-lg font-semibold text-white">Apr 22</p></div>
+              <div class="rounded-2xl border border-white/10 bg-white/5 p-4">
+                <p class="text-sm text-slate-300">Early bird closes</p>
+                <p class="text-lg font-semibold text-white">Feb 28</p>
+              </div>
+              <div class="rounded-2xl border border-white/10 bg-white/5 p-4">
+                <p class="text-sm text-slate-300">Agenda drop</p>
+                <p class="text-lg font-semibold text-white">Mar 12</p>
+              </div>
+              <div class="rounded-2xl border border-white/10 bg-white/5 p-4">
+                <p class="text-sm text-slate-300">Summit kickoff</p>
+                <p class="text-lg font-semibold text-white">Apr 22</p>
+              </div>
             </div>
           </div>
 
           <div class="mt-10">
             <h3 class="text-xl font-semibold text-white">Related events</h3>
             <div class="mt-4 grid gap-4 md:grid-cols-3">
-              <div class="rounded-2xl border border-white/10 bg-white/5 p-4 text-sm text-slate-200">Experience Labs • June • Berlin</div>
-              <div class="rounded-2xl border border-white/10 bg-white/5 p-4 text-sm text-slate-200">Creator Forum • Aug • Toronto</div>
-              <div class="rounded-2xl border border-white/10 bg-white/5 p-4 text-sm text-slate-200">Production Summit • Nov • Singapore</div>
+              <div class="rounded-2xl border border-white/10 bg-white/5 p-4 text-sm text-slate-200">Experience Labs •
+                June • Berlin</div>
+              <div class="rounded-2xl border border-white/10 bg-white/5 p-4 text-sm text-slate-200">Creator Forum • Aug
+                • Toronto</div>
+              <div class="rounded-2xl border border-white/10 bg-white/5 p-4 text-sm text-slate-200">Production Summit •
+                Nov • Singapore</div>
             </div>
           </div>
 
           <div class="mt-10">
             <h3 class="text-2xl font-semibold text-white mb-6">Registration Packages</h3>
             <div class="grid gap-6 md:grid-cols-3">
-              <div class="rounded-3xl border-2 border-sky-400/40 bg-gradient-to-br from-sky-500/10 to-sky-600/5 p-6 card-hover">
+              <div
+                class="rounded-3xl border-2 border-sky-400/40 bg-gradient-to-br from-sky-500/10 to-sky-600/5 p-6 card-hover">
                 <div class="flex items-center justify-between mb-4">
                   <h4 class="text-xl font-bold text-sky-300">Standard Pass</h4>
                   <i class="fa-solid fa-ticket text-3xl text-sky-400"></i>
@@ -330,17 +497,28 @@
                 <p class="text-4xl font-black text-white mb-2">$899</p>
                 <p class="text-xs text-slate-400 mb-6">Early bird: $699 (ends Feb 28)</p>
                 <ul class="space-y-3 text-sm text-slate-300 mb-6">
-                  <li class="flex items-start gap-2"><i class="fa-solid fa-check text-emerald-400 mt-1"></i>Access to all mainstage sessions</li>
-                  <li class="flex items-start gap-2"><i class="fa-solid fa-check text-emerald-400 mt-1"></i>Networking events & receptions</li>
-                  <li class="flex items-start gap-2"><i class="fa-solid fa-check text-emerald-400 mt-1"></i>Expo hall & sponsor showcases</li>
-                  <li class="flex items-start gap-2"><i class="fa-solid fa-check text-emerald-400 mt-1"></i>Virtual platform access (30 days)</li>
-                  <li class="flex items-start gap-2"><i class="fa-solid fa-check text-emerald-400 mt-1"></i>Session recordings & materials</li>
-                  <li class="flex items-start gap-2"><i class="fa-solid fa-check text-emerald-400 mt-1"></i>Mobile app & digital agenda</li>
+                  <li class="flex items-start gap-2"><i class="fa-solid fa-check text-emerald-400 mt-1"></i>Access to
+                    all mainstage sessions</li>
+                  <li class="flex items-start gap-2"><i class="fa-solid fa-check text-emerald-400 mt-1"></i>Networking
+                    events & receptions</li>
+                  <li class="flex items-start gap-2"><i class="fa-solid fa-check text-emerald-400 mt-1"></i>Expo hall &
+                    sponsor showcases</li>
+                  <li class="flex items-start gap-2"><i class="fa-solid fa-check text-emerald-400 mt-1"></i>Virtual
+                    platform access (30 days)</li>
+                  <li class="flex items-start gap-2"><i class="fa-solid fa-check text-emerald-400 mt-1"></i>Session
+                    recordings & materials</li>
+                  <li class="flex items-start gap-2"><i class="fa-solid fa-check text-emerald-400 mt-1"></i>Mobile app &
+                    digital agenda</li>
                 </ul>
-                <a href="register.html" class="inline-flex w-full items-center justify-center rounded-full bg-sky-500 px-4 py-3 text-sm font-semibold text-white transition hover:bg-sky-400">Select Package</a>
+                <a href="register.html"
+                  class="inline-flex w-full items-center justify-center rounded-full bg-sky-500 px-4 py-3 text-sm font-semibold text-white transition hover:bg-sky-400">Select
+                  Package</a>
               </div>
-              <div class="rounded-3xl border-2 border-purple-400/60 bg-gradient-to-br from-purple-500/20 to-purple-600/10 p-6 card-hover relative overflow-hidden">
-                <div class="absolute top-4 right-4 rounded-full bg-yellow-400 px-3 py-1 text-xs font-bold text-slate-900">POPULAR</div>
+              <div
+                class="rounded-3xl border-2 border-purple-400/60 bg-gradient-to-br from-purple-500/20 to-purple-600/10 p-6 card-hover relative overflow-hidden">
+                <div
+                  class="absolute top-4 right-4 rounded-full bg-yellow-400 px-3 py-1 text-xs font-bold text-slate-900">
+                  POPULAR</div>
                 <div class="flex items-center justify-between mb-4">
                   <h4 class="text-xl font-bold text-purple-300">All-Access Pass</h4>
                   <i class="fa-solid fa-crown text-3xl text-purple-400"></i>
@@ -348,17 +526,27 @@
                 <p class="text-4xl font-black text-white mb-2">$1,499</p>
                 <p class="text-xs text-slate-400 mb-6">Early bird: $1,199 (ends Feb 28)</p>
                 <ul class="space-y-3 text-sm text-slate-300 mb-6">
-                  <li class="flex items-start gap-2"><i class="fa-solid fa-check text-emerald-400 mt-1"></i>Everything in Standard Pass</li>
-                  <li class="flex items-start gap-2"><i class="fa-solid fa-check text-emerald-400 mt-1"></i>All workshops & hands-on labs</li>
-                  <li class="flex items-start gap-2"><i class="fa-solid fa-check text-emerald-400 mt-1"></i>CMP certification track access</li>
-                  <li class="flex items-start gap-2"><i class="fa-solid fa-check text-emerald-400 mt-1"></i>VIP lounge & priority seating</li>
-                  <li class="flex items-start gap-2"><i class="fa-solid fa-check text-emerald-400 mt-1"></i>AI-matched 1:1 networking</li>
-                  <li class="flex items-start gap-2"><i class="fa-solid fa-check text-emerald-400 mt-1"></i>Welcome & farewell dinners</li>
-                  <li class="flex items-start gap-2"><i class="fa-solid fa-check text-emerald-400 mt-1"></i>Exclusive swag & gift box</li>
+                  <li class="flex items-start gap-2"><i class="fa-solid fa-check text-emerald-400 mt-1"></i>Everything
+                    in Standard Pass</li>
+                  <li class="flex items-start gap-2"><i class="fa-solid fa-check text-emerald-400 mt-1"></i>All
+                    workshops & hands-on labs</li>
+                  <li class="flex items-start gap-2"><i class="fa-solid fa-check text-emerald-400 mt-1"></i>CMP
+                    certification track access</li>
+                  <li class="flex items-start gap-2"><i class="fa-solid fa-check text-emerald-400 mt-1"></i>VIP lounge &
+                    priority seating</li>
+                  <li class="flex items-start gap-2"><i class="fa-solid fa-check text-emerald-400 mt-1"></i>AI-matched
+                    1:1 networking</li>
+                  <li class="flex items-start gap-2"><i class="fa-solid fa-check text-emerald-400 mt-1"></i>Welcome &
+                    farewell dinners</li>
+                  <li class="flex items-start gap-2"><i class="fa-solid fa-check text-emerald-400 mt-1"></i>Exclusive
+                    swag & gift box</li>
                 </ul>
-                <a href="register.html" class="inline-flex w-full items-center justify-center rounded-full gradient-animate px-4 py-3 text-sm font-semibold text-white transition hover:shadow-lg">Select Package</a>
+                <a href="register.html"
+                  class="inline-flex w-full items-center justify-center rounded-full gradient-animate px-4 py-3 text-sm font-semibold text-white transition hover:shadow-lg">Select
+                  Package</a>
               </div>
-              <div class="rounded-3xl border-2 border-amber-400/40 bg-gradient-to-br from-amber-500/10 to-amber-600/5 p-6 card-hover">
+              <div
+                class="rounded-3xl border-2 border-amber-400/40 bg-gradient-to-br from-amber-500/10 to-amber-600/5 p-6 card-hover">
                 <div class="flex items-center justify-between mb-4">
                   <h4 class="text-xl font-bold text-amber-300">Virtual Pass</h4>
                   <i class="fa-solid fa-laptop text-3xl text-amber-400"></i>
@@ -366,18 +554,29 @@
                 <p class="text-4xl font-black text-white mb-2">$299</p>
                 <p class="text-xs text-slate-400 mb-6">Early bird: $199 (ends Feb 28)</p>
                 <ul class="space-y-3 text-sm text-slate-300 mb-6">
-                  <li class="flex items-start gap-2"><i class="fa-solid fa-check text-emerald-400 mt-1"></i>Live stream all mainstage sessions</li>
-                  <li class="flex items-start gap-2"><i class="fa-solid fa-check text-emerald-400 mt-1"></i>Virtual networking lounge</li>
-                  <li class="flex items-start gap-2"><i class="fa-solid fa-check text-emerald-400 mt-1"></i>Live Q&A with speakers</li>
-                  <li class="flex items-start gap-2"><i class="fa-solid fa-check text-emerald-400 mt-1"></i>On-demand recordings (90 days)</li>
-                  <li class="flex items-start gap-2"><i class="fa-solid fa-check text-emerald-400 mt-1"></i>Downloadable resources & slides</li>
-                  <li class="flex items-start gap-2"><i class="fa-solid fa-check text-emerald-400 mt-1"></i>Digital certificate of attendance</li>
+                  <li class="flex items-start gap-2"><i class="fa-solid fa-check text-emerald-400 mt-1"></i>Live stream
+                    all mainstage sessions</li>
+                  <li class="flex items-start gap-2"><i class="fa-solid fa-check text-emerald-400 mt-1"></i>Virtual
+                    networking lounge</li>
+                  <li class="flex items-start gap-2"><i class="fa-solid fa-check text-emerald-400 mt-1"></i>Live Q&A
+                    with speakers</li>
+                  <li class="flex items-start gap-2"><i class="fa-solid fa-check text-emerald-400 mt-1"></i>On-demand
+                    recordings (90 days)</li>
+                  <li class="flex items-start gap-2"><i class="fa-solid fa-check text-emerald-400 mt-1"></i>Downloadable
+                    resources & slides</li>
+                  <li class="flex items-start gap-2"><i class="fa-solid fa-check text-emerald-400 mt-1"></i>Digital
+                    certificate of attendance</li>
                 </ul>
-                <a href="register.html" class="inline-flex w-full items-center justify-center rounded-full bg-amber-500 px-4 py-3 text-sm font-semibold text-white transition hover:bg-amber-400">Select Package</a>
+                <a href="register.html"
+                  class="inline-flex w-full items-center justify-center rounded-full bg-amber-500 px-4 py-3 text-sm font-semibold text-white transition hover:bg-amber-400">Select
+                  Package</a>
               </div>
             </div>
             <div class="mt-6 p-4 rounded-2xl bg-white/5 border border-white/10">
-              <p class="text-sm text-slate-300"><i class="fa-solid fa-users text-purple-400 mr-2"></i><strong class="text-white">Group Discounts:</strong> 10% off for 3-5 attendees, 15% off for 6-10, 20% off for 11+. <a href="contact.html" class="text-sky-400 hover:text-sky-300 underline">Contact us</a> for custom enterprise packages.</p>
+              <p class="text-sm text-slate-300"><i class="fa-solid fa-users text-purple-400 mr-2"></i><strong
+                  class="text-white">Group Discounts:</strong> 10% off for 3-5 attendees, 15% off for 6-10, 20% off for
+                11+. <a href="contact.html" class="text-sky-400 hover:text-sky-300 underline">Contact us</a> for custom
+                enterprise packages.</p>
             </div>
           </div>
 
@@ -385,7 +584,8 @@
             <h3 class="text-2xl font-semibold text-white mb-6">Travel & Accommodation</h3>
             <div class="grid gap-6 md:grid-cols-2">
               <div class="rounded-3xl border border-white/10 bg-white/5 p-6">
-                <h4 class="text-lg font-bold text-sky-300 mb-4 flex items-center gap-2"><i class="fa-solid fa-hotel"></i>Hotel Partners</h4>
+                <h4 class="text-lg font-bold text-sky-300 mb-4 flex items-center gap-2"><i
+                    class="fa-solid fa-hotel"></i>Hotel Partners</h4>
                 <div class="space-y-4">
                   <div class="p-4 rounded-2xl bg-slate-900/50 border border-white/5">
                     <p class="font-semibold text-white">Novotel World Trade Centre</p>
@@ -405,21 +605,25 @@
                 </div>
               </div>
               <div class="rounded-3xl border border-white/10 bg-white/5 p-6">
-                <h4 class="text-lg font-bold text-purple-300 mb-4 flex items-center gap-2"><i class="fa-solid fa-plane"></i>Getting There</h4>
+                <h4 class="text-lg font-bold text-purple-300 mb-4 flex items-center gap-2"><i
+                    class="fa-solid fa-plane"></i>Getting There</h4>
                 <div class="space-y-4 text-sm text-slate-300">
                   <div class="p-4 rounded-2xl bg-slate-900/50 border border-white/5">
-                    <p class="font-semibold text-white mb-2"><i class="fa-solid fa-plane-arrival text-sky-400 mr-2"></i>From Dubai International (DXB)</p>
+                    <p class="font-semibold text-white mb-2"><i
+                        class="fa-solid fa-plane-arrival text-sky-400 mr-2"></i>From Dubai International (DXB)</p>
                     <p>• Metro Red Line to World Trade Centre (25 min)</p>
                     <p>• Taxi or Uber (15-20 min, ~35 AED)</p>
                   </div>
                   <div class="p-4 rounded-2xl bg-slate-900/50 border border-white/5">
-                    <p class="font-semibold text-white mb-2"><i class="fa-solid fa-subway text-purple-400 mr-2"></i>Public Transit</p>
+                    <p class="font-semibold text-white mb-2"><i
+                        class="fa-solid fa-subway text-purple-400 mr-2"></i>Public Transit</p>
                     <p>• Metro: World Trade Centre Station (Red Line)</p>
                     <p>• Bus: Routes 27, 29, X28 stop adjacent</p>
                     <p>• Nol Card recommended for convenience</p>
                   </div>
                   <div class="p-4 rounded-2xl bg-slate-900/50 border border-white/5">
-                    <p class="font-semibold text-white mb-2"><i class="fa-solid fa-car text-orange-400 mr-2"></i>Parking & Rideshare</p>
+                    <p class="font-semibold text-white mb-2"><i class="fa-solid fa-car text-orange-400 mr-2"></i>Parking
+                      & Rideshare</p>
                     <p>• 3,000+ parking spaces (50 AED/day)</p>
                     <p>• Valet parking available (100 AED/day)</p>
                     <p>• Designated Uber/Careem pickup zone</p>
@@ -436,54 +640,81 @@
                 <div class="flex items-start justify-between gap-4">
                   <div class="flex-1">
                     <h4 class="font-semibold text-white mb-2">What's included in my registration?</h4>
-                    <p class="text-sm text-slate-300 leading-relaxed" data-expand-content>Your registration includes access to all sessions in your pass tier, networking events, expo hall, mobile app, complimentary WiFi, tea/coffee stations, and digital materials. All-Access passes also include workshops, labs, VIP lounge, and catered meals. Virtual passes include live streams and 90-day recording access.</p>
+                    <p class="text-sm text-slate-300 leading-relaxed" data-expand-content>Your registration includes
+                      access to all sessions in your pass tier, networking events, expo hall, mobile app, complimentary
+                      WiFi, tea/coffee stations, and digital materials. All-Access passes also include workshops, labs,
+                      VIP lounge, and catered meals. Virtual passes include live streams and 90-day recording access.
+                    </p>
                   </div>
-                  <button class="text-sky-400 hover:text-sky-300" data-expand-toggle><i class="fa-solid fa-chevron-down"></i></button>
+                  <button class="text-sky-400 hover:text-sky-300" data-expand-toggle><i
+                      class="fa-solid fa-chevron-down"></i></button>
                 </div>
               </div>
               <div class="rounded-2xl border border-white/10 bg-white/5 p-5 card-hover" data-expand>
                 <div class="flex items-start justify-between gap-4">
                   <div class="flex-1">
                     <h4 class="font-semibold text-white mb-2">Can I upgrade my pass after registering?</h4>
-                    <p class="text-sm text-slate-300 leading-relaxed" data-expand-content>Yes! You can upgrade from Standard to All-Access or from Virtual to in-person at any time before the event. Simply log into your account and pay the difference. Upgrades are subject to availability and pricing at the time of upgrade.</p>
+                    <p class="text-sm text-slate-300 leading-relaxed" data-expand-content>Yes! You can upgrade from
+                      Standard to All-Access or from Virtual to in-person at any time before the event. Simply log into
+                      your account and pay the difference. Upgrades are subject to availability and pricing at the time
+                      of upgrade.</p>
                   </div>
-                  <button class="text-sky-400 hover:text-sky-300" data-expand-toggle><i class="fa-solid fa-chevron-down"></i></button>
+                  <button class="text-sky-400 hover:text-sky-300" data-expand-toggle><i
+                      class="fa-solid fa-chevron-down"></i></button>
                 </div>
               </div>
               <div class="rounded-2xl border border-white/10 bg-white/5 p-5 card-hover" data-expand>
                 <div class="flex items-start justify-between gap-4">
                   <div class="flex-1">
                     <h4 class="font-semibold text-white mb-2">How do CMP credits work?</h4>
-                    <p class="text-sm text-slate-300 leading-relaxed" data-expand-content>Eventia Summit is approved for up to 24 CMP (Certified Meeting Professional) clock hours across our certification tracks. Attend sessions within your chosen track, check in via the mobile app, and receive your CMP certificate within 2 weeks post-event. Certificates are accepted by MPI, PCMA, and other major associations.</p>
+                    <p class="text-sm text-slate-300 leading-relaxed" data-expand-content>Eventia Summit is approved for
+                      up to 24 CMP (Certified Meeting Professional) clock hours across our certification tracks. Attend
+                      sessions within your chosen track, check in via the mobile app, and receive your CMP certificate
+                      within 2 weeks post-event. Certificates are accepted by MPI, PCMA, and other major associations.
+                    </p>
                   </div>
-                  <button class="text-sky-400 hover:text-sky-300" data-expand-toggle><i class="fa-solid fa-chevron-down"></i></button>
+                  <button class="text-sky-400 hover:text-sky-300" data-expand-toggle><i
+                      class="fa-solid fa-chevron-down"></i></button>
                 </div>
               </div>
               <div class="rounded-2xl border border-white/10 bg-white/5 p-5 card-hover" data-expand>
                 <div class="flex items-start justify-between gap-4">
                   <div class="flex-1">
                     <h4 class="font-semibold text-white mb-2">What is your cancellation policy?</h4>
-                    <p class="text-sm text-slate-300 leading-relaxed" data-expand-content>Cancellations made 60+ days before the event receive a full refund minus $50 processing fee. 30-59 days: 50% refund. Within 30 days: no refund, but registrations are transferable to another person at no charge. We recommend purchasing travel insurance for international attendees.</p>
+                    <p class="text-sm text-slate-300 leading-relaxed" data-expand-content>Cancellations made 60+ days
+                      before the event receive a full refund minus $50 processing fee. 30-59 days: 50% refund. Within 30
+                      days: no refund, but registrations are transferable to another person at no charge. We recommend
+                      purchasing travel insurance for international attendees.</p>
                   </div>
-                  <button class="text-sky-400 hover:text-sky-300" data-expand-toggle><i class="fa-solid fa-chevron-down"></i></button>
+                  <button class="text-sky-400 hover:text-sky-300" data-expand-toggle><i
+                      class="fa-solid fa-chevron-down"></i></button>
                 </div>
               </div>
               <div class="rounded-2xl border border-white/10 bg-white/5 p-5 card-hover" data-expand>
                 <div class="flex items-start justify-between gap-4">
                   <div class="flex-1">
                     <h4 class="font-semibold text-white mb-2">Is there a mobile app?</h4>
-                    <p class="text-sm text-slate-300 leading-relaxed" data-expand-content>Yes! Download the Eventia Summit app (iOS/Android) 2 weeks before the event. Features include personalized agenda builder, interactive venue maps, speaker bios, real-time notifications, AI-powered networking matches, live polls, Q&A, and more. The app also works offline for viewing your saved schedule.</p>
+                    <p class="text-sm text-slate-300 leading-relaxed" data-expand-content>Yes! Download the Eventia
+                      Summit app (iOS/Android) 2 weeks before the event. Features include personalized agenda builder,
+                      interactive venue maps, speaker bios, real-time notifications, AI-powered networking matches, live
+                      polls, Q&A, and more. The app also works offline for viewing your saved schedule.</p>
                   </div>
-                  <button class="text-sky-400 hover:text-sky-300" data-expand-toggle><i class="fa-solid fa-chevron-down"></i></button>
+                  <button class="text-sky-400 hover:text-sky-300" data-expand-toggle><i
+                      class="fa-solid fa-chevron-down"></i></button>
                 </div>
               </div>
               <div class="rounded-2xl border border-white/10 bg-white/5 p-5 card-hover" data-expand>
                 <div class="flex items-start justify-between gap-4">
                   <div class="flex-1">
                     <h4 class="font-semibold text-white mb-2">What accessibility services are available?</h4>
-                    <p class="text-sm text-slate-300 leading-relaxed" data-expand-content>We provide wheelchair accessible venues, reserved seating, sign language interpreters (request 14 days in advance), live captioning on all mainstage sessions, assistive listening devices, service animal accommodation, quiet rooms, prayer rooms, and dedicated accessibility support staff. Contact us at accessibility@eventia.com with specific needs.</p>
+                    <p class="text-sm text-slate-300 leading-relaxed" data-expand-content>We provide wheelchair
+                      accessible venues, reserved seating, sign language interpreters (request 14 days in advance), live
+                      captioning on all mainstage sessions, assistive listening devices, service animal accommodation,
+                      quiet rooms, prayer rooms, and dedicated accessibility support staff. Contact us at
+                      accessibility@eventia.com with specific needs.</p>
                   </div>
-                  <button class="text-sky-400 hover:text-sky-300" data-expand-toggle><i class="fa-solid fa-chevron-down"></i></button>
+                  <button class="text-sky-400 hover:text-sky-300" data-expand-toggle><i
+                      class="fa-solid fa-chevron-down"></i></button>
                 </div>
               </div>
             </div>
@@ -495,15 +726,19 @@
             <p class="text-xs uppercase tracking-[0.25em] text-slate-300">Join us</p>
             <p class="mt-2 text-2xl font-semibold text-white">Secure your seat</p>
             <p class="mt-2 text-sm text-slate-300">Limited executive passes remaining.</p>
-            <a href="register.html" class="mt-4 inline-flex w-full items-center justify-center rounded-full bg-sky-500 px-4 py-3 text-sm font-semibold text-white transition hover:bg-sky-400">Register Now</a>
+            <a href="register.html"
+              class="mt-4 inline-flex w-full items-center justify-center rounded-full bg-sky-500 px-4 py-3 text-sm font-semibold text-white transition hover:bg-sky-400">Register
+              Now</a>
             <div class="mt-4 space-y-2 text-sm text-slate-300">
               <p><i class="fa-solid fa-circle-check text-emerald-400"></i> Group rates available</p>
               <p><i class="fa-solid fa-circle-check text-emerald-400"></i> Hybrid access included</p>
               <p><i class="fa-solid fa-circle-check text-emerald-400"></i> CMP credits eligible</p>
             </div>
           </div>
-          <div class="rounded-3xl border border-purple-400/40 bg-gradient-to-br from-purple-500/10 to-purple-600/5 p-6 shadow-lg">
-            <p class="text-xs uppercase tracking-[0.25em] text-purple-300 mb-3"><i class="fa-solid fa-calendar-check mr-2"></i>Important Dates</p>
+          <div
+            class="rounded-3xl border border-purple-400/40 bg-gradient-to-br from-purple-500/10 to-purple-600/5 p-6 shadow-lg">
+            <p class="text-xs uppercase tracking-[0.25em] text-purple-300 mb-3"><i
+                class="fa-solid fa-calendar-check mr-2"></i>Important Dates</p>
             <div class="space-y-3 text-sm">
               <div class="flex justify-between items-center pb-2 border-b border-white/10">
                 <span class="text-slate-300">Early Bird Ends</span>
@@ -523,13 +758,19 @@
               </div>
             </div>
           </div>
-          <div class="rounded-3xl border border-sky-400/40 bg-gradient-to-br from-sky-500/10 to-sky-600/5 p-6 shadow-lg">
-            <p class="text-xs uppercase tracking-[0.25em] text-sky-300 mb-3"><i class="fa-solid fa-info-circle mr-2"></i>Quick Links</p>
+          <div
+            class="rounded-3xl border border-sky-400/40 bg-gradient-to-br from-sky-500/10 to-sky-600/5 p-6 shadow-lg">
+            <p class="text-xs uppercase tracking-[0.25em] text-sky-300 mb-3"><i
+                class="fa-solid fa-info-circle mr-2"></i>Quick Links</p>
             <div class="space-y-2 text-sm">
-              <a href="schedule.html" class="flex items-center gap-2 text-slate-300 hover:text-white transition"><i class="fa-solid fa-calendar text-sky-400"></i>View Full Schedule</a>
-              <a href="contact.html" class="flex items-center gap-2 text-slate-300 hover:text-white transition"><i class="fa-solid fa-envelope text-purple-400"></i>Contact Organizers</a>
-              <a href="#" class="flex items-center gap-2 text-slate-300 hover:text-white transition"><i class="fa-solid fa-download text-emerald-400"></i>Download Brochure</a>
-              <a href="#" class="flex items-center gap-2 text-slate-300 hover:text-white transition"><i class="fa-solid fa-share text-orange-400"></i>Share with Team</a>
+              <a href="schedule.html" class="flex items-center gap-2 text-slate-300 hover:text-white transition"><i
+                  class="fa-solid fa-calendar text-sky-400"></i>View Full Schedule</a>
+              <a href="contact.html" class="flex items-center gap-2 text-slate-300 hover:text-white transition"><i
+                  class="fa-solid fa-envelope text-purple-400"></i>Contact Organizers</a>
+              <a href="#" class="flex items-center gap-2 text-slate-300 hover:text-white transition"><i
+                  class="fa-solid fa-download text-emerald-400"></i>Download Brochure</a>
+              <a href="#" class="flex items-center gap-2 text-slate-300 hover:text-white transition"><i
+                  class="fa-solid fa-share text-orange-400"></i>Share with Team</a>
             </div>
           </div>
         </aside>
@@ -539,7 +780,9 @@
 
   <footer class="border-t border-white/10 bg-slate-950/80 py-12">
     <div class="mx-auto grid max-w-7xl gap-8 px-4 lg:grid-cols-4 lg:px-8">
-      <div><a href="index.html" class="text-xl font-bold text-white">Eventia</a><p class="mt-3 text-sm text-slate-300">Premium experiences crafted with intent.</p></div>
+      <div><a href="index.html" class="text-xl font-bold text-white">Eventia</a>
+        <p class="mt-3 text-sm text-slate-300">Premium experiences crafted with intent.</p>
+      </div>
       <div>
         <h3 class="text-sm font-semibold uppercase tracking-widest text-slate-200">Explore</h3>
         <ul class="mt-3 space-y-2 text-sm text-slate-300">
@@ -551,14 +794,16 @@
       </div>
       <div>
         <h3 class="text-sm font-semibold uppercase tracking-widest text-slate-200">Contact</h3>
-        <p class="mt-3 text-sm text-slate-300">hello@eventia.com<br/>+1 (415) 555-0123</p>
+        <p class="mt-3 text-sm text-slate-300">hello@eventia.com<br />+1 (415) 555-0123</p>
       </div>
       <div>
         <h3 class="text-sm font-semibold uppercase tracking-widest text-slate-200">Newsletter</h3>
         <form data-validate novalidate class="mt-3 space-y-2">
-          <input type="email" name="email" required placeholder="you@email.com" class="w-full rounded-full border border-white/40 bg-white/10 px-4 py-3 text-sm text-white placeholder:text-slate-400 focus:border-white" />
+          <input type="email" name="email" required placeholder="you@email.com"
+            class="w-full rounded-full border border-white/40 bg-white/10 px-4 py-3 text-sm text-white placeholder:text-slate-400 focus:border-white" />
           <p class="hidden text-xs text-rose-300" data-error>Email is required.</p>
-          <button type="submit" class="w-full rounded-full bg-sky-500 px-4 py-3 text-sm font-semibold text-white transition hover:bg-sky-400">Join</button>
+          <button type="submit"
+            class="w-full rounded-full bg-sky-500 px-4 py-3 text-sm font-semibold text-white transition hover:bg-sky-400">Join</button>
           <p class="hidden text-xs text-emerald-300" data-success>Welcome aboard!</p>
         </form>
       </div>
@@ -566,9 +811,12 @@
     <div class="mt-8 text-center text-xs text-slate-400">© 2025 Eventia Summit.</div>
   </footer>
 
-  <button type="button" data-scroll-top class="fixed bottom-6 right-6 hidden h-12 w-12 items-center justify-center rounded-full bg-sky-500 text-white shadow-lg shadow-sky-500/40 transition hover:bg-sky-400" aria-label="Scroll to top"><i class="fa-solid fa-arrow-up"></i></button>
+  <button type="button" data-scroll-top
+    class="fixed bottom-6 right-6 hidden h-12 w-12 items-center justify-center rounded-full bg-sky-500 text-white shadow-lg shadow-sky-500/40 transition hover:bg-sky-400"
+    aria-label="Scroll to top"><i class="fa-solid fa-arrow-up"></i></button>
 
   <script src="js/rtl-toggle.js"></script>
   <script src="js/main.js" defer></script>
 </body>
+
 </html>

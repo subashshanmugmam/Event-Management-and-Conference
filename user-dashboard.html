@@ -67,11 +67,13 @@
       left: auto;
       right: 0;
       border-right: none;
-      border-left: 1px solid rgba(255,255,255,0.1);
+      border-left: 1px solid rgba(255, 255, 255, 0.1);
     }
+
     [dir="rtl"] [data-sidebar].translate-x-0 {
       transform: translateX(0);
     }
+
     [dir="rtl"] [data-sidebar].-translate-x-full {
       transform: translateX(100%);
     }
@@ -122,7 +124,8 @@
   <header data-header data-header-mode="dark"
     class="fixed top-0 left-0 w-full z-50 transition-all duration-300 bg-transparent border-b border-transparent">
     <nav class="mx-auto flex max-w-7xl items-center justify-between px-4 py-4 lg:px-8">
-      <a href="index.html" class="text-xl font-bold tracking-tight text-white transition-colors duration-300">Eventia</a>
+      <a href="index.html"
+        class="text-xl font-bold tracking-tight text-white transition-colors duration-300">Eventia</a>
       <button type="button" data-nav-toggle
         class="inline-flex items-center justify-center rounded-lg bg-slate-900 px-3 py-2.5 text-white shadow lg:hidden"
         aria-label="Toggle navigation">
@@ -137,12 +140,14 @@
             <i class="fa-solid fa-chevron-down text-xs"></i>
           </button>
           <div
-            class="absolute left-0 top-full mt-2 hidden w-48 rounded-2xl border border-slate-200 bg-white shadow-xl z-[120]"
+            class="absolute left-0 top-full mt-2 hidden w-48 rounded-2xl border border-white/10 bg-slate-900 shadow-xl z-[120]"
             data-home-menu>
             <a href="index.html"
-              class="block px-4 py-3 text-sm font-semibold text-slate-900 hover:bg-slate-50 transition">Home Version 1</a>
+              class="block px-4 py-3 text-sm font-semibold text-slate-200 hover:bg-white/5 transition">Home Version
+              1</a>
             <a href="home2.html"
-              class="block px-4 py-3 text-sm font-semibold text-slate-900 hover:bg-slate-50 transition">Home Version 2</a>
+              class="block px-4 py-3 text-sm font-semibold text-slate-200 hover:bg-white/5 transition">Home Version
+              2</a>
           </div>
         </div>
         <a href="event-details.html"
@@ -161,12 +166,14 @@
             <i class="fa-solid fa-chevron-down text-xs"></i>
           </button>
           <div
-            class="absolute left-0 top-full mt-2 hidden w-48 rounded-2xl border border-slate-200 bg-white shadow-xl z-[120]"
+            class="absolute left-0 top-full mt-2 hidden w-48 rounded-2xl border border-white/10 bg-slate-900 shadow-xl z-[120]"
             data-dashboard-menu>
             <a href="admin-dashboard.html"
-              class="block px-4 py-3 text-sm font-semibold text-slate-900 hover:bg-slate-50 transition">Admin Dashboard</a>
+              class="block px-4 py-3 text-sm font-semibold text-slate-200 hover:bg-white/5 transition">Admin
+              Dashboard</a>
             <a href="user-dashboard.html"
-              class="block px-4 py-3 text-sm font-semibold text-slate-900 hover:bg-slate-50 transition">User Dashboard</a>
+              class="block px-4 py-3 text-sm font-semibold text-slate-200 hover:bg-white/5 transition">User
+              Dashboard</a>
           </div>
         </div>
         <button type="button" data-rtl-toggle
@@ -185,608 +192,609 @@
   </header>
 
   <main id="main" class="mx-auto max-w-6xl space-y-10 px-4 pt-28 pb-16 lg:px-8">
-          <section
-            class="rounded-3xl glass-panel ring-glow p-6 shadow-lg shadow-slate-900/40 transition hover:shadow-slate-900/60 card-fade">
-            <div class="flex flex-wrap items-center justify-between gap-4">
-              <div class="space-y-2">
-                <p class="text-xs uppercase tracking-[0.3em] text-slate-300">Welcome back</p>
-                <h1 class="text-2xl lg:text-3xl font-bold text-white">Hi Alex, your Eventia hub is ready.</h1>
-                <p class="text-sm text-slate-300">Review your schedule, tickets, and networking in one place.</p>
-                <div class="flex flex-wrap gap-3 pt-2 text-xs">
-                  <span
-                    class="rounded-full border border-emerald-300/40 bg-emerald-300/10 px-3 py-1 text-emerald-100">Profile
-                    90% complete</span>
-                  <span class="rounded-full border border-sky-300/40 bg-sky-300/10 px-3 py-1 text-sky-100">3 unread
-                    updates</span>
-                </div>
-              </div>
-              <div class="flex flex-col items-end gap-3">
-                <div class="rounded-2xl border border-white/10 bg-white/5 px-5 py-4 text-center shadow-inner">
-                  <p class="text-xs text-slate-300">Days to event</p>
-                  <p class="text-3xl font-bold text-white" data-count="48">0</p>
-                </div>
-                <div class="flex gap-2 text-xs">
-                  <a href="#schedule"
-                    class="inline-flex items-center gap-2 rounded-full bg-white/90 px-4 py-2 font-semibold text-slate-900 shadow-lg transition hover:translate-y-[-1px] hover:bg-white text-glow"><i
-                      class="fa-solid fa-calendar-check"></i>View schedule</a>
-                  <a href="#networking"
-                    class="inline-flex items-center gap-2 rounded-full border border-white/20 px-4 py-2 font-semibold text-white transition hover:border-white/50 hover:bg-white/5 text-glow"><i
-                      class="fa-solid fa-user-group"></i>Networking</a>
-                </div>
-              </div>
-            </div>
-          </section>
+    <section
+      class="rounded-3xl glass-panel ring-glow p-6 shadow-lg shadow-slate-900/40 transition hover:shadow-slate-900/60 card-fade">
+      <div class="flex flex-wrap items-center justify-between gap-4">
+        <div class="space-y-2">
+          <p class="text-xs uppercase tracking-[0.3em] text-slate-300">Welcome back</p>
+          <h1 class="text-2xl lg:text-3xl font-bold text-white">Hi Alex, your Eventia hub is ready.</h1>
+          <p class="text-sm text-slate-300">Review your schedule, tickets, and networking in one place.</p>
+          <div class="flex flex-wrap gap-3 pt-2 text-xs">
+            <span class="rounded-full border border-emerald-300/40 bg-emerald-300/10 px-3 py-1 text-emerald-100">Profile
+              90% complete</span>
+            <span class="rounded-full border border-sky-300/40 bg-sky-300/10 px-3 py-1 text-sky-100">3 unread
+              updates</span>
+          </div>
+        </div>
+        <div class="flex flex-col items-end gap-3">
+          <div class="rounded-2xl border border-white/10 bg-white/5 px-5 py-4 text-center shadow-inner">
+            <p class="text-xs text-slate-300">Days to event</p>
+            <p class="text-3xl font-bold text-white" data-count="48">0</p>
+          </div>
+          <div class="flex gap-2 text-xs">
+            <a href="#schedule"
+              class="inline-flex items-center gap-2 rounded-full bg-white/90 px-4 py-2 font-semibold text-slate-900 shadow-lg transition hover:translate-y-[-1px] hover:bg-white text-glow"><i
+                class="fa-solid fa-calendar-check"></i>View schedule</a>
+            <a href="#networking"
+              class="inline-flex items-center gap-2 rounded-full border border-white/20 px-4 py-2 font-semibold text-white transition hover:border-white/50 hover:bg-white/5 text-glow"><i
+                class="fa-solid fa-user-group"></i>Networking</a>
+          </div>
+        </div>
+      </div>
+    </section>
 
-          <section class="grid gap-4 md:grid-cols-3">
-            <div
-              class="rounded-2xl border border-white/10 bg-white/5 p-4 shadow-sm transition hover:-translate-y-1 hover:border-sky-300/50 hover:shadow-lg hover:shadow-sky-900/30 card-fade">
-              <p class="text-xs text-slate-300">Sessions registered</p>
-              <p class="text-2xl font-bold text-white">6</p>
-              <p class="mt-1 text-xs text-slate-400">2 today • 1 conflict resolved</p>
-            </div>
-            <div
-              class="rounded-2xl border border-white/10 bg-white/5 p-4 shadow-sm transition hover:-translate-y-1 hover:border-emerald-300/50 hover:shadow-lg hover:shadow-emerald-900/30 card-fade">
-              <p class="text-xs text-slate-300">Networking matches</p>
-              <p class="text-2xl font-bold text-white">12</p>
-              <p class="mt-1 text-xs text-slate-400">4 new intros pending</p>
-            </div>
-            <div
-              class="rounded-2xl border border-white/10 bg-white/5 p-4 shadow-sm transition hover:-translate-y-1 hover:border-purple-300/50 hover:shadow-lg hover:shadow-purple-900/30 card-fade">
-              <p class="text-xs text-slate-300">Tickets</p>
-              <p class="text-2xl font-bold text-white">1</p>
-              <p class="mt-1 text-xs text-slate-400">VIP • Seat B12</p>
-            </div>
-          </section>
+    <section class="grid gap-4 md:grid-cols-3">
+      <div
+        class="rounded-2xl border border-white/10 bg-white/5 p-4 shadow-sm transition hover:-translate-y-1 hover:border-sky-300/50 hover:shadow-lg hover:shadow-sky-900/30 card-fade">
+        <p class="text-xs text-slate-300">Sessions registered</p>
+        <p class="text-2xl font-bold text-white">6</p>
+        <p class="mt-1 text-xs text-slate-400">2 today • 1 conflict resolved</p>
+      </div>
+      <div
+        class="rounded-2xl border border-white/10 bg-white/5 p-4 shadow-sm transition hover:-translate-y-1 hover:border-emerald-300/50 hover:shadow-lg hover:shadow-emerald-900/30 card-fade">
+        <p class="text-xs text-slate-300">Networking matches</p>
+        <p class="text-2xl font-bold text-white">12</p>
+        <p class="mt-1 text-xs text-slate-400">4 new intros pending</p>
+      </div>
+      <div
+        class="rounded-2xl border border-white/10 bg-white/5 p-4 shadow-sm transition hover:-translate-y-1 hover:border-purple-300/50 hover:shadow-lg hover:shadow-purple-900/30 card-fade">
+        <p class="text-xs text-slate-300">Tickets</p>
+        <p class="text-2xl font-bold text-white">1</p>
+        <p class="mt-1 text-xs text-slate-400">VIP • Seat B12</p>
+      </div>
+    </section>
 
-          <section class="grid gap-6 lg:grid-cols-3" id="insights">
-            <article
-              class="lg:col-span-2 rounded-3xl border border-white/10 bg-gradient-to-br from-white/10 via-white/5 to-transparent p-6 shadow-lg shadow-slate-900/40 transition hover:shadow-slate-900/60 card-fade">
-              <div class="flex flex-wrap items-center justify-between gap-3">
-                <div>
-                  <p class="text-xs uppercase tracking-[0.25em] text-slate-300">Engagement pulse</p>
-                  <h2 class="text-lg font-semibold text-white">Check-ins vs. live viewers</h2>
-                </div>
-                <div class="flex gap-4 text-xs text-slate-300">
-                  <div>
-                    <p class="text-slate-400">Avg check-ins</p>
-                    <p class="text-xl font-semibold text-white">82%</p>
-                  </div>
-                  <div>
-                    <p class="text-slate-400">Live viewers</p>
-                    <p class="text-xl font-semibold text-white">68%</p>
-                  </div>
-                </div>
-              </div>
-              <div class="mt-6">
-                <svg viewBox="0 0 420 200" role="img" aria-label="Engagement trend over the last seven days"
-                  class="h-48 w-full">
-                  <defs>
-                    <linearGradient id="fill-trend" x1="0%" y1="0%" x2="0%" y2="100%">
-                      <stop offset="0%" stop-color="rgba(14,165,233,0.45)" />
-                      <stop offset="100%" stop-color="rgba(14,165,233,0)" />
-                    </linearGradient>
-                    <linearGradient id="stroke-trend" x1="0%" y1="0%" x2="100%" y2="0%">
-                      <stop offset="0%" stop-color="#38bdf8" />
-                      <stop offset="100%" stop-color="#c084fc" />
-                    </linearGradient>
-                  </defs>
-                  <polyline points="0,140 60,110 120,130 180,90 240,100 300,70 360,60 420,80" fill="none" stroke="#1e293b"
-                    stroke-width="2" opacity="0.2" />
-                  <polygon points="0,140 60,110 120,130 180,90 240,100 300,70 360,60 420,80 420,200 0,200" fill="url(#fill-trend)" />
-                  <polyline points="0,140 60,110 120,130 180,90 240,100 300,70 360,60 420,80" fill="none"
-                    stroke="url(#stroke-trend)" stroke-width="4" stroke-linecap="round" />
-                  <g fill="#38bdf8">
-                    <circle cx="180" cy="90" r="5" />
-                    <circle cx="360" cy="60" r="5" />
-                  </g>
-                </svg>
-              </div>
-              <div class="mt-4 flex flex-wrap gap-4 text-xs text-slate-300">
-                <span class="rounded-full border border-sky-300/40 bg-sky-300/10 px-3 py-1 text-sky-100">+12% week over week</span>
-                <span class="rounded-full border border-purple-300/40 bg-purple-300/10 px-3 py-1 text-purple-100">Peak at 11:00 AM</span>
-              </div>
-            </article>
-
-            <article
-              class="space-y-4 rounded-3xl border border-white/10 bg-white/5 p-6 shadow-lg shadow-slate-900/40 transition hover:shadow-slate-900/60 card-fade">
-              <div class="flex items-center justify-between">
-                <h2 class="text-lg font-semibold text-white">Session fill rate</h2>
-                <span class="text-xs text-slate-400">Live</span>
-              </div>
-              <div class="space-y-3">
-                <div>
-                  <div class="flex items-center justify-between text-xs text-slate-300">
-                    <span>Main stage</span>
-                    <span>92%</span>
-                  </div>
-                  <div class="mt-1 h-3 rounded-full bg-white/10">
-                    <div class="h-full rounded-full bg-gradient-to-r from-emerald-400 to-sky-400" style="width:92%"></div>
-                  </div>
-                </div>
-                <div>
-                  <div class="flex items-center justify-between text-xs text-slate-300">
-                    <span>Workshops</span>
-                    <span>74%</span>
-                  </div>
-                  <div class="mt-1 h-3 rounded-full bg-white/10">
-                    <div class="h-full rounded-full bg-gradient-to-r from-sky-400 to-purple-400" style="width:74%"></div>
-                  </div>
-                </div>
-                <div>
-                  <div class="flex items-center justify-between text-xs text-slate-300">
-                    <span>Meetups</span>
-                    <span>61%</span>
-                  </div>
-                  <div class="mt-1 h-3 rounded-full bg-white/10">
-                    <div class="h-full rounded-full bg-gradient-to-r from-cyan-400 to-rose-400" style="width:61%"></div>
-                  </div>
-                </div>
-              </div>
-              <p class="text-xs text-slate-400">Add more seats to the 14:00 sustainability lab to meet demand.</p>
-            </article>
-
-            <article
-              class="space-y-4 rounded-3xl border border-white/10 bg-white/5 p-6 text-center shadow-lg shadow-slate-900/40 transition hover:shadow-slate-900/60 card-fade">
-              <h2 class="text-lg font-semibold text-white">Channel split</h2>
-              <div class="mx-auto w-40">
-                <svg viewBox="0 0 160 160" role="img" aria-label="In-person vs virtual attendance split">
-                  <circle cx="80" cy="80" r="60" stroke="#1e293b" stroke-width="18" fill="none" opacity="0.35" />
-                  <circle cx="80" cy="80" r="60" stroke="#34d399" stroke-width="18" fill="none"
-                    stroke-dasharray="377" stroke-dashoffset="75" stroke-linecap="round" />
-                  <circle cx="80" cy="80" r="60" stroke="#38bdf8" stroke-width="18" fill="none"
-                    stroke-dasharray="377" stroke-dashoffset="240" stroke-linecap="round" />
-                </svg>
-              </div>
-              <div class="flex items-center justify-center gap-6 text-sm text-slate-200">
-                <div>
-                  <p class="text-2xl font-bold text-white">58%</p>
-                  <p class="text-xs text-emerald-200">In-person</p>
-                </div>
-                <div>
-                  <p class="text-2xl font-bold text-white">42%</p>
-                  <p class="text-xs text-sky-200">Virtual</p>
-                </div>
-              </div>
-              <p class="text-xs text-slate-400">Virtual audience grew 9% after last keynote replay drop.</p>
-            </article>
-          </section>
-
-          <section class="grid gap-6 lg:grid-cols-2">
-            <article
-              class="rounded-3xl border border-white/10 bg-white/5 p-6 shadow-lg shadow-slate-900/40 transition hover:shadow-slate-900/60 card-fade">
-              <div class="flex items-center justify-between">
-                <div>
-                  <p class="text-xs uppercase tracking-[0.3em] text-slate-300">Ticket funnel</p>
-                  <h2 class="text-lg font-semibold text-white">Lead → Paid conversion</h2>
-                </div>
-                <span class="text-xs text-emerald-300">+4% this week</span>
-              </div>
-              <div class="mt-6 space-y-4">
-                <div>
-                  <div class="flex items-center justify-between text-xs text-slate-300">
-                    <span>Leads</span>
-                    <span>3,420</span>
-                  </div>
-                  <div class="mt-1 h-3 rounded-full bg-white/10">
-                    <div class="h-full rounded-full bg-gradient-to-r from-cyan-400 to-blue-500" style="width:100%"></div>
-                  </div>
-                </div>
-                <div>
-                  <div class="flex items-center justify-between text-xs text-slate-300">
-                    <span>Qualified</span>
-                    <span>1,980</span>
-                  </div>
-                  <div class="mt-1 h-3 rounded-full bg-white/10">
-                    <div class="h-full rounded-full bg-gradient-to-r from-blue-500 to-indigo-500" style="width:58%"></div>
-                  </div>
-                </div>
-                <div>
-                  <div class="flex items-center justify-between text-xs text-slate-300">
-                    <span>Trial / Demo</span>
-                    <span>940</span>
-                  </div>
-                  <div class="mt-1 h-3 rounded-full bg-white/10">
-                    <div class="h-full rounded-full bg-gradient-to-r from-indigo-500 to-violet-500" style="width:28%"></div>
-                  </div>
-                </div>
-                <div>
-                  <div class="flex items-center justify-between text-xs text-slate-300">
-                    <span>Paid</span>
-                    <span>640</span>
-                  </div>
-                  <div class="mt-1 h-3 rounded-full bg-white/10">
-                    <div class="h-full rounded-full bg-gradient-to-r from-violet-500 to-fuchsia-500" style="width:19%"></div>
-                  </div>
-                </div>
-              </div>
-              <p class="mt-4 text-xs text-slate-400">Most drop-off occurs between demo and payment—surface limited-time bundles.</p>
-            </article>
-
-            <article
-              class="rounded-3xl border border-white/10 bg-white/5 p-6 shadow-lg shadow-slate-900/40 transition hover:shadow-slate-900/60 card-fade">
-              <div class="flex items-center justify-between">
-                <div>
-                  <p class="text-xs uppercase tracking-[0.3em] text-slate-300">Regional mix</p>
-                  <h2 class="text-lg font-semibold text-white">Attendees by region</h2>
-                </div>
-                <span class="text-xs text-slate-400">Rolling 30 days</span>
-              </div>
-              <div class="mt-6 grid gap-4 md:grid-cols-2">
-                <div class="relative mx-auto h-40 w-40">
-                  <svg viewBox="0 0 200 200" role="img" aria-label="Regional distribution donut chart">
-                    <circle cx="100" cy="100" r="70" stroke="#1e293b" stroke-width="24" fill="none" opacity="0.35" />
-                    <circle cx="100" cy="100" r="70" stroke="#34d399" stroke-width="24" fill="none"
-                      stroke-dasharray="439" stroke-dashoffset="70" stroke-linecap="round" />
-                    <circle cx="100" cy="100" r="70" stroke="#38bdf8" stroke-width="24" fill="none"
-                      stroke-dasharray="439" stroke-dashoffset="210" stroke-linecap="round" />
-                    <circle cx="100" cy="100" r="70" stroke="#c084fc" stroke-width="24" fill="none"
-                      stroke-dasharray="439" stroke-dashoffset="330" stroke-linecap="round" />
-                  </svg>
-                  <div class="absolute inset-0 flex flex-col items-center justify-center text-center text-white">
-                    <p class="text-xs uppercase tracking-[0.2em] text-slate-300">Global</p>
-                    <p class="text-2xl font-bold">4.7K</p>
-                  </div>
-                </div>
-                <ul class="space-y-3 text-sm text-slate-200">
-                  <li class="flex items-center justify-between">
-                    <span class="flex items-center gap-2">
-                      <span class="h-2 w-2 rounded-full bg-emerald-300"></span>EMEA
-                    </span>
-                    <span>42%</span>
-                  </li>
-                  <li class="flex items-center justify-between">
-                    <span class="flex items-center gap-2">
-                      <span class="h-2 w-2 rounded-full bg-sky-300"></span>AMER
-                    </span>
-                    <span>31%</span>
-                  </li>
-                  <li class="flex items-center justify-between">
-                    <span class="flex items-center gap-2">
-                      <span class="h-2 w-2 rounded-full bg-violet-300"></span>APAC
-                    </span>
-                    <span>19%</span>
-                  </li>
-                  <li class="flex items-center justify-between">
-                    <span class="flex items-center gap-2">
-                      <span class="h-2 w-2 rounded-full bg-rose-300"></span>LATAM
-                    </span>
-                    <span>8%</span>
-                  </li>
-                </ul>
-              </div>
-              <p class="mt-4 text-xs text-slate-400">APAC registrations are trending +6% week over week after timezone-friendly releases.</p>
-            </article>
-          </section>
-
-          <section class="grid gap-6 lg:grid-cols-3" id="schedule">
-            <div
-              class="lg:col-span-2 rounded-3xl border border-white/10 bg-white/5 p-6 shadow-lg shadow-slate-900/30 transition hover:shadow-slate-900/50 card-fade">
-              <div class="flex items-center justify-between gap-3">
-                <h2 class="text-lg font-semibold text-white">My schedule</h2>
-                <div class="flex gap-2 text-xs">
-                  <button
-                    class="rounded-full border border-white/20 px-3 py-1 text-white transition hover:border-white/40 hover:bg-white/10 text-glow">Calendar
-                    view</button>
-                  <button
-                    class="rounded-full border border-sky-300/40 bg-sky-300/10 px-3 py-1 text-sky-100 transition hover:border-sky-200 hover:bg-sky-200/10 text-glow">Add
-                    session</button>
-                </div>
-              </div>
-              <ul class="mt-4 space-y-3 text-sm text-slate-200" data-session-list>
-                <li
-                  class="flex items-center justify-between rounded-2xl border border-white/10 bg-white/5 p-3 transition hover:border-sky-300/40 hover:bg-sky-300/5 card-fade">
-                  <div>
-                    <p class="font-semibold text-white">Keynote • 10:00</p>
-                    <p class="text-xs text-slate-300">Main Hall</p>
-                  </div>
-                  <div class="flex items-center gap-3 text-xs">
-                    <span class="rounded-full bg-emerald-400/20 px-2 py-1 text-emerald-100">Booked</span>
-                    <button class="text-rose-300 transition hover:text-rose-200 text-glow"
-                      data-remove-session>Remove</button>
-                  </div>
-                </li>
-                <li
-                  class="flex items-center justify-between rounded-2xl border border-white/10 bg-white/5 p-3 transition hover:border-sky-300/40 hover:bg-sky-300/5 card-fade">
-                  <div>
-                    <p class="font-semibold text-white">Workshop • 13:30</p>
-                    <p class="text-xs text-slate-300">Studio B</p>
-                  </div>
-                  <div class="flex items-center gap-3 text-xs">
-                    <span class="rounded-full bg-amber-400/20 px-2 py-1 text-amber-100">Waitlist</span>
-                    <button class="text-rose-300 transition hover:text-rose-200 text-glow"
-                      data-remove-session>Remove</button>
-                  </div>
-                </li>
-                <li
-                  class="flex items-center justify-between rounded-2xl border border-white/10 bg-white/5 p-3 transition hover:border-sky-300/40 hover:bg-sky-300/5 card-fade">
-                  <div>
-                    <p class="font-semibold text-white">Meetup • 17:00</p>
-                    <p class="text-xs text-slate-300">Networking Lounge</p>
-                  </div>
-                  <div class="flex items-center gap-3 text-xs">
-                    <span class="rounded-full bg-sky-400/20 px-2 py-1 text-sky-100">Confirmed</span>
-                    <button class="text-rose-300 transition hover:text-rose-200 text-glow"
-                      data-remove-session>Remove</button>
-                  </div>
-                </li>
-              </ul>
-            </div>
-
-            <div
-              class="rounded-3xl border border-white/10 bg-white/5 p-6 shadow-lg shadow-slate-900/30 space-y-5 transition hover:shadow-slate-900/50 card-fade">
-              <div class="flex items-center justify-between">
-                <h2 class="text-lg font-semibold text-white">My ticket</h2>
-                <button
-                  class="inline-flex items-center gap-2 rounded-full border border-white/20 px-3 py-1 text-xs font-semibold text-white transition hover:border-white/40 hover:bg-white/10 text-glow"><i
-                    class="fa-solid fa-download"></i>Download</button>
-              </div>
-              <div
-                class="rounded-2xl border border-dashed border-white/20 bg-white/5 p-4 text-sm text-slate-200 text-center tracking-widest transition hover:border-white/40 hover:bg-white/10">
-                QR CODE • VIP-B12</div>
-              <div
-                class="rounded-2xl border border-white/10 bg-white/5 p-4 text-sm text-slate-200 space-y-2 transition hover:border-white/30 hover:bg-white/10">
-                <div class="flex items-center justify-between text-xs text-slate-300">
-                  <span>Networking suggestions</span>
-                  <span class="rounded-full bg-emerald-400/20 px-2 py-1 text-emerald-100">3 new</span>
-                </div>
-                <ul class="space-y-1 text-xs">
-                  <li class="flex items-center justify-between"><span>Priya S • Marketing</span><button
-                      class="text-sky-300 transition hover:text-sky-200 text-glow">Connect</button></li>
-                  <li class="flex items-center justify-between"><span>Omar K • Product</span><button
-                      class="text-sky-300 transition hover:text-sky-200 text-glow">Connect</button></li>
-                  <li class="flex items-center justify-between"><span>Julia M • Ops</span><button
-                      class="text-sky-300 transition hover:text-sky-200 text-glow">Connect</button></li>
-                </ul>
-              </div>
-            </div>
-          </section>
-
-          <section class="grid gap-6 lg:grid-cols-3" id="networking">
-            <div
-              class="lg:col-span-2 rounded-3xl border border-white/10 bg-white/5 p-6 shadow-lg shadow-slate-900/30 space-y-4 transition hover:shadow-slate-900/50 card-fade">
-              <div class="flex items-center justify-between">
-                <h2 class="text-lg font-semibold text-white">Recommended sessions</h2>
-                <button class="text-xs text-sky-300 transition hover:text-sky-200 text-glow">See all</button>
-              </div>
-              <div class="grid gap-4 md:grid-cols-2">
-                <article
-                  class="rounded-2xl border border-white/10 bg-white/5 p-4 shadow-sm transition hover:-translate-y-1 hover:border-sky-300/50 hover:shadow-lg hover:shadow-sky-900/30 card-fade">
-                  <div class="flex items-start justify-between gap-2">
-                    <div>
-                      <p class="text-xs text-slate-300">09:30 • Studio C</p>
-                      <h3 class="text-sm font-semibold text-white">Designing Immersive Hybrid Experiences</h3>
-                      <p class="mt-1 text-xs text-slate-400">Speaker: Laila Hassan</p>
-                    </div>
-                    <button
-                      class="rounded-full bg-white/10 px-2 py-1 text-[11px] text-sky-200 transition hover:bg-white/20 text-glow">Save</button>
-                  </div>
-                  <div class="mt-3 flex flex-wrap gap-2 text-[11px] text-slate-200">
-                    <span class="rounded-full bg-sky-400/20 px-2 py-1 text-sky-100">UX</span>
-                    <span class="rounded-full bg-emerald-400/20 px-2 py-1 text-emerald-100">Engagement</span>
-                  </div>
-                </article>
-                <article
-                  class="rounded-2xl border border-white/10 bg-white/5 p-4 shadow-sm transition hover:-translate-y-1 hover:border-purple-300/50 hover:shadow-lg hover:shadow-purple-900/30 card-fade">
-                  <div class="flex items-start justify-between gap-2">
-                    <div>
-                      <p class="text-xs text-slate-300">11:15 • Hall A</p>
-                      <h3 class="text-sm font-semibold text-white">AI Ops for Live Event Reliability</h3>
-                      <p class="mt-1 text-xs text-slate-400">Speaker: Marcus Chen</p>
-                    </div>
-                    <button
-                      class="rounded-full bg-white/10 px-2 py-1 text-[11px] text-purple-200 transition hover:bg-white/20 text-glow">Save</button>
-                  </div>
-                  <div class="mt-3 flex flex-wrap gap-2 text-[11px] text-slate-200">
-                    <span class="rounded-full bg-purple-400/20 px-2 py-1 text-purple-100">AI</span>
-                    <span class="rounded-full bg-orange-400/20 px-2 py-1 text-orange-100">Ops</span>
-                  </div>
-                </article>
-                <article
-                  class="rounded-2xl border border-white/10 bg-white/5 p-4 shadow-sm transition hover:-translate-y-1 hover:border-emerald-300/50 hover:shadow-lg hover:shadow-emerald-900/30 card-fade">
-                  <div class="flex items-start justify-between gap-2">
-                    <div>
-                      <p class="text-xs text-slate-300">14:00 • Studio B</p>
-                      <h3 class="text-sm font-semibold text-white">Sustainable Stage Design Playbook</h3>
-                      <p class="mt-1 text-xs text-slate-400">Speaker: Grace Nakamura</p>
-                    </div>
-                    <button
-                      class="rounded-full bg-white/10 px-2 py-1 text-[11px] text-emerald-200 transition hover:bg-white/20 text-glow">Save</button>
-                  </div>
-                  <div class="mt-3 flex flex-wrap gap-2 text-[11px] text-slate-200">
-                    <span class="rounded-full bg-emerald-400/20 px-2 py-1 text-emerald-100">Sustainability</span>
-                    <span class="rounded-full bg-sky-400/20 px-2 py-1 text-sky-100">Design</span>
-                  </div>
-                </article>
-                <article
-                  class="rounded-2xl border border-white/10 bg-white/5 p-4 shadow-sm transition hover:-translate-y-1 hover:border-amber-300/50 hover:shadow-lg hover:shadow-amber-900/30 card-fade">
-                  <div class="flex items-start justify-between gap-2">
-                    <div>
-                      <p class="text-xs text-slate-300">16:30 • Hall B</p>
-                      <h3 class="text-sm font-semibold text-white">Revenue & Sponsorship Labs</h3>
-                      <p class="mt-1 text-xs text-slate-400">Speaker: Rohan Patel</p>
-                    </div>
-                    <button
-                      class="rounded-full bg-white/10 px-2 py-1 text-[11px] text-amber-200 transition hover:bg-white/20 text-glow">Save</button>
-                  </div>
-                  <div class="mt-3 flex flex-wrap gap-2 text-[11px] text-slate-200">
-                    <span class="rounded-full bg-amber-400/20 px-2 py-1 text-amber-100">Revenue</span>
-                    <span class="rounded-full bg-rose-400/20 px-2 py-1 text-rose-100">Sponsors</span>
-                  </div>
-                </article>
-              </div>
-            </div>
-
-            <div
-              class="space-y-4 rounded-3xl border border-white/10 bg-white/5 p-6 shadow-lg shadow-slate-900/30 transition hover:shadow-slate-900/50 card-fade">
-              <div class="flex items-center justify-between">
-                <h2 class="text-lg font-semibold text-white">Recent activity</h2>
-                <span class="text-[11px] text-slate-400">Today</span>
-              </div>
-              <ul class="space-y-3 text-sm text-slate-200">
-                <li class="flex items-start gap-3">
-                  <span class="mt-1 h-2 w-2 rounded-full bg-emerald-300"></span>
-                  <div>
-                    <p class="font-semibold text-white">Added “AI Ops for Live Event Reliability”</p>
-                    <p class="text-xs text-slate-400">2m ago</p>
-                  </div>
-                </li>
-                <li class="flex items-start gap-3">
-                  <span class="mt-1 h-2 w-2 rounded-full bg-sky-300"></span>
-                  <div>
-                    <p class="font-semibold text-white">New networking intro from Priya</p>
-                    <p class="text-xs text-slate-400">18m ago</p>
-                  </div>
-                </li>
-                <li class="flex items-start gap-3">
-                  <span class="mt-1 h-2 w-2 rounded-full bg-amber-300"></span>
-                  <div>
-                    <p class="font-semibold text-white">Ticket upgrade confirmed</p>
-                    <p class="text-xs text-slate-400">1h ago</p>
-                  </div>
-                </li>
-              </ul>
-            </div>
-          </section>
-
-          <section class="grid gap-6 lg:grid-cols-3">
-            <div
-              class="rounded-3xl border border-white/10 bg-white/5 p-6 shadow-lg shadow-slate-900/30 space-y-4 transition hover:shadow-slate-900/50 card-fade">
-              <div class="flex items-center justify-between">
-                <h2 class="text-lg font-semibold text-white">Resources</h2>
-                <button class="text-xs text-sky-300 transition hover:text-sky-200 text-glow">View all</button>
-              </div>
-              <ul class="space-y-3 text-sm text-slate-200">
-                <li
-                  class="flex items-center justify-between rounded-2xl border border-white/10 bg-white/5 p-3 transition hover:border-white/30 hover:bg-white/10 card-fade">
-                  <span>Speaker prep guide</span><button
-                    class="text-xs text-sky-300 transition hover:text-sky-200 text-glow">Download</button>
-                </li>
-                <li
-                  class="flex items-center justify-between rounded-2xl border border-white/10 bg-white/5 p-3 transition hover:border-white/30 hover:bg-white/10 card-fade">
-                  <span>Venue map</span><button
-                    class="text-xs text-sky-300 transition hover:text-sky-200 text-glow">View</button>
-                </li>
-                <li
-                  class="flex items-center justify-between rounded-2xl border border-white/10 bg-white/5 p-3 transition hover:border-white/30 hover:bg-white/10 card-fade">
-                  <span>Community code</span><button
-                    class="text-xs text-sky-300 transition hover:text-sky-200 text-glow">Open</button>
-                </li>
-              </ul>
-            </div>
-
-            <div
-              class="rounded-3xl border border-white/10 bg-white/5 p-6 shadow-lg shadow-slate-900/30 space-y-4 transition hover:shadow-slate-900/50 card-fade">
-              <div class="flex items-center justify-between">
-                <h2 class="text-lg font-semibold text-white">Announcements</h2>
-                <span class="text-[11px] text-amber-200">New</span>
-              </div>
-              <div class="space-y-3 text-sm text-slate-200">
-                <div
-                  class="rounded-2xl border border-amber-300/30 bg-amber-300/10 p-3 transition hover:border-amber-200/60 card-fade">
-                  <p class="font-semibold text-white">Afterparty RSVP closes tonight</p>
-                  <p class="text-xs text-amber-100">Submit by 11:00 PM</p>
-                </div>
-                <div
-                  class="rounded-2xl border border-white/10 bg-white/5 p-3 transition hover:border-white/30 hover:bg-white/10 card-fade">
-                  <p class="font-semibold text-white">Shuttle schedule updated</p>
-                  <p class="text-xs text-slate-300">Now every 20 minutes</p>
-                </div>
-                <div
-                  class="rounded-2xl border border-white/10 bg-white/5 p-3 transition hover:border-white/30 hover:bg-white/10 card-fade">
-                  <p class="font-semibold text-white">AR wayfinding beta</p>
-                  <p class="text-xs text-slate-300">Try it in the venue map</p>
-                </div>
-              </div>
-            </div>
-
-            <div
-              class="rounded-3xl border border-white/10 bg-white/5 p-6 shadow-lg shadow-slate-900/30 space-y-4 transition hover:shadow-slate-900/50 card-fade">
-              <h2 class="text-lg font-semibold text-white">Support</h2>
-              <p class="text-sm text-slate-300">Need help with tickets, schedule, or networking? Our team responds in
-                minutes.
-              </p>
-              <div class="flex flex-wrap gap-2 text-xs text-slate-200">
-                <span class="rounded-full bg-emerald-400/20 px-3 py-1 text-emerald-100">Live chat</span>
-                <span class="rounded-full bg-sky-400/20 px-3 py-1 text-sky-100">On-site desk</span>
-                <span class="rounded-full bg-purple-400/20 px-3 py-1 text-purple-100">Knowledge base</span>
-              </div>
-              <div class="flex gap-2 text-xs">
-                <button
-                  class="inline-flex flex-1 items-center justify-center gap-2 rounded-full bg-white/90 px-4 py-2 font-semibold text-slate-900 shadow-lg transition hover:translate-y-[-1px] hover:bg-white text-glow"><i
-                    class="fa-solid fa-headset"></i>Chat now</button>
-                <button
-                  class="inline-flex flex-1 items-center justify-center gap-2 rounded-full border border-white/20 px-4 py-2 font-semibold text-white transition hover:border-white/40 hover:bg-white/10 text-glow"><i
-                    class="fa-solid fa-book"></i>Guide</button>
-              </div>
-            </div>
-          </section>
-        </main>
-
-        <footer class="border-t border-white/10 bg-slate-950/80 py-12 sm:py-16 lg:py-20">
-          <div class="mx-auto grid max-w-7xl gap-10 sm:gap-12 px-4 sm:grid-cols-2 lg:grid-cols-5 lg:px-8">
-            <div class="lg:col-span-2">
-              <a href="index.html" class="text-lg sm:text-xl font-bold text-white">Eventia</a>
-              <p class="mt-3 sm:mt-4 text-xs sm:text-sm text-slate-300">Eventia Summit blends visionary storytelling,
-                immersive technology, and meaningful human connections across four unforgettable days.</p>
-              <div class="mt-4 sm:mt-6 flex gap-2 sm:gap-3 text-slate-300">
-                <a href="#"
-                  class="flex h-8 w-8 sm:h-10 sm:w-10 items-center justify-center rounded-full border border-white/10 transition hover:border-sky-400 hover:text-sky-300"
-                  aria-label="Facebook"><i class="fa-brands fa-facebook-f text-xs sm:text-sm"></i></a>
-                <a href="#"
-                  class="flex h-8 w-8 sm:h-10 sm:w-10 items-center justify-center rounded-full border border-white/10 transition hover:border-sky-400 hover:text-sky-300"
-                  aria-label="Twitter"><i class="fa-brands fa-x-twitter text-xs sm:text-sm"></i></a>
-                <a href="#"
-                  class="flex h-8 w-8 sm:h-10 sm:w-10 items-center justify-center rounded-full border border-white/10 transition hover:border-sky-400 hover:text-sky-300"
-                  aria-label="LinkedIn"><i class="fa-brands fa-linkedin-in text-xs sm:text-sm"></i></a>
-                <a href="#"
-                  class="flex h-8 w-8 sm:h-10 sm:w-10 items-center justify-center rounded-full border border-white/10 transition hover:border-sky-400 hover:text-sky-300"
-                  aria-label="Instagram"><i class="fa-brands fa-instagram text-xs sm:text-sm"></i></a>
-                <a href="#"
-                  class="flex h-8 w-8 sm:h-10 sm:w-10 items-center justify-center rounded-full border border-white/10 transition hover:border-sky-400 hover:text-sky-300"
-                  aria-label="YouTube"><i class="fa-brands fa-youtube text-xs sm:text-sm"></i></a>
-              </div>
+    <section class="grid gap-6 lg:grid-cols-3" id="insights">
+      <article
+        class="lg:col-span-2 rounded-3xl border border-white/10 bg-gradient-to-br from-white/10 via-white/5 to-transparent p-6 shadow-lg shadow-slate-900/40 transition hover:shadow-slate-900/60 card-fade">
+        <div class="flex flex-wrap items-center justify-between gap-3">
+          <div>
+            <p class="text-xs uppercase tracking-[0.25em] text-slate-300">Engagement pulse</p>
+            <h2 class="text-lg font-semibold text-white">Check-ins vs. live viewers</h2>
+          </div>
+          <div class="flex gap-4 text-xs text-slate-300">
+            <div>
+              <p class="text-slate-400">Avg check-ins</p>
+              <p class="text-xl font-semibold text-white">82%</p>
             </div>
             <div>
-              <h3 class="text-xs sm:text-sm font-semibold uppercase tracking-widest text-slate-200">Explore</h3>
-              <ul class="mt-3 sm:mt-4 space-y-2 text-xs sm:text-sm text-slate-300">
-                <li><a href="event-details.html" class="transition hover:text-white">Event Details</a></li>
-                <li><a href="schedule.html" class="transition hover:text-white">Schedule</a></li>
-                <li><a href="register.html" class="transition hover:text-white">Register</a></li>
-                <li><a href="contact.html" class="transition hover:text-white">Contact</a></li>
-              </ul>
-            </div>
-            <div>
-              <h3 class="text-xs sm:text-sm font-semibold uppercase tracking-widest text-slate-200">Contact</h3>
-              <ul class="mt-3 sm:mt-4 space-y-2 text-xs sm:text-sm text-slate-300">
-                <li>hello@eventia.com</li>
-                <li>+1 (415) 555-0123</li>
-                <li>Dubai World Trade Centre</li>
-              </ul>
-            </div>
-            <div>
-              <h3 class="text-xs sm:text-sm font-semibold uppercase tracking-widest text-slate-200">Newsletter</h3>
-              <form data-validate novalidate class="mt-3 sm:mt-4 space-y-2 sm:space-y-3">
-                <label for="footer-email" class="sr-only">Email</label>
-                <input id="footer-email" name="email" type="email" required placeholder="you@email.com"
-                  class="w-full rounded-full border border-white/40 bg-white/10 px-4 py-2 sm:py-3 text-xs sm:text-sm text-white placeholder:text-slate-300 focus:border-white focus:outline-none" />
-                <p class="hidden text-xs text-rose-300" data-error>Email address is required.</p>
-                <button type="submit"
-                  class="w-full rounded-full bg-sky-500 px-4 py-2 sm:py-3 text-xs sm:text-sm font-semibold text-white transition hover:bg-sky-400">Join</button>
-                <p class="hidden text-xs text-emerald-300" data-success>Welcome to the Eventia collective!</p>
-              </form>
+              <p class="text-slate-400">Live viewers</p>
+              <p class="text-xl font-semibold text-white">68%</p>
             </div>
           </div>
-          <div class="mt-8 sm:mt-12 border-t border-white/10 pt-4 sm:pt-6 text-center text-xs text-slate-400 px-4">
-            <p>&copy; 2025 Eventia Summit. All rights reserved.</p>
-            <div class="mt-2 flex justify-center gap-3 sm:gap-4 text-slate-400">
-              <a href="#" class="hover:text-white">Privacy Policy</a>
-              <a href="#" class="hover:text-white">Terms of Service</a>
+        </div>
+        <div class="mt-6">
+          <svg viewBox="0 0 420 200" role="img" aria-label="Engagement trend over the last seven days"
+            class="h-48 w-full">
+            <defs>
+              <linearGradient id="fill-trend" x1="0%" y1="0%" x2="0%" y2="100%">
+                <stop offset="0%" stop-color="rgba(14,165,233,0.45)" />
+                <stop offset="100%" stop-color="rgba(14,165,233,0)" />
+              </linearGradient>
+              <linearGradient id="stroke-trend" x1="0%" y1="0%" x2="100%" y2="0%">
+                <stop offset="0%" stop-color="#38bdf8" />
+                <stop offset="100%" stop-color="#c084fc" />
+              </linearGradient>
+            </defs>
+            <polyline points="0,140 60,110 120,130 180,90 240,100 300,70 360,60 420,80" fill="none" stroke="#1e293b"
+              stroke-width="2" opacity="0.2" />
+            <polygon points="0,140 60,110 120,130 180,90 240,100 300,70 360,60 420,80 420,200 0,200"
+              fill="url(#fill-trend)" />
+            <polyline points="0,140 60,110 120,130 180,90 240,100 300,70 360,60 420,80" fill="none"
+              stroke="url(#stroke-trend)" stroke-width="4" stroke-linecap="round" />
+            <g fill="#38bdf8">
+              <circle cx="180" cy="90" r="5" />
+              <circle cx="360" cy="60" r="5" />
+            </g>
+          </svg>
+        </div>
+        <div class="mt-4 flex flex-wrap gap-4 text-xs text-slate-300">
+          <span class="rounded-full border border-sky-300/40 bg-sky-300/10 px-3 py-1 text-sky-100">+12% week over
+            week</span>
+          <span class="rounded-full border border-purple-300/40 bg-purple-300/10 px-3 py-1 text-purple-100">Peak at
+            11:00 AM</span>
+        </div>
+      </article>
+
+      <article
+        class="space-y-4 rounded-3xl border border-white/10 bg-white/5 p-6 shadow-lg shadow-slate-900/40 transition hover:shadow-slate-900/60 card-fade">
+        <div class="flex items-center justify-between">
+          <h2 class="text-lg font-semibold text-white">Session fill rate</h2>
+          <span class="text-xs text-slate-400">Live</span>
+        </div>
+        <div class="space-y-3">
+          <div>
+            <div class="flex items-center justify-between text-xs text-slate-300">
+              <span>Main stage</span>
+              <span>92%</span>
+            </div>
+            <div class="mt-1 h-3 rounded-full bg-white/10">
+              <div class="h-full rounded-full bg-gradient-to-r from-emerald-400 to-sky-400" style="width:92%"></div>
             </div>
           </div>
-        </footer>
+          <div>
+            <div class="flex items-center justify-between text-xs text-slate-300">
+              <span>Workshops</span>
+              <span>74%</span>
+            </div>
+            <div class="mt-1 h-3 rounded-full bg-white/10">
+              <div class="h-full rounded-full bg-gradient-to-r from-sky-400 to-purple-400" style="width:74%"></div>
+            </div>
+          </div>
+          <div>
+            <div class="flex items-center justify-between text-xs text-slate-300">
+              <span>Meetups</span>
+              <span>61%</span>
+            </div>
+            <div class="mt-1 h-3 rounded-full bg-white/10">
+              <div class="h-full rounded-full bg-gradient-to-r from-cyan-400 to-rose-400" style="width:61%"></div>
+            </div>
+          </div>
+        </div>
+        <p class="text-xs text-slate-400">Add more seats to the 14:00 sustainability lab to meet demand.</p>
+      </article>
 
-        <script src="js/rtl-toggle.js"></script>
-        <script src="js/main.js" defer></script>
+      <article
+        class="space-y-4 rounded-3xl border border-white/10 bg-white/5 p-6 text-center shadow-lg shadow-slate-900/40 transition hover:shadow-slate-900/60 card-fade">
+        <h2 class="text-lg font-semibold text-white">Channel split</h2>
+        <div class="mx-auto w-40">
+          <svg viewBox="0 0 160 160" role="img" aria-label="In-person vs virtual attendance split">
+            <circle cx="80" cy="80" r="60" stroke="#1e293b" stroke-width="18" fill="none" opacity="0.35" />
+            <circle cx="80" cy="80" r="60" stroke="#34d399" stroke-width="18" fill="none" stroke-dasharray="377"
+              stroke-dashoffset="75" stroke-linecap="round" />
+            <circle cx="80" cy="80" r="60" stroke="#38bdf8" stroke-width="18" fill="none" stroke-dasharray="377"
+              stroke-dashoffset="240" stroke-linecap="round" />
+          </svg>
+        </div>
+        <div class="flex items-center justify-center gap-6 text-sm text-slate-200">
+          <div>
+            <p class="text-2xl font-bold text-white">58%</p>
+            <p class="text-xs text-emerald-200">In-person</p>
+          </div>
+          <div>
+            <p class="text-2xl font-bold text-white">42%</p>
+            <p class="text-xs text-sky-200">Virtual</p>
+          </div>
+        </div>
+        <p class="text-xs text-slate-400">Virtual audience grew 9% after last keynote replay drop.</p>
+      </article>
+    </section>
+
+    <section class="grid gap-6 lg:grid-cols-2">
+      <article
+        class="rounded-3xl border border-white/10 bg-white/5 p-6 shadow-lg shadow-slate-900/40 transition hover:shadow-slate-900/60 card-fade">
+        <div class="flex items-center justify-between">
+          <div>
+            <p class="text-xs uppercase tracking-[0.3em] text-slate-300">Ticket funnel</p>
+            <h2 class="text-lg font-semibold text-white">Lead → Paid conversion</h2>
+          </div>
+          <span class="text-xs text-emerald-300">+4% this week</span>
+        </div>
+        <div class="mt-6 space-y-4">
+          <div>
+            <div class="flex items-center justify-between text-xs text-slate-300">
+              <span>Leads</span>
+              <span>3,420</span>
+            </div>
+            <div class="mt-1 h-3 rounded-full bg-white/10">
+              <div class="h-full rounded-full bg-gradient-to-r from-cyan-400 to-blue-500" style="width:100%"></div>
+            </div>
+          </div>
+          <div>
+            <div class="flex items-center justify-between text-xs text-slate-300">
+              <span>Qualified</span>
+              <span>1,980</span>
+            </div>
+            <div class="mt-1 h-3 rounded-full bg-white/10">
+              <div class="h-full rounded-full bg-gradient-to-r from-blue-500 to-indigo-500" style="width:58%"></div>
+            </div>
+          </div>
+          <div>
+            <div class="flex items-center justify-between text-xs text-slate-300">
+              <span>Trial / Demo</span>
+              <span>940</span>
+            </div>
+            <div class="mt-1 h-3 rounded-full bg-white/10">
+              <div class="h-full rounded-full bg-gradient-to-r from-indigo-500 to-violet-500" style="width:28%"></div>
+            </div>
+          </div>
+          <div>
+            <div class="flex items-center justify-between text-xs text-slate-300">
+              <span>Paid</span>
+              <span>640</span>
+            </div>
+            <div class="mt-1 h-3 rounded-full bg-white/10">
+              <div class="h-full rounded-full bg-gradient-to-r from-violet-500 to-fuchsia-500" style="width:19%"></div>
+            </div>
+          </div>
+        </div>
+        <p class="mt-4 text-xs text-slate-400">Most drop-off occurs between demo and payment—surface limited-time
+          bundles.</p>
+      </article>
+
+      <article
+        class="rounded-3xl border border-white/10 bg-white/5 p-6 shadow-lg shadow-slate-900/40 transition hover:shadow-slate-900/60 card-fade">
+        <div class="flex items-center justify-between">
+          <div>
+            <p class="text-xs uppercase tracking-[0.3em] text-slate-300">Regional mix</p>
+            <h2 class="text-lg font-semibold text-white">Attendees by region</h2>
+          </div>
+          <span class="text-xs text-slate-400">Rolling 30 days</span>
+        </div>
+        <div class="mt-6 grid gap-4 md:grid-cols-2">
+          <div class="relative mx-auto h-40 w-40">
+            <svg viewBox="0 0 200 200" role="img" aria-label="Regional distribution donut chart">
+              <circle cx="100" cy="100" r="70" stroke="#1e293b" stroke-width="24" fill="none" opacity="0.35" />
+              <circle cx="100" cy="100" r="70" stroke="#34d399" stroke-width="24" fill="none" stroke-dasharray="439"
+                stroke-dashoffset="70" stroke-linecap="round" />
+              <circle cx="100" cy="100" r="70" stroke="#38bdf8" stroke-width="24" fill="none" stroke-dasharray="439"
+                stroke-dashoffset="210" stroke-linecap="round" />
+              <circle cx="100" cy="100" r="70" stroke="#c084fc" stroke-width="24" fill="none" stroke-dasharray="439"
+                stroke-dashoffset="330" stroke-linecap="round" />
+            </svg>
+            <div class="absolute inset-0 flex flex-col items-center justify-center text-center text-white">
+              <p class="text-xs uppercase tracking-[0.2em] text-slate-300">Global</p>
+              <p class="text-2xl font-bold">4.7K</p>
+            </div>
+          </div>
+          <ul class="space-y-3 text-sm text-slate-200">
+            <li class="flex items-center justify-between">
+              <span class="flex items-center gap-2">
+                <span class="h-2 w-2 rounded-full bg-emerald-300"></span>EMEA
+              </span>
+              <span>42%</span>
+            </li>
+            <li class="flex items-center justify-between">
+              <span class="flex items-center gap-2">
+                <span class="h-2 w-2 rounded-full bg-sky-300"></span>AMER
+              </span>
+              <span>31%</span>
+            </li>
+            <li class="flex items-center justify-between">
+              <span class="flex items-center gap-2">
+                <span class="h-2 w-2 rounded-full bg-violet-300"></span>APAC
+              </span>
+              <span>19%</span>
+            </li>
+            <li class="flex items-center justify-between">
+              <span class="flex items-center gap-2">
+                <span class="h-2 w-2 rounded-full bg-rose-300"></span>LATAM
+              </span>
+              <span>8%</span>
+            </li>
+          </ul>
+        </div>
+        <p class="mt-4 text-xs text-slate-400">APAC registrations are trending +6% week over week after
+          timezone-friendly releases.</p>
+      </article>
+    </section>
+
+    <section class="grid gap-6 lg:grid-cols-3" id="schedule">
+      <div
+        class="lg:col-span-2 rounded-3xl border border-white/10 bg-white/5 p-6 shadow-lg shadow-slate-900/30 transition hover:shadow-slate-900/50 card-fade">
+        <div class="flex items-center justify-between gap-3">
+          <h2 class="text-lg font-semibold text-white">My schedule</h2>
+          <div class="flex gap-2 text-xs">
+            <button
+              class="rounded-full border border-white/20 px-3 py-1 text-white transition hover:border-white/40 hover:bg-white/10 text-glow">Calendar
+              view</button>
+            <button
+              class="rounded-full border border-sky-300/40 bg-sky-300/10 px-3 py-1 text-sky-100 transition hover:border-sky-200 hover:bg-sky-200/10 text-glow">Add
+              session</button>
+          </div>
+        </div>
+        <ul class="mt-4 space-y-3 text-sm text-slate-200" data-session-list>
+          <li
+            class="flex items-center justify-between rounded-2xl border border-white/10 bg-white/5 p-3 transition hover:border-sky-300/40 hover:bg-sky-300/5 card-fade">
+            <div>
+              <p class="font-semibold text-white">Keynote • 10:00</p>
+              <p class="text-xs text-slate-300">Main Hall</p>
+            </div>
+            <div class="flex items-center gap-3 text-xs">
+              <span class="rounded-full bg-emerald-400/20 px-2 py-1 text-emerald-100">Booked</span>
+              <button class="text-rose-300 transition hover:text-rose-200 text-glow" data-remove-session>Remove</button>
+            </div>
+          </li>
+          <li
+            class="flex items-center justify-between rounded-2xl border border-white/10 bg-white/5 p-3 transition hover:border-sky-300/40 hover:bg-sky-300/5 card-fade">
+            <div>
+              <p class="font-semibold text-white">Workshop • 13:30</p>
+              <p class="text-xs text-slate-300">Studio B</p>
+            </div>
+            <div class="flex items-center gap-3 text-xs">
+              <span class="rounded-full bg-amber-400/20 px-2 py-1 text-amber-100">Waitlist</span>
+              <button class="text-rose-300 transition hover:text-rose-200 text-glow" data-remove-session>Remove</button>
+            </div>
+          </li>
+          <li
+            class="flex items-center justify-between rounded-2xl border border-white/10 bg-white/5 p-3 transition hover:border-sky-300/40 hover:bg-sky-300/5 card-fade">
+            <div>
+              <p class="font-semibold text-white">Meetup • 17:00</p>
+              <p class="text-xs text-slate-300">Networking Lounge</p>
+            </div>
+            <div class="flex items-center gap-3 text-xs">
+              <span class="rounded-full bg-sky-400/20 px-2 py-1 text-sky-100">Confirmed</span>
+              <button class="text-rose-300 transition hover:text-rose-200 text-glow" data-remove-session>Remove</button>
+            </div>
+          </li>
+        </ul>
+      </div>
+
+      <div
+        class="rounded-3xl border border-white/10 bg-white/5 p-6 shadow-lg shadow-slate-900/30 space-y-5 transition hover:shadow-slate-900/50 card-fade">
+        <div class="flex items-center justify-between">
+          <h2 class="text-lg font-semibold text-white">My ticket</h2>
+          <button
+            class="inline-flex items-center gap-2 rounded-full border border-white/20 px-3 py-1 text-xs font-semibold text-white transition hover:border-white/40 hover:bg-white/10 text-glow"><i
+              class="fa-solid fa-download"></i>Download</button>
+        </div>
+        <div
+          class="rounded-2xl border border-dashed border-white/20 bg-white/5 p-4 text-sm text-slate-200 text-center tracking-widest transition hover:border-white/40 hover:bg-white/10">
+          QR CODE • VIP-B12</div>
+        <div
+          class="rounded-2xl border border-white/10 bg-white/5 p-4 text-sm text-slate-200 space-y-2 transition hover:border-white/30 hover:bg-white/10">
+          <div class="flex items-center justify-between text-xs text-slate-300">
+            <span>Networking suggestions</span>
+            <span class="rounded-full bg-emerald-400/20 px-2 py-1 text-emerald-100">3 new</span>
+          </div>
+          <ul class="space-y-1 text-xs">
+            <li class="flex items-center justify-between"><span>Priya S • Marketing</span><button
+                class="text-sky-300 transition hover:text-sky-200 text-glow">Connect</button></li>
+            <li class="flex items-center justify-between"><span>Omar K • Product</span><button
+                class="text-sky-300 transition hover:text-sky-200 text-glow">Connect</button></li>
+            <li class="flex items-center justify-between"><span>Julia M • Ops</span><button
+                class="text-sky-300 transition hover:text-sky-200 text-glow">Connect</button></li>
+          </ul>
+        </div>
+      </div>
+    </section>
+
+    <section class="grid gap-6 lg:grid-cols-3" id="networking">
+      <div
+        class="lg:col-span-2 rounded-3xl border border-white/10 bg-white/5 p-6 shadow-lg shadow-slate-900/30 space-y-4 transition hover:shadow-slate-900/50 card-fade">
+        <div class="flex items-center justify-between">
+          <h2 class="text-lg font-semibold text-white">Recommended sessions</h2>
+          <button class="text-xs text-sky-300 transition hover:text-sky-200 text-glow">See all</button>
+        </div>
+        <div class="grid gap-4 md:grid-cols-2">
+          <article
+            class="rounded-2xl border border-white/10 bg-white/5 p-4 shadow-sm transition hover:-translate-y-1 hover:border-sky-300/50 hover:shadow-lg hover:shadow-sky-900/30 card-fade">
+            <div class="flex items-start justify-between gap-2">
+              <div>
+                <p class="text-xs text-slate-300">09:30 • Studio C</p>
+                <h3 class="text-sm font-semibold text-white">Designing Immersive Hybrid Experiences</h3>
+                <p class="mt-1 text-xs text-slate-400">Speaker: Laila Hassan</p>
+              </div>
+              <button
+                class="rounded-full bg-white/10 px-2 py-1 text-[11px] text-sky-200 transition hover:bg-white/20 text-glow">Save</button>
+            </div>
+            <div class="mt-3 flex flex-wrap gap-2 text-[11px] text-slate-200">
+              <span class="rounded-full bg-sky-400/20 px-2 py-1 text-sky-100">UX</span>
+              <span class="rounded-full bg-emerald-400/20 px-2 py-1 text-emerald-100">Engagement</span>
+            </div>
+          </article>
+          <article
+            class="rounded-2xl border border-white/10 bg-white/5 p-4 shadow-sm transition hover:-translate-y-1 hover:border-purple-300/50 hover:shadow-lg hover:shadow-purple-900/30 card-fade">
+            <div class="flex items-start justify-between gap-2">
+              <div>
+                <p class="text-xs text-slate-300">11:15 • Hall A</p>
+                <h3 class="text-sm font-semibold text-white">AI Ops for Live Event Reliability</h3>
+                <p class="mt-1 text-xs text-slate-400">Speaker: Marcus Chen</p>
+              </div>
+              <button
+                class="rounded-full bg-white/10 px-2 py-1 text-[11px] text-purple-200 transition hover:bg-white/20 text-glow">Save</button>
+            </div>
+            <div class="mt-3 flex flex-wrap gap-2 text-[11px] text-slate-200">
+              <span class="rounded-full bg-purple-400/20 px-2 py-1 text-purple-100">AI</span>
+              <span class="rounded-full bg-orange-400/20 px-2 py-1 text-orange-100">Ops</span>
+            </div>
+          </article>
+          <article
+            class="rounded-2xl border border-white/10 bg-white/5 p-4 shadow-sm transition hover:-translate-y-1 hover:border-emerald-300/50 hover:shadow-lg hover:shadow-emerald-900/30 card-fade">
+            <div class="flex items-start justify-between gap-2">
+              <div>
+                <p class="text-xs text-slate-300">14:00 • Studio B</p>
+                <h3 class="text-sm font-semibold text-white">Sustainable Stage Design Playbook</h3>
+                <p class="mt-1 text-xs text-slate-400">Speaker: Grace Nakamura</p>
+              </div>
+              <button
+                class="rounded-full bg-white/10 px-2 py-1 text-[11px] text-emerald-200 transition hover:bg-white/20 text-glow">Save</button>
+            </div>
+            <div class="mt-3 flex flex-wrap gap-2 text-[11px] text-slate-200">
+              <span class="rounded-full bg-emerald-400/20 px-2 py-1 text-emerald-100">Sustainability</span>
+              <span class="rounded-full bg-sky-400/20 px-2 py-1 text-sky-100">Design</span>
+            </div>
+          </article>
+          <article
+            class="rounded-2xl border border-white/10 bg-white/5 p-4 shadow-sm transition hover:-translate-y-1 hover:border-amber-300/50 hover:shadow-lg hover:shadow-amber-900/30 card-fade">
+            <div class="flex items-start justify-between gap-2">
+              <div>
+                <p class="text-xs text-slate-300">16:30 • Hall B</p>
+                <h3 class="text-sm font-semibold text-white">Revenue & Sponsorship Labs</h3>
+                <p class="mt-1 text-xs text-slate-400">Speaker: Rohan Patel</p>
+              </div>
+              <button
+                class="rounded-full bg-white/10 px-2 py-1 text-[11px] text-amber-200 transition hover:bg-white/20 text-glow">Save</button>
+            </div>
+            <div class="mt-3 flex flex-wrap gap-2 text-[11px] text-slate-200">
+              <span class="rounded-full bg-amber-400/20 px-2 py-1 text-amber-100">Revenue</span>
+              <span class="rounded-full bg-rose-400/20 px-2 py-1 text-rose-100">Sponsors</span>
+            </div>
+          </article>
+        </div>
+      </div>
+
+      <div
+        class="space-y-4 rounded-3xl border border-white/10 bg-white/5 p-6 shadow-lg shadow-slate-900/30 transition hover:shadow-slate-900/50 card-fade">
+        <div class="flex items-center justify-between">
+          <h2 class="text-lg font-semibold text-white">Recent activity</h2>
+          <span class="text-[11px] text-slate-400">Today</span>
+        </div>
+        <ul class="space-y-3 text-sm text-slate-200">
+          <li class="flex items-start gap-3">
+            <span class="mt-1 h-2 w-2 rounded-full bg-emerald-300"></span>
+            <div>
+              <p class="font-semibold text-white">Added “AI Ops for Live Event Reliability”</p>
+              <p class="text-xs text-slate-400">2m ago</p>
+            </div>
+          </li>
+          <li class="flex items-start gap-3">
+            <span class="mt-1 h-2 w-2 rounded-full bg-sky-300"></span>
+            <div>
+              <p class="font-semibold text-white">New networking intro from Priya</p>
+              <p class="text-xs text-slate-400">18m ago</p>
+            </div>
+          </li>
+          <li class="flex items-start gap-3">
+            <span class="mt-1 h-2 w-2 rounded-full bg-amber-300"></span>
+            <div>
+              <p class="font-semibold text-white">Ticket upgrade confirmed</p>
+              <p class="text-xs text-slate-400">1h ago</p>
+            </div>
+          </li>
+        </ul>
+      </div>
+    </section>
+
+    <section class="grid gap-6 lg:grid-cols-3">
+      <div
+        class="rounded-3xl border border-white/10 bg-white/5 p-6 shadow-lg shadow-slate-900/30 space-y-4 transition hover:shadow-slate-900/50 card-fade">
+        <div class="flex items-center justify-between">
+          <h2 class="text-lg font-semibold text-white">Resources</h2>
+          <button class="text-xs text-sky-300 transition hover:text-sky-200 text-glow">View all</button>
+        </div>
+        <ul class="space-y-3 text-sm text-slate-200">
+          <li
+            class="flex items-center justify-between rounded-2xl border border-white/10 bg-white/5 p-3 transition hover:border-white/30 hover:bg-white/10 card-fade">
+            <span>Speaker prep guide</span><button
+              class="text-xs text-sky-300 transition hover:text-sky-200 text-glow">Download</button>
+          </li>
+          <li
+            class="flex items-center justify-between rounded-2xl border border-white/10 bg-white/5 p-3 transition hover:border-white/30 hover:bg-white/10 card-fade">
+            <span>Venue map</span><button
+              class="text-xs text-sky-300 transition hover:text-sky-200 text-glow">View</button>
+          </li>
+          <li
+            class="flex items-center justify-between rounded-2xl border border-white/10 bg-white/5 p-3 transition hover:border-white/30 hover:bg-white/10 card-fade">
+            <span>Community code</span><button
+              class="text-xs text-sky-300 transition hover:text-sky-200 text-glow">Open</button>
+          </li>
+        </ul>
+      </div>
+
+      <div
+        class="rounded-3xl border border-white/10 bg-white/5 p-6 shadow-lg shadow-slate-900/30 space-y-4 transition hover:shadow-slate-900/50 card-fade">
+        <div class="flex items-center justify-between">
+          <h2 class="text-lg font-semibold text-white">Announcements</h2>
+          <span class="text-[11px] text-amber-200">New</span>
+        </div>
+        <div class="space-y-3 text-sm text-slate-200">
+          <div
+            class="rounded-2xl border border-amber-300/30 bg-amber-300/10 p-3 transition hover:border-amber-200/60 card-fade">
+            <p class="font-semibold text-white">Afterparty RSVP closes tonight</p>
+            <p class="text-xs text-amber-100">Submit by 11:00 PM</p>
+          </div>
+          <div
+            class="rounded-2xl border border-white/10 bg-white/5 p-3 transition hover:border-white/30 hover:bg-white/10 card-fade">
+            <p class="font-semibold text-white">Shuttle schedule updated</p>
+            <p class="text-xs text-slate-300">Now every 20 minutes</p>
+          </div>
+          <div
+            class="rounded-2xl border border-white/10 bg-white/5 p-3 transition hover:border-white/30 hover:bg-white/10 card-fade">
+            <p class="font-semibold text-white">AR wayfinding beta</p>
+            <p class="text-xs text-slate-300">Try it in the venue map</p>
+          </div>
+        </div>
+      </div>
+
+      <div
+        class="rounded-3xl border border-white/10 bg-white/5 p-6 shadow-lg shadow-slate-900/30 space-y-4 transition hover:shadow-slate-900/50 card-fade">
+        <h2 class="text-lg font-semibold text-white">Support</h2>
+        <p class="text-sm text-slate-300">Need help with tickets, schedule, or networking? Our team responds in
+          minutes.
+        </p>
+        <div class="flex flex-wrap gap-2 text-xs text-slate-200">
+          <span class="rounded-full bg-emerald-400/20 px-3 py-1 text-emerald-100">Live chat</span>
+          <span class="rounded-full bg-sky-400/20 px-3 py-1 text-sky-100">On-site desk</span>
+          <span class="rounded-full bg-purple-400/20 px-3 py-1 text-purple-100">Knowledge base</span>
+        </div>
+        <div class="flex gap-2 text-xs">
+          <button
+            class="inline-flex flex-1 items-center justify-center gap-2 rounded-full bg-white/90 px-4 py-2 font-semibold text-slate-900 shadow-lg transition hover:translate-y-[-1px] hover:bg-white text-glow"><i
+              class="fa-solid fa-headset"></i>Chat now</button>
+          <button
+            class="inline-flex flex-1 items-center justify-center gap-2 rounded-full border border-white/20 px-4 py-2 font-semibold text-white transition hover:border-white/40 hover:bg-white/10 text-glow"><i
+              class="fa-solid fa-book"></i>Guide</button>
+        </div>
+      </div>
+    </section>
+  </main>
+
+  <footer class="border-t border-white/10 bg-slate-950/80 py-12 sm:py-16 lg:py-20">
+    <div class="mx-auto grid max-w-7xl gap-10 sm:gap-12 px-4 sm:grid-cols-2 lg:grid-cols-5 lg:px-8">
+      <div class="lg:col-span-2">
+        <a href="index.html" class="text-lg sm:text-xl font-bold text-white">Eventia</a>
+        <p class="mt-3 sm:mt-4 text-xs sm:text-sm text-slate-300">Eventia Summit blends visionary storytelling,
+          immersive technology, and meaningful human connections across four unforgettable days.</p>
+        <div class="mt-4 sm:mt-6 flex gap-2 sm:gap-3 text-slate-300">
+          <a href="#"
+            class="flex h-8 w-8 sm:h-10 sm:w-10 items-center justify-center rounded-full border border-white/10 transition hover:border-sky-400 hover:text-sky-300"
+            aria-label="Facebook"><i class="fa-brands fa-facebook-f text-xs sm:text-sm"></i></a>
+          <a href="#"
+            class="flex h-8 w-8 sm:h-10 sm:w-10 items-center justify-center rounded-full border border-white/10 transition hover:border-sky-400 hover:text-sky-300"
+            aria-label="Twitter"><i class="fa-brands fa-x-twitter text-xs sm:text-sm"></i></a>
+          <a href="#"
+            class="flex h-8 w-8 sm:h-10 sm:w-10 items-center justify-center rounded-full border border-white/10 transition hover:border-sky-400 hover:text-sky-300"
+            aria-label="LinkedIn"><i class="fa-brands fa-linkedin-in text-xs sm:text-sm"></i></a>
+          <a href="#"
+            class="flex h-8 w-8 sm:h-10 sm:w-10 items-center justify-center rounded-full border border-white/10 transition hover:border-sky-400 hover:text-sky-300"
+            aria-label="Instagram"><i class="fa-brands fa-instagram text-xs sm:text-sm"></i></a>
+          <a href="#"
+            class="flex h-8 w-8 sm:h-10 sm:w-10 items-center justify-center rounded-full border border-white/10 transition hover:border-sky-400 hover:text-sky-300"
+            aria-label="YouTube"><i class="fa-brands fa-youtube text-xs sm:text-sm"></i></a>
+        </div>
+      </div>
+      <div>
+        <h3 class="text-xs sm:text-sm font-semibold uppercase tracking-widest text-slate-200">Explore</h3>
+        <ul class="mt-3 sm:mt-4 space-y-2 text-xs sm:text-sm text-slate-300">
+          <li><a href="event-details.html" class="transition hover:text-white">Event Details</a></li>
+          <li><a href="schedule.html" class="transition hover:text-white">Schedule</a></li>
+          <li><a href="register.html" class="transition hover:text-white">Register</a></li>
+          <li><a href="contact.html" class="transition hover:text-white">Contact</a></li>
+        </ul>
+      </div>
+      <div>
+        <h3 class="text-xs sm:text-sm font-semibold uppercase tracking-widest text-slate-200">Contact</h3>
+        <ul class="mt-3 sm:mt-4 space-y-2 text-xs sm:text-sm text-slate-300">
+          <li>hello@eventia.com</li>
+          <li>+1 (415) 555-0123</li>
+          <li>Dubai World Trade Centre</li>
+        </ul>
+      </div>
+      <div>
+        <h3 class="text-xs sm:text-sm font-semibold uppercase tracking-widest text-slate-200">Newsletter</h3>
+        <form data-validate novalidate class="mt-3 sm:mt-4 space-y-2 sm:space-y-3">
+          <label for="footer-email" class="sr-only">Email</label>
+          <input id="footer-email" name="email" type="email" required placeholder="you@email.com"
+            class="w-full rounded-full border border-white/40 bg-white/10 px-4 py-2 sm:py-3 text-xs sm:text-sm text-white placeholder:text-slate-300 focus:border-white focus:outline-none" />
+          <p class="hidden text-xs text-rose-300" data-error>Email address is required.</p>
+          <button type="submit"
+            class="w-full rounded-full bg-sky-500 px-4 py-2 sm:py-3 text-xs sm:text-sm font-semibold text-white transition hover:bg-sky-400">Join</button>
+          <p class="hidden text-xs text-emerald-300" data-success>Welcome to the Eventia collective!</p>
+        </form>
+      </div>
+    </div>
+    <div class="mt-8 sm:mt-12 border-t border-white/10 pt-4 sm:pt-6 text-center text-xs text-slate-400 px-4">
+      <p>&copy; 2025 Eventia Summit. All rights reserved.</p>
+      <div class="mt-2 flex justify-center gap-3 sm:gap-4 text-slate-400">
+        <a href="#" class="hover:text-white">Privacy Policy</a>
+        <a href="#" class="hover:text-white">Terms of Service</a>
+      </div>
+    </div>
+  </footer>
+
+  <script src="js/rtl-toggle.js"></script>
+  <script src="js/main.js" defer></script>
 </body>
 
 </html>

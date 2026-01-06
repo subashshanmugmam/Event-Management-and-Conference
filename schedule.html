@@ -1,5 +1,6 @@
 <!DOCTYPE html>
 <html lang="en" dir="ltr" class="scroll-smooth">
+
 <head>
   <meta charset="UTF-8" />
   <meta name="viewport" content="width=device-width, initial-scale=1.0" />
@@ -7,102 +8,200 @@
   <link rel="preconnect" href="https://fonts.googleapis.com" />
   <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
   <link href="https://fonts.googleapis.com/css2?family=Inter:wght@400;500;600;700;800&display=swap" rel="stylesheet" />
-  <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.5.1/css/all.min.css" crossorigin="anonymous" referrerpolicy="no-referrer" />
+  <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.5.1/css/all.min.css"
+    crossorigin="anonymous" referrerpolicy="no-referrer" />
   <link rel="icon" type="image/svg+xml" href="assets/images/placeholder-event.svg" />
   <script src="https://cdn.tailwindcss.com"></script>
   <style>
-    body{font-family:'Inter',sans-serif}
+    body {
+      font-family: 'Inter', sans-serif
+    }
+
     @keyframes slideInUp {
-      from { opacity: 0; transform: translateY(30px); }
-      to { opacity: 1; transform: translateY(0); }
+      from {
+        opacity: 0;
+        transform: translateY(30px);
+      }
+
+      to {
+        opacity: 1;
+        transform: translateY(0);
+      }
     }
+
     @keyframes fadeIn {
-      from { opacity: 0; }
-      to { opacity: 1; }
+      from {
+        opacity: 0;
+      }
+
+      to {
+        opacity: 1;
+      }
     }
+
     @keyframes scaleIn {
-      from { opacity: 0; transform: scale(0.95); }
-      to { opacity: 1; transform: scale(1); }
+      from {
+        opacity: 0;
+        transform: scale(0.95);
+      }
+
+      to {
+        opacity: 1;
+        transform: scale(1);
+      }
     }
+
     @keyframes shimmer {
-      0% { background-position: -200% center; }
-      100% { background-position: 200% center; }
+      0% {
+        background-position: -200% center;
+      }
+
+      100% {
+        background-position: 200% center;
+      }
     }
+
     @keyframes pulse-glow {
-      0%, 100% { box-shadow: 0 0 20px rgba(56, 189, 248, 0.3); }
-      50% { box-shadow: 0 0 40px rgba(56, 189, 248, 0.6); }
+
+      0%,
+      100% {
+        box-shadow: 0 0 20px rgba(56, 189, 248, 0.3);
+      }
+
+      50% {
+        box-shadow: 0 0 40px rgba(56, 189, 248, 0.6);
+      }
     }
+
     .session {
       animation: scaleIn 0.5s cubic-bezier(0.175, 0.885, 0.32, 1.275) forwards;
       opacity: 0;
       transition: all 0.3s ease;
     }
+
     .session:hover {
       transform: translateY(-8px) scale(1.02);
       box-shadow: 0 20px 40px rgba(0, 0, 0, 0.3);
       border-color: rgba(56, 189, 248, 0.5);
     }
-    .session:nth-child(1) { animation-delay: 0.1s; }
-    .session:nth-child(2) { animation-delay: 0.2s; }
-    .session:nth-child(3) { animation-delay: 0.3s; }
-    .session:nth-child(4) { animation-delay: 0.4s; }
-    .session:nth-child(5) { animation-delay: 0.5s; }
-    .session:nth-child(6) { animation-delay: 0.6s; }
-    .fade-in { animation: fadeIn 0.6s ease-in forwards; }
-    .slide-in-up { animation: slideInUp 0.8s cubic-bezier(0.175, 0.885, 0.32, 1.275) forwards; }
+
+    .session:nth-child(1) {
+      animation-delay: 0.1s;
+    }
+
+    .session:nth-child(2) {
+      animation-delay: 0.2s;
+    }
+
+    .session:nth-child(3) {
+      animation-delay: 0.3s;
+    }
+
+    .session:nth-child(4) {
+      animation-delay: 0.4s;
+    }
+
+    .session:nth-child(5) {
+      animation-delay: 0.5s;
+    }
+
+    .session:nth-child(6) {
+      animation-delay: 0.6s;
+    }
+
+    .fade-in {
+      animation: fadeIn 0.6s ease-in forwards;
+    }
+
+    .slide-in-up {
+      animation: slideInUp 0.8s cubic-bezier(0.175, 0.885, 0.32, 1.275) forwards;
+    }
+
     [data-tab].active-tab {
       background: linear-gradient(135deg, #0ea5e9 0%, #8b5cf6 100%);
       animation: pulse-glow 2s infinite;
     }
+
     .shimmer-effect {
-      background: linear-gradient(90deg, transparent, rgba(255,255,255,0.1), transparent);
+      background: linear-gradient(90deg, transparent, rgba(255, 255, 255, 0.1), transparent);
       background-size: 200% 100%;
       animation: shimmer 2s infinite;
     }
+
     .group:hover .group-hover\:block,
     .group .group-hover\:block:hover {
       display: block;
     }
+
     .group .group-hover\:block {
       transition: opacity 0.2s ease-in-out;
     }
   </style>
 </head>
+
 <body class="bg-slate-950 text-slate-100">
-  <a href="#main" class="sr-only focus:not-sr-only focus:absolute focus:top-4 focus:left-4 focus:bg-white focus:text-slate-900 focus:px-4 focus:py-2 focus:rounded">Skip to main content</a>
+  <a href="#main"
+    class="sr-only focus:not-sr-only focus:absolute focus:top-4 focus:left-4 focus:bg-white focus:text-slate-900 focus:px-4 focus:py-2 focus:rounded">Skip
+    to main content</a>
   <header data-header data-header-mode="dark" class="fixed top-0 left-0 z-50 w-full transition-all duration-300">
     <nav class="mx-auto flex max-w-7xl items-center justify-between px-4 py-4 lg:px-8">
       <a href="index.html" class="text-xl font-bold text-white">Eventia</a>
-      <button type="button" data-nav-toggle class="inline-flex items-center justify-center rounded-lg bg-white/10 px-3 py-2.5 text-white shadow lg:hidden" aria-label="Toggle navigation"><i class="fa-solid fa-bars text-base"></i></button>
-      <div data-nav-menu class="fixed inset-x-4 top-20 hidden flex-col gap-4 space-y-2 rounded-2xl bg-white/95 border border-slate-200 p-6 shadow-2xl backdrop-blur lg:static lg:flex lg:w-auto lg:flex-row lg:items-center lg:gap-8 lg:space-y-0 lg:bg-transparent lg:border-0 lg:p-0 lg:shadow-none">
+      <button type="button" data-nav-toggle
+        class="inline-flex items-center justify-center rounded-lg bg-white/10 px-3 py-2.5 text-white shadow lg:hidden"
+        aria-label="Toggle navigation"><i class="fa-solid fa-bars text-base"></i></button>
+      <div data-nav-menu
+        class="fixed inset-x-4 top-20 hidden flex-col gap-4 space-y-2 rounded-2xl bg-white/95 border border-slate-200 p-6 shadow-2xl backdrop-blur lg:static lg:flex lg:w-auto lg:flex-row lg:items-center lg:gap-8 lg:space-y-0 lg:bg-transparent lg:border-0 lg:p-0 lg:shadow-none">
         <div class="relative inline-block" data-home-switch>
-          <button type="button" class="flex w-full items-center justify-between gap-2 rounded-full border border-white/20 px-4 py-2 text-sm font-semibold text-white transition hover:border-white/40 lg:w-auto lg:justify-start">
+          <button type="button"
+            class="flex w-full items-center justify-between gap-2 rounded-full border border-white/20 px-4 py-2 text-sm font-semibold text-white transition hover:border-white/40 lg:w-auto lg:justify-start">
             Home
             <i class="fa-solid fa-chevron-down text-xs"></i>
           </button>
-          <div class="absolute left-0 top-full mt-2 hidden w-48 rounded-2xl border border-white/20 bg-slate-900/95 shadow-xl z-[120]" data-home-menu>
-            <a href="index.html" class="block px-4 py-3 text-sm font-semibold text-white hover:bg-white/10 transition">Home Version 1</a>
-            <a href="home2.html" class="block px-4 py-3 text-sm font-semibold text-white hover:bg-white/10 transition">Home Version 2</a>
+          <div
+            class="absolute left-0 top-full mt-2 hidden w-48 rounded-2xl border border-white/10 bg-slate-900 shadow-xl z-[120]"
+            data-home-menu>
+            <a href="index.html"
+              class="block px-4 py-3 text-sm font-semibold text-slate-200 hover:bg-white/5 transition">Home Version
+              1</a>
+            <a href="home2.html"
+              class="block px-4 py-3 text-sm font-semibold text-slate-200 hover:bg-white/5 transition">Home Version
+              2</a>
           </div>
         </div>
-        <a href="event-details.html" class="block w-full text-start text-sm font-semibold hover:text-sky-300 lg:w-auto">Event Details</a>
-        <a href="schedule.html" class="block w-full text-start text-sm font-semibold text-sky-300 lg:w-auto">Schedule</a>
-        <a href="register.html" class="block w-full text-start text-sm font-semibold hover:text-sky-300 lg:w-auto">Register</a>
-        <a href="contact.html" class="block w-full text-start text-sm font-semibold hover:text-sky-300 lg:w-auto">Contact</a>
+        <a href="event-details.html"
+          class="block w-full text-start text-sm font-semibold hover:text-sky-300 lg:w-auto">Event Details</a>
+        <a href="schedule.html"
+          class="block w-full text-start text-sm font-semibold text-sky-300 lg:w-auto">Schedule</a>
+        <a href="register.html"
+          class="block w-full text-start text-sm font-semibold hover:text-sky-300 lg:w-auto">Register</a>
+        <a href="contact.html"
+          class="block w-full text-start text-sm font-semibold hover:text-sky-300 lg:w-auto">Contact</a>
         <div class="relative inline-block" data-dashboard-switch>
-          <button type="button" class="flex w-full items-center justify-between gap-2 rounded-full border border-white/20 px-4 py-2 text-sm font-semibold text-white transition hover:border-white/40 lg:w-auto lg:justify-start">
+          <button type="button"
+            class="flex w-full items-center justify-between gap-2 rounded-full border border-white/20 px-4 py-2 text-sm font-semibold text-white transition hover:border-white/40 lg:w-auto lg:justify-start">
             Dashboard
             <i class="fa-solid fa-chevron-down text-xs"></i>
           </button>
-          <div class="absolute left-0 top-full mt-2 hidden w-48 rounded-2xl border border-white/20 bg-slate-900/95 shadow-xl z-[120]" data-dashboard-menu>
-            <a href="admin-dashboard.html" class="block px-4 py-3 text-sm font-semibold text-white hover:bg-white/10 transition">Admin Dashboard</a>
-            <a href="user-dashboard.html" class="block px-4 py-3 text-sm font-semibold text-white hover:bg-white/10 transition">User Dashboard</a>
+          <div
+            class="absolute left-0 top-full mt-2 hidden w-48 rounded-2xl border border-white/10 bg-slate-900 shadow-xl z-[120]"
+            data-dashboard-menu>
+            <a href="admin-dashboard.html"
+              class="block px-4 py-3 text-sm font-semibold text-slate-200 hover:bg-white/5 transition">Admin
+              Dashboard</a>
+            <a href="user-dashboard.html"
+              class="block px-4 py-3 text-sm font-semibold text-slate-200 hover:bg-white/5 transition">User
+              Dashboard</a>
           </div>
         </div>
-        <button type="button" data-rtl-toggle class="flex h-10 w-10 items-center justify-center rounded-full border border-white/20 bg-white/5 text-white transition hover:bg-white/10 hover:border-white/40 lg:w-10"><i class="fa-solid fa-globe"></i></button>
+        <button type="button" data-rtl-toggle
+          class="flex h-10 w-10 items-center justify-center rounded-full border border-white/20 bg-white/5 text-white transition hover:bg-white/10 hover:border-white/40 lg:w-10"><i
+            class="fa-solid fa-globe"></i></button>
         <div class="flex w-full items-center gap-3 lg:w-auto lg:gap-2">
-          <a href="signup.html" class="inline-flex w-full items-center justify-center rounded-full border border-white/20 bg-white/5 px-6 py-2.5 text-sm font-bold text-white transition hover:bg-white/10 hover:border-white/40 lg:w-auto">Sign Up</a>
-          <a href="login.html" class="inline-flex w-full items-center justify-center rounded-full bg-sky-500 px-5 py-2 text-sm font-semibold text-white shadow-lg shadow-sky-500/30 transition hover:bg-sky-400 lg:w-auto">Login</a>
+          <a href="signup.html"
+            class="inline-flex w-full items-center justify-center rounded-full border border-white/20 bg-white/5 px-6 py-2.5 text-sm font-bold text-white transition hover:bg-white/10 hover:border-white/40 lg:w-auto">Sign
+            Up</a>
+          <a href="login.html"
+            class="inline-flex w-full items-center justify-center rounded-full bg-sky-500 px-5 py-2 text-sm font-semibold text-white shadow-lg shadow-sky-500/30 transition hover:bg-sky-400 lg:w-auto">Login</a>
         </div>
       </div>
     </nav>
@@ -110,41 +209,53 @@
 
   <main id="main" class="pt-24">
     <section class="relative overflow-hidden bg-gradient-to-br from-slate-900 via-slate-900 to-purple-900/30 py-16">
-      <div class="absolute inset-0 bg-[radial-gradient(circle_at_30%_20%,rgba(139,92,246,0.15),transparent_40%),radial-gradient(circle_at_70%_60%,rgba(56,189,248,0.15),transparent_40%)]"></div>
+      <div
+        class="absolute inset-0 bg-[radial-gradient(circle_at_30%_20%,rgba(139,92,246,0.15),transparent_40%),radial-gradient(circle_at_70%_60%,rgba(56,189,248,0.15),transparent_40%)]">
+      </div>
       <div class="relative mx-auto max-w-7xl px-4 lg:px-8">
         <div class="text-center mb-10 slide-in-up">
-          <div class="inline-flex items-center gap-2 rounded-full bg-white/10 backdrop-blur-sm px-5 py-2 text-xs uppercase tracking-[0.3em] text-sky-200 mb-4">
+          <div
+            class="inline-flex items-center gap-2 rounded-full bg-white/10 backdrop-blur-sm px-5 py-2 text-xs uppercase tracking-[0.3em] text-sky-200 mb-4">
             <i class="fa-solid fa-calendar-days text-sky-400"></i>
             <span>4-Day Experience</span>
           </div>
           <h1 class="text-4xl md:text-5xl lg:text-6xl font-bold text-white mb-4">Summit Schedule</h1>
-          <p class="text-lg text-slate-300 max-w-2xl mx-auto">Explore 140+ sessions across 4 days. Filter by track, speaker, or session type to build your perfect agenda.</p>
+          <p class="text-lg text-slate-300 max-w-2xl mx-auto">Explore 140+ sessions across 4 days. Filter by track,
+            speaker, or session type to build your perfect agenda.</p>
         </div>
-        
+
         <div class="grid gap-4 md:grid-cols-4 mb-8 fade-in">
-          <div class="rounded-2xl bg-gradient-to-br from-sky-500/10 to-sky-600/5 border border-sky-400/30 p-5 text-center card-hover">
-            <div class="inline-flex h-12 w-12 items-center justify-center rounded-full bg-sky-500/20 border-2 border-sky-400 text-sky-300 mb-3">
+          <div
+            class="rounded-2xl bg-gradient-to-br from-sky-500/10 to-sky-600/5 border border-sky-400/30 p-5 text-center card-hover">
+            <div
+              class="inline-flex h-12 w-12 items-center justify-center rounded-full bg-sky-500/20 border-2 border-sky-400 text-sky-300 mb-3">
               <i class="fa-solid fa-calendar text-xl"></i>
             </div>
             <p class="text-3xl font-black text-white mb-1">4</p>
             <p class="text-xs text-slate-400">Days of Content</p>
           </div>
-          <div class="rounded-2xl bg-gradient-to-br from-purple-500/10 to-purple-600/5 border border-purple-400/30 p-5 text-center card-hover">
-            <div class="inline-flex h-12 w-12 items-center justify-center rounded-full bg-purple-500/20 border-2 border-purple-400 text-purple-300 mb-3">
+          <div
+            class="rounded-2xl bg-gradient-to-br from-purple-500/10 to-purple-600/5 border border-purple-400/30 p-5 text-center card-hover">
+            <div
+              class="inline-flex h-12 w-12 items-center justify-center rounded-full bg-purple-500/20 border-2 border-purple-400 text-purple-300 mb-3">
               <i class="fa-solid fa-presentation text-xl"></i>
             </div>
             <p class="text-3xl font-black text-white mb-1">140+</p>
             <p class="text-xs text-slate-400">Total Sessions</p>
           </div>
-          <div class="rounded-2xl bg-gradient-to-br from-emerald-500/10 to-emerald-600/5 border border-emerald-400/30 p-5 text-center card-hover">
-            <div class="inline-flex h-12 w-12 items-center justify-center rounded-full bg-emerald-500/20 border-2 border-emerald-400 text-emerald-300 mb-3">
+          <div
+            class="rounded-2xl bg-gradient-to-br from-emerald-500/10 to-emerald-600/5 border border-emerald-400/30 p-5 text-center card-hover">
+            <div
+              class="inline-flex h-12 w-12 items-center justify-center rounded-full bg-emerald-500/20 border-2 border-emerald-400 text-emerald-300 mb-3">
               <i class="fa-solid fa-users text-xl"></i>
             </div>
             <p class="text-3xl font-black text-white mb-1">86+</p>
             <p class="text-xs text-slate-400">Expert Speakers</p>
           </div>
-          <div class="rounded-2xl bg-gradient-to-br from-orange-500/10 to-orange-600/5 border border-orange-400/30 p-5 text-center card-hover">
-            <div class="inline-flex h-12 w-12 items-center justify-center rounded-full bg-orange-500/20 border-2 border-orange-400 text-orange-300 mb-3">
+          <div
+            class="rounded-2xl bg-gradient-to-br from-orange-500/10 to-orange-600/5 border border-orange-400/30 p-5 text-center card-hover">
+            <div
+              class="inline-flex h-12 w-12 items-center justify-center rounded-full bg-orange-500/20 border-2 border-orange-400 text-orange-300 mb-3">
               <i class="fa-solid fa-layer-group text-xl"></i>
             </div>
             <p class="text-3xl font-black text-white mb-1">8</p>
@@ -152,17 +263,20 @@
           </div>
         </div>
 
-        <div class="flex flex-col gap-4 md:flex-row md:items-center md:justify-between bg-white/5 backdrop-blur-sm rounded-2xl border border-white/10 p-6">
+        <div
+          class="flex flex-col gap-4 md:flex-row md:items-center md:justify-between bg-white/5 backdrop-blur-sm rounded-2xl border border-white/10 p-6">
           <div>
             <p class="text-sm text-slate-400 mb-1">Personalize Your Experience</p>
             <p class="text-white font-semibold">Use filters below to discover sessions tailored to your interests</p>
           </div>
           <div class="flex gap-3">
-            <button class="inline-flex items-center gap-2 rounded-full border border-white/20 px-5 py-2.5 text-sm text-white hover:bg-white/10 transition">
+            <button
+              class="inline-flex items-center gap-2 rounded-full border border-white/20 px-5 py-2.5 text-sm text-white hover:bg-white/10 transition">
               <i class="fa-solid fa-download"></i>
               <span>Export PDF</span>
             </button>
-            <button class="inline-flex items-center gap-2 rounded-full bg-sky-500 px-5 py-2.5 text-sm font-semibold text-white hover:bg-sky-400 transition">
+            <button
+              class="inline-flex items-center gap-2 rounded-full bg-sky-500 px-5 py-2.5 text-sm font-semibold text-white hover:bg-sky-400 transition">
               <i class="fa-solid fa-star"></i>
               <span>My Agenda</span>
             </button>
@@ -187,92 +301,161 @@
             <option value="workshop">Workshop</option>
             <option value="panel">Panel</option>
           </select>
-          <select data-filter-speaker class="rounded-2xl border border-white/15 bg-white/5 px-3 py-3 text-sm text-white">
+          <select data-filter-speaker
+            class="rounded-2xl border border-white/15 bg-white/5 px-3 py-3 text-sm text-white">
             <option value="all">All speakers</option>
             <option value="elena">Elena Rivera</option>
             <option value="rohan">Rohan Patel</option>
             <option value="laila">Laila Hassan</option>
           </select>
-          <input data-filter-search type="search" placeholder="Search sessions" class="rounded-2xl border border-white/15 bg-white/5 px-3 py-3 text-sm text-white placeholder:text-slate-400" />
+          <input data-filter-search type="search" placeholder="Search sessions"
+            class="rounded-2xl border border-white/15 bg-white/5 px-3 py-3 text-sm text-white placeholder:text-slate-400" />
         </div>
         <div class="mt-4 flex flex-wrap gap-3 text-sm" data-active-filters></div>
 
         <div class="mt-8 flex flex-wrap gap-3" data-tabs>
-          <button class="rounded-full bg-sky-500 px-4 py-2 text-xs font-semibold text-white" data-tab="day1">Day 1</button>
-          <button class="rounded-full bg-white/10 px-4 py-2 text-xs font-semibold text-white" data-tab="day2">Day 2</button>
-          <button class="rounded-full bg-white/10 px-4 py-2 text-xs font-semibold text-white" data-tab="day3">Day 3</button>
-          <button class="rounded-full bg-white/10 px-4 py-2 text-xs font-semibold text-white" data-tab="day4">Day 4</button>
+          <button class="rounded-full bg-sky-500 px-4 py-2 text-xs font-semibold text-white" data-tab="day1">Day
+            1</button>
+          <button class="rounded-full bg-white/10 px-4 py-2 text-xs font-semibold text-white" data-tab="day2">Day
+            2</button>
+          <button class="rounded-full bg-white/10 px-4 py-2 text-xs font-semibold text-white" data-tab="day3">Day
+            3</button>
+          <button class="rounded-full bg-white/10 px-4 py-2 text-xs font-semibold text-white" data-tab="day4">Day
+            4</button>
         </div>
 
         <div class="mt-6 space-y-4" data-tab-panel="day1">
           <div class="grid gap-4 md:grid-cols-2" data-session-list>
-            <article class="session rounded-3xl border border-white/10 bg-white/5 p-5 relative overflow-hidden" data-track="design" data-type="keynote" data-speaker="elena">
-              <div class="absolute top-0 right-0 w-32 h-32 bg-gradient-to-br from-sky-500/10 to-transparent rounded-full -translate-y-8 translate-x-8"></div>
+            <article class="session rounded-3xl border border-white/10 bg-white/5 p-5 relative overflow-hidden"
+              data-track="design" data-type="keynote" data-speaker="elena">
+              <div
+                class="absolute top-0 right-0 w-32 h-32 bg-gradient-to-br from-sky-500/10 to-transparent rounded-full -translate-y-8 translate-x-8">
+              </div>
               <div class="relative z-10">
-                <div class="flex items-center justify-between"><span class="text-xs uppercase tracking-[0.3em] text-slate-300"><i class="fa-solid fa-clock mr-1"></i>10:00 • Main Hall</span><span class="rounded-full bg-sky-500/20 px-3 py-1 text-xs text-sky-200 border border-sky-400/30"><i class="fa-solid fa-star mr-1"></i>Keynote</span></div>
-                <h3 class="mt-3 text-lg font-semibold text-white leading-tight">Designing human-first hybrid experiences</h3>
-                <p class="mt-2 text-sm text-slate-300 flex items-center gap-2"><i class="fa-solid fa-user text-sky-400"></i>Elena Rivera</p>
-                <p class="mt-2 text-xs text-slate-400 leading-relaxed">Discover frameworks for creating meaningful connections in hybrid environments through spatial design and interactive technology.</p>
+                <div class="flex items-center justify-between"><span
+                    class="text-xs uppercase tracking-[0.3em] text-slate-300"><i
+                      class="fa-solid fa-clock mr-1"></i>10:00 • Main Hall</span><span
+                    class="rounded-full bg-sky-500/20 px-3 py-1 text-xs text-sky-200 border border-sky-400/30"><i
+                      class="fa-solid fa-star mr-1"></i>Keynote</span></div>
+                <h3 class="mt-3 text-lg font-semibold text-white leading-tight">Designing human-first hybrid experiences
+                </h3>
+                <p class="mt-2 text-sm text-slate-300 flex items-center gap-2"><i
+                    class="fa-solid fa-user text-sky-400"></i>Elena Rivera</p>
+                <p class="mt-2 text-xs text-slate-400 leading-relaxed">Discover frameworks for creating meaningful
+                  connections in hybrid environments through spatial design and interactive technology.</p>
                 <div class="mt-4 flex items-center gap-3 text-xs text-slate-300">
-                  <button class="rounded-full bg-white/10 px-4 py-2 hover:bg-white/20 transition" data-modal-open><i class="fa-solid fa-info-circle mr-1"></i>Details</button>
-                  <button class="rounded-full bg-sky-500 px-4 py-2 text-white hover:bg-sky-400 transition"><i class="fa-solid fa-calendar-plus mr-1"></i>Add</button>
-                  <button class="rounded-full bg-white/10 px-3 py-2 hover:bg-white/20 transition"><i class="fa-solid fa-heart"></i></button>
+                  <button class="rounded-full bg-white/10 px-4 py-2 hover:bg-white/20 transition" data-modal-open><i
+                      class="fa-solid fa-info-circle mr-1"></i>Details</button>
+                  <button class="rounded-full bg-sky-500 px-4 py-2 text-white hover:bg-sky-400 transition"><i
+                      class="fa-solid fa-calendar-plus mr-1"></i>Add</button>
+                  <button class="rounded-full bg-white/10 px-3 py-2 hover:bg-white/20 transition"><i
+                      class="fa-solid fa-heart"></i></button>
                 </div>
               </div>
             </article>
-            <article class="session rounded-3xl border border-white/10 bg-white/5 p-5 relative overflow-hidden" data-track="production" data-type="workshop" data-speaker="rohan">
-              <div class="absolute top-0 right-0 w-32 h-32 bg-gradient-to-br from-purple-500/10 to-transparent rounded-full -translate-y-8 translate-x-8"></div>
+            <article class="session rounded-3xl border border-white/10 bg-white/5 p-5 relative overflow-hidden"
+              data-track="production" data-type="workshop" data-speaker="rohan">
+              <div
+                class="absolute top-0 right-0 w-32 h-32 bg-gradient-to-br from-purple-500/10 to-transparent rounded-full -translate-y-8 translate-x-8">
+              </div>
               <div class="relative z-10">
-                <div class="flex items-center justify-between"><span class="text-xs uppercase tracking-[0.3em] text-slate-300"><i class="fa-solid fa-clock mr-1"></i>13:30 • Studio B</span><span class="rounded-full bg-purple-500/20 px-3 py-1 text-xs text-purple-200 border border-purple-400/30"><i class="fa-solid fa-wrench mr-1"></i>Workshop</span></div>
+                <div class="flex items-center justify-between"><span
+                    class="text-xs uppercase tracking-[0.3em] text-slate-300"><i
+                      class="fa-solid fa-clock mr-1"></i>13:30 • Studio B</span><span
+                    class="rounded-full bg-purple-500/20 px-3 py-1 text-xs text-purple-200 border border-purple-400/30"><i
+                      class="fa-solid fa-wrench mr-1"></i>Workshop</span></div>
                 <h3 class="mt-3 text-lg font-semibold text-white leading-tight">Modular stagecraft for agile teams</h3>
-                <p class="mt-2 text-sm text-slate-300 flex items-center gap-2"><i class="fa-solid fa-user text-purple-400"></i>Rohan Patel</p>
-                <p class="mt-2 text-xs text-slate-400 leading-relaxed">Hands-on workshop exploring adaptive staging systems that scale from intimate gatherings to massive productions.</p>
+                <p class="mt-2 text-sm text-slate-300 flex items-center gap-2"><i
+                    class="fa-solid fa-user text-purple-400"></i>Rohan Patel</p>
+                <p class="mt-2 text-xs text-slate-400 leading-relaxed">Hands-on workshop exploring adaptive staging
+                  systems that scale from intimate gatherings to massive productions.</p>
                 <div class="mt-4 flex items-center gap-3 text-xs text-slate-300">
-                  <button class="rounded-full bg-white/10 px-4 py-2 hover:bg-white/20 transition" data-modal-open><i class="fa-solid fa-info-circle mr-1"></i>Details</button>
-                  <button class="rounded-full bg-purple-500 px-4 py-2 text-white hover:bg-purple-400 transition"><i class="fa-solid fa-calendar-plus mr-1"></i>Add</button>
-                  <button class="rounded-full bg-white/10 px-3 py-2 hover:bg-white/20 transition"><i class="fa-solid fa-heart"></i></button>
+                  <button class="rounded-full bg-white/10 px-4 py-2 hover:bg-white/20 transition" data-modal-open><i
+                      class="fa-solid fa-info-circle mr-1"></i>Details</button>
+                  <button class="rounded-full bg-purple-500 px-4 py-2 text-white hover:bg-purple-400 transition"><i
+                      class="fa-solid fa-calendar-plus mr-1"></i>Add</button>
+                  <button class="rounded-full bg-white/10 px-3 py-2 hover:bg-white/20 transition"><i
+                      class="fa-solid fa-heart"></i></button>
                 </div>
               </div>
             </article>
-            <article class="session rounded-3xl border border-white/10 bg-white/5 p-5 relative overflow-hidden" data-track="sustainability" data-type="panel" data-speaker="laila">
-              <div class="absolute top-0 right-0 w-32 h-32 bg-gradient-to-br from-emerald-500/10 to-transparent rounded-full -translate-y-8 translate-x-8"></div>
+            <article class="session rounded-3xl border border-white/10 bg-white/5 p-5 relative overflow-hidden"
+              data-track="sustainability" data-type="panel" data-speaker="laila">
+              <div
+                class="absolute top-0 right-0 w-32 h-32 bg-gradient-to-br from-emerald-500/10 to-transparent rounded-full -translate-y-8 translate-x-8">
+              </div>
               <div class="relative z-10">
-                <div class="flex items-center justify-between"><span class="text-xs uppercase tracking-[0.3em] text-slate-300"><i class="fa-solid fa-clock mr-1"></i>15:00 • Forum</span><span class="rounded-full bg-emerald-500/20 px-3 py-1 text-xs text-emerald-200 border border-emerald-400/30"><i class="fa-solid fa-users mr-1"></i>Panel</span></div>
+                <div class="flex items-center justify-between"><span
+                    class="text-xs uppercase tracking-[0.3em] text-slate-300"><i
+                      class="fa-solid fa-clock mr-1"></i>15:00 • Forum</span><span
+                    class="rounded-full bg-emerald-500/20 px-3 py-1 text-xs text-emerald-200 border border-emerald-400/30"><i
+                      class="fa-solid fa-users mr-1"></i>Panel</span></div>
                 <h3 class="mt-3 text-lg font-semibold text-white leading-tight">Circular builds and material reuse</h3>
-                <p class="mt-2 text-sm text-slate-300 flex items-center gap-2"><i class="fa-solid fa-user text-emerald-400"></i>Dr. Laila Hassan + 3 panelists</p>
-                <p class="mt-2 text-xs text-slate-400 leading-relaxed">Expert panel discussing sustainable event design, waste reduction strategies, and circular economy principles.</p>
+                <p class="mt-2 text-sm text-slate-300 flex items-center gap-2"><i
+                    class="fa-solid fa-user text-emerald-400"></i>Dr. Laila Hassan + 3 panelists</p>
+                <p class="mt-2 text-xs text-slate-400 leading-relaxed">Expert panel discussing sustainable event design,
+                  waste reduction strategies, and circular economy principles.</p>
                 <div class="mt-4 flex items-center gap-3 text-xs text-slate-300">
-                  <button class="rounded-full bg-white/10 px-4 py-2 hover:bg-white/20 transition" data-modal-open><i class="fa-solid fa-info-circle mr-1"></i>Details</button>
-                  <button class="rounded-full bg-emerald-500 px-4 py-2 text-white hover:bg-emerald-400 transition"><i class="fa-solid fa-calendar-plus mr-1"></i>Add</button>
-                  <button class="rounded-full bg-white/10 px-3 py-2 hover:bg-white/20 transition"><i class="fa-solid fa-heart"></i></button>
+                  <button class="rounded-full bg-white/10 px-4 py-2 hover:bg-white/20 transition" data-modal-open><i
+                      class="fa-solid fa-info-circle mr-1"></i>Details</button>
+                  <button class="rounded-full bg-emerald-500 px-4 py-2 text-white hover:bg-emerald-400 transition"><i
+                      class="fa-solid fa-calendar-plus mr-1"></i>Add</button>
+                  <button class="rounded-full bg-white/10 px-3 py-2 hover:bg-white/20 transition"><i
+                      class="fa-solid fa-heart"></i></button>
                 </div>
               </div>
             </article>
-            <article class="session rounded-3xl border border-white/10 bg-white/5 p-5 relative overflow-hidden" data-track="technology" data-type="lab" data-speaker="anika">
-              <div class="absolute top-0 right-0 w-32 h-32 bg-gradient-to-br from-cyan-500/10 to-transparent rounded-full -translate-y-8 translate-x-8"></div>
+            <article class="session rounded-3xl border border-white/10 bg-white/5 p-5 relative overflow-hidden"
+              data-track="technology" data-type="lab" data-speaker="anika">
+              <div
+                class="absolute top-0 right-0 w-32 h-32 bg-gradient-to-br from-cyan-500/10 to-transparent rounded-full -translate-y-8 translate-x-8">
+              </div>
               <div class="relative z-10">
-                <div class="flex items-center justify-between"><span class="text-xs uppercase tracking-[0.3em] text-slate-300"><i class="fa-solid fa-clock mr-1"></i>16:30 • Tech Lab</span><span class="rounded-full bg-cyan-500/20 px-3 py-1 text-xs text-cyan-200 border border-cyan-400/30"><i class="fa-solid fa-flask mr-1"></i>Hands-on Lab</span></div>
-                <h3 class="mt-3 text-lg font-semibold text-white leading-tight">Building AI-powered engagement platforms</h3>
-                <p class="mt-2 text-sm text-slate-300 flex items-center gap-2"><i class="fa-solid fa-user text-cyan-400"></i>Anika Bose</p>
-                <p class="mt-2 text-xs text-slate-400 leading-relaxed">Practical lab session building real-time analytics dashboards with machine learning for attendee insights.</p>
+                <div class="flex items-center justify-between"><span
+                    class="text-xs uppercase tracking-[0.3em] text-slate-300"><i
+                      class="fa-solid fa-clock mr-1"></i>16:30 • Tech Lab</span><span
+                    class="rounded-full bg-cyan-500/20 px-3 py-1 text-xs text-cyan-200 border border-cyan-400/30"><i
+                      class="fa-solid fa-flask mr-1"></i>Hands-on Lab</span></div>
+                <h3 class="mt-3 text-lg font-semibold text-white leading-tight">Building AI-powered engagement platforms
+                </h3>
+                <p class="mt-2 text-sm text-slate-300 flex items-center gap-2"><i
+                    class="fa-solid fa-user text-cyan-400"></i>Anika Bose</p>
+                <p class="mt-2 text-xs text-slate-400 leading-relaxed">Practical lab session building real-time
+                  analytics dashboards with machine learning for attendee insights.</p>
                 <div class="mt-4 flex items-center gap-3 text-xs text-slate-300">
-                  <button class="rounded-full bg-white/10 px-4 py-2 hover:bg-white/20 transition" data-modal-open><i class="fa-solid fa-info-circle mr-1"></i>Details</button>
-                  <button class="rounded-full bg-cyan-500 px-4 py-2 text-white hover:bg-cyan-400 transition"><i class="fa-solid fa-calendar-plus mr-1"></i>Add</button>
-                  <button class="rounded-full bg-white/10 px-3 py-2 hover:bg-white/20 transition"><i class="fa-solid fa-heart"></i></button>
+                  <button class="rounded-full bg-white/10 px-4 py-2 hover:bg-white/20 transition" data-modal-open><i
+                      class="fa-solid fa-info-circle mr-1"></i>Details</button>
+                  <button class="rounded-full bg-cyan-500 px-4 py-2 text-white hover:bg-cyan-400 transition"><i
+                      class="fa-solid fa-calendar-plus mr-1"></i>Add</button>
+                  <button class="rounded-full bg-white/10 px-3 py-2 hover:bg-white/20 transition"><i
+                      class="fa-solid fa-heart"></i></button>
                 </div>
               </div>
             </article>
-            <article class="session rounded-3xl border border-white/10 bg-white/5 p-5 relative overflow-hidden" data-track="networking" data-type="roundtable" data-speaker="multiple">
-              <div class="absolute top-0 right-0 w-32 h-32 bg-gradient-to-br from-rose-500/10 to-transparent rounded-full -translate-y-8 translate-x-8"></div>
+            <article class="session rounded-3xl border border-white/10 bg-white/5 p-5 relative overflow-hidden"
+              data-track="networking" data-type="roundtable" data-speaker="multiple">
+              <div
+                class="absolute top-0 right-0 w-32 h-32 bg-gradient-to-br from-rose-500/10 to-transparent rounded-full -translate-y-8 translate-x-8">
+              </div>
               <div class="relative z-10">
-                <div class="flex items-center justify-between"><span class="text-xs uppercase tracking-[0.3em] text-slate-300"><i class="fa-solid fa-clock mr-1"></i>18:00 • Lounge</span><span class="rounded-full bg-rose-500/20 px-3 py-1 text-xs text-rose-200 border border-rose-400/30"><i class="fa-solid fa-handshake mr-1"></i>Networking</span></div>
-                <h3 class="mt-3 text-lg font-semibold text-white leading-tight">Welcome reception & AI-matched networking</h3>
-                <p class="mt-2 text-sm text-slate-300 flex items-center gap-2"><i class="fa-solid fa-champagne-glasses text-rose-400"></i>All attendees • Sponsored by Arcadia</p>
-                <p class="mt-2 text-xs text-slate-400 leading-relaxed">Opening night celebration with algorithmic networking matches, cocktails, and live entertainment.</p>
+                <div class="flex items-center justify-between"><span
+                    class="text-xs uppercase tracking-[0.3em] text-slate-300"><i
+                      class="fa-solid fa-clock mr-1"></i>18:00 • Lounge</span><span
+                    class="rounded-full bg-rose-500/20 px-3 py-1 text-xs text-rose-200 border border-rose-400/30"><i
+                      class="fa-solid fa-handshake mr-1"></i>Networking</span></div>
+                <h3 class="mt-3 text-lg font-semibold text-white leading-tight">Welcome reception & AI-matched
+                  networking</h3>
+                <p class="mt-2 text-sm text-slate-300 flex items-center gap-2"><i
+                    class="fa-solid fa-champagne-glasses text-rose-400"></i>All attendees • Sponsored by Arcadia</p>
+                <p class="mt-2 text-xs text-slate-400 leading-relaxed">Opening night celebration with algorithmic
+                  networking matches, cocktails, and live entertainment.</p>
                 <div class="mt-4 flex items-center gap-3 text-xs text-slate-300">
-                  <button class="rounded-full bg-white/10 px-4 py-2 hover:bg-white/20 transition" data-modal-open><i class="fa-solid fa-info-circle mr-1"></i>Details</button>
-                  <button class="rounded-full bg-rose-500 px-4 py-2 text-white hover:bg-rose-400 transition"><i class="fa-solid fa-calendar-plus mr-1"></i>Add</button>
-                  <button class="rounded-full bg-white/10 px-3 py-2 hover:bg-white/20 transition"><i class="fa-solid fa-heart"></i></button>
+                  <button class="rounded-full bg-white/10 px-4 py-2 hover:bg-white/20 transition" data-modal-open><i
+                      class="fa-solid fa-info-circle mr-1"></i>Details</button>
+                  <button class="rounded-full bg-rose-500 px-4 py-2 text-white hover:bg-rose-400 transition"><i
+                      class="fa-solid fa-calendar-plus mr-1"></i>Add</button>
+                  <button class="rounded-full bg-white/10 px-3 py-2 hover:bg-white/20 transition"><i
+                      class="fa-solid fa-heart"></i></button>
                 </div>
               </div>
             </article>
@@ -281,8 +464,11 @@
 
         <div class="mt-6 hidden space-y-4" data-tab-panel="day2">
           <div class="grid gap-4 md:grid-cols-2" data-session-list>
-            <article class="session rounded-3xl border border-white/10 bg-white/5 p-5" data-track="hybrid" data-type="keynote" data-speaker="marcus">
-              <div class="flex items-center justify-between"><span class="text-xs uppercase tracking-[0.3em] text-slate-300">09:00 • Main Hall</span><span class="rounded-full bg-sky-500/20 px-3 py-1 text-xs text-sky-200">Keynote</span></div>
+            <article class="session rounded-3xl border border-white/10 bg-white/5 p-5" data-track="hybrid"
+              data-type="keynote" data-speaker="marcus">
+              <div class="flex items-center justify-between"><span
+                  class="text-xs uppercase tracking-[0.3em] text-slate-300">09:00 • Main Hall</span><span
+                  class="rounded-full bg-sky-500/20 px-3 py-1 text-xs text-sky-200">Keynote</span></div>
               <h3 class="mt-2 text-lg font-semibold text-white">Scaling hybrid events to 500K+ attendees</h3>
               <p class="text-sm text-slate-300">Marcus Chen</p>
               <div class="mt-3 flex items-center gap-3 text-xs text-slate-300">
@@ -290,8 +476,11 @@
                 <button class="rounded-full bg-sky-500 px-3 py-2 text-white">Add to calendar</button>
               </div>
             </article>
-            <article class="session rounded-3xl border border-white/10 bg-white/5 p-5" data-track="design" data-type="workshop" data-speaker="hassan">
-              <div class="flex items-center justify-between"><span class="text-xs uppercase tracking-[0.3em] text-slate-300">11:00 • Studio A</span><span class="rounded-full bg-purple-500/20 px-3 py-1 text-xs text-purple-200">Workshop</span></div>
+            <article class="session rounded-3xl border border-white/10 bg-white/5 p-5" data-track="design"
+              data-type="workshop" data-speaker="hassan">
+              <div class="flex items-center justify-between"><span
+                  class="text-xs uppercase tracking-[0.3em] text-slate-300">11:00 • Studio A</span><span
+                  class="rounded-full bg-purple-500/20 px-3 py-1 text-xs text-purple-200">Workshop</span></div>
               <h3 class="mt-2 text-lg font-semibold text-white">Immersive environments: AR/VR best practices</h3>
               <p class="text-sm text-slate-300">Hassan El-Masri</p>
               <div class="mt-3 flex items-center gap-3 text-xs text-slate-300">
@@ -299,8 +488,11 @@
                 <button class="rounded-full bg-sky-500 px-3 py-2 text-white">Add to calendar</button>
               </div>
             </article>
-            <article class="session rounded-3xl border border-white/10 bg-white/5 p-5" data-track="sustainability" data-type="panel" data-speaker="grace">
-              <div class="flex items-center justify-between"><span class="text-xs uppercase tracking-[0.3em] text-slate-300">14:00 • Forum</span><span class="rounded-full bg-emerald-500/20 px-3 py-1 text-xs text-emerald-200">Panel</span></div>
+            <article class="session rounded-3xl border border-white/10 bg-white/5 p-5" data-track="sustainability"
+              data-type="panel" data-speaker="grace">
+              <div class="flex items-center justify-between"><span
+                  class="text-xs uppercase tracking-[0.3em] text-slate-300">14:00 • Forum</span><span
+                  class="rounded-full bg-emerald-500/20 px-3 py-1 text-xs text-emerald-200">Panel</span></div>
               <h3 class="mt-2 text-lg font-semibold text-white">Zero-waste events: Case studies & frameworks</h3>
               <p class="text-sm text-slate-300">Grace Nakamura + 4 panelists</p>
               <div class="mt-3 flex items-center gap-3 text-xs text-slate-300">
@@ -308,8 +500,11 @@
                 <button class="rounded-full bg-sky-500 px-3 py-2 text-white">Add to calendar</button>
               </div>
             </article>
-            <article class="session rounded-3xl border border-white/10 bg-white/5 p-5" data-track="leadership" data-type="roundtable" data-speaker="elena">
-              <div class="flex items-center justify-between"><span class="text-xs uppercase tracking-[0.3em] text-slate-300">16:00 • Executive Lounge</span><span class="rounded-full bg-amber-500/20 px-3 py-1 text-xs text-amber-200">Roundtable</span></div>
+            <article class="session rounded-3xl border border-white/10 bg-white/5 p-5" data-track="leadership"
+              data-type="roundtable" data-speaker="elena">
+              <div class="flex items-center justify-between"><span
+                  class="text-xs uppercase tracking-[0.3em] text-slate-300">16:00 • Executive Lounge</span><span
+                  class="rounded-full bg-amber-500/20 px-3 py-1 text-xs text-amber-200">Roundtable</span></div>
               <h3 class="mt-2 text-lg font-semibold text-white">Executive strategy: ROI & stakeholder buy-in</h3>
               <p class="text-sm text-slate-300">Elena Rivera • Limited to 30 attendees</p>
               <div class="mt-3 flex items-center gap-3 text-xs text-slate-300">
@@ -317,8 +512,11 @@
                 <button class="rounded-full bg-sky-500 px-3 py-2 text-white">Add to calendar</button>
               </div>
             </article>
-            <article class="session rounded-3xl border border-white/10 bg-white/5 p-5" data-track="technology" data-type="lab" data-speaker="laila">
-              <div class="flex items-center justify-between"><span class="text-xs uppercase tracking-[0.3em] text-slate-300">17:00 • Tech Lab</span><span class="rounded-full bg-cyan-500/20 px-3 py-1 text-xs text-cyan-200">Hands-on Lab</span></div>
+            <article class="session rounded-3xl border border-white/10 bg-white/5 p-5" data-track="technology"
+              data-type="lab" data-speaker="laila">
+              <div class="flex items-center justify-between"><span
+                  class="text-xs uppercase tracking-[0.3em] text-slate-300">17:00 • Tech Lab</span><span
+                  class="rounded-full bg-cyan-500/20 px-3 py-1 text-xs text-cyan-200">Hands-on Lab</span></div>
               <h3 class="mt-2 text-lg font-semibold text-white">Using behavioral analytics to boost engagement</h3>
               <p class="text-sm text-slate-300">Dr. Laila Hassan</p>
               <div class="mt-3 flex items-center gap-3 text-xs text-slate-300">
@@ -326,8 +524,11 @@
                 <button class="rounded-full bg-sky-500 px-3 py-2 text-white">Add to calendar</button>
               </div>
             </article>
-            <article class="session rounded-3xl border border-white/10 bg-white/5 p-5" data-track="networking" data-type="social" data-speaker="multiple">
-              <div class="flex items-center justify-between"><span class="text-xs uppercase tracking-[0.3em] text-slate-300">19:30 • Rooftop Terrace</span><span class="rounded-full bg-rose-500/20 px-3 py-1 text-xs text-rose-200">Social Event</span></div>
+            <article class="session rounded-3xl border border-white/10 bg-white/5 p-5" data-track="networking"
+              data-type="social" data-speaker="multiple">
+              <div class="flex items-center justify-between"><span
+                  class="text-xs uppercase tracking-[0.3em] text-slate-300">19:30 • Rooftop Terrace</span><span
+                  class="rounded-full bg-rose-500/20 px-3 py-1 text-xs text-rose-200">Social Event</span></div>
               <h3 class="mt-2 text-lg font-semibold text-white">Sunset networking mixer & live entertainment</h3>
               <p class="text-sm text-slate-300">All attendees • Sponsored by Vertex</p>
               <div class="mt-3 flex items-center gap-3 text-xs text-slate-300">
@@ -339,17 +540,24 @@
         </div>
         <div class="mt-6 hidden space-y-4" data-tab-panel="day3">
           <div class="grid gap-4 md:grid-cols-2" data-session-list>
-            <article class="session rounded-3xl border border-white/10 bg-white/5 p-5" data-track="production" data-type="keynote" data-speaker="rohan">
-              <div class="flex items-center justify-between"><span class="text-xs uppercase tracking-[0.3em] text-slate-300">09:30 • Main Hall</span><span class="rounded-full bg-sky-500/20 px-3 py-1 text-xs text-sky-200">Keynote</span></div>
-              <h3 class="mt-2 text-lg font-semibold text-white">Production innovation: Lessons from Olympics & World Cup</h3>
+            <article class="session rounded-3xl border border-white/10 bg-white/5 p-5" data-track="production"
+              data-type="keynote" data-speaker="rohan">
+              <div class="flex items-center justify-between"><span
+                  class="text-xs uppercase tracking-[0.3em] text-slate-300">09:30 • Main Hall</span><span
+                  class="rounded-full bg-sky-500/20 px-3 py-1 text-xs text-sky-200">Keynote</span></div>
+              <h3 class="mt-2 text-lg font-semibold text-white">Production innovation: Lessons from Olympics & World Cup
+              </h3>
               <p class="text-sm text-slate-300">Rohan Patel</p>
               <div class="mt-3 flex items-center gap-3 text-xs text-slate-300">
                 <button class="rounded-full bg-white/10 px-3 py-2" data-modal-open>Details</button>
                 <button class="rounded-full bg-sky-500 px-3 py-2 text-white">Add to calendar</button>
               </div>
             </article>
-            <article class="session rounded-3xl border border-white/10 bg-white/5 p-5" data-track="design" data-type="workshop" data-speaker="elena">
-              <div class="flex items-center justify-between"><span class="text-xs uppercase tracking-[0.3em] text-slate-300">11:30 • Studio C</span><span class="rounded-full bg-purple-500/20 px-3 py-1 text-xs text-purple-200">Workshop</span></div>
+            <article class="session rounded-3xl border border-white/10 bg-white/5 p-5" data-track="design"
+              data-type="workshop" data-speaker="elena">
+              <div class="flex items-center justify-between"><span
+                  class="text-xs uppercase tracking-[0.3em] text-slate-300">11:30 • Studio C</span><span
+                  class="rounded-full bg-purple-500/20 px-3 py-1 text-xs text-purple-200">Workshop</span></div>
               <h3 class="mt-2 text-lg font-semibold text-white">Sensory storytelling: Multi-dimensional experiences</h3>
               <p class="text-sm text-slate-300">Elena Rivera</p>
               <div class="mt-3 flex items-center gap-3 text-xs text-slate-300">
@@ -357,17 +565,24 @@
                 <button class="rounded-full bg-sky-500 px-3 py-2 text-white">Add to calendar</button>
               </div>
             </article>
-            <article class="session rounded-3xl border border-white/10 bg-white/5 p-5" data-track="sponsorship" data-type="panel" data-speaker="multiple">
-              <div class="flex items-center justify-between"><span class="text-xs uppercase tracking-[0.3em] text-slate-300">13:00 • Forum</span><span class="rounded-full bg-amber-500/20 px-3 py-1 text-xs text-amber-200">Panel</span></div>
-              <h3 class="mt-2 text-lg font-semibold text-white">Sponsorship activation: Creative partnerships that convert</h3>
+            <article class="session rounded-3xl border border-white/10 bg-white/5 p-5" data-track="sponsorship"
+              data-type="panel" data-speaker="multiple">
+              <div class="flex items-center justify-between"><span
+                  class="text-xs uppercase tracking-[0.3em] text-slate-300">13:00 • Forum</span><span
+                  class="rounded-full bg-amber-500/20 px-3 py-1 text-xs text-amber-200">Panel</span></div>
+              <h3 class="mt-2 text-lg font-semibold text-white">Sponsorship activation: Creative partnerships that
+                convert</h3>
               <p class="text-sm text-slate-300">5 industry leaders</p>
               <div class="mt-3 flex items-center gap-3 text-xs text-slate-300">
                 <button class="rounded-full bg-white/10 px-3 py-2" data-modal-open>Details</button>
                 <button class="rounded-full bg-sky-500 px-3 py-2 text-white">Add to calendar</button>
               </div>
             </article>
-            <article class="session rounded-3xl border border-white/10 bg-white/5 p-5" data-track="community" data-type="workshop" data-speaker="grace">
-              <div class="flex items-center justify-between"><span class="text-xs uppercase tracking-[0.3em] text-slate-300">15:00 • Studio B</span><span class="rounded-full bg-purple-500/20 px-3 py-1 text-xs text-purple-200">Workshop</span></div>
+            <article class="session rounded-3xl border border-white/10 bg-white/5 p-5" data-track="community"
+              data-type="workshop" data-speaker="grace">
+              <div class="flex items-center justify-between"><span
+                  class="text-xs uppercase tracking-[0.3em] text-slate-300">15:00 • Studio B</span><span
+                  class="rounded-full bg-purple-500/20 px-3 py-1 text-xs text-purple-200">Workshop</span></div>
               <h3 class="mt-2 text-lg font-semibold text-white">Member retention strategies for associations</h3>
               <p class="text-sm text-slate-300">Grace Nakamura</p>
               <div class="mt-3 flex items-center gap-3 text-xs text-slate-300">
@@ -375,8 +590,11 @@
                 <button class="rounded-full bg-sky-500 px-3 py-2 text-white">Add to calendar</button>
               </div>
             </article>
-            <article class="session rounded-3xl border border-white/10 bg-white/5 p-5" data-track="technology" data-type="lab" data-speaker="marcus">
-              <div class="flex items-center justify-between"><span class="text-xs uppercase tracking-[0.3em] text-slate-300">16:30 • Tech Lab</span><span class="rounded-full bg-cyan-500/20 px-3 py-1 text-xs text-cyan-200">Hands-on Lab</span></div>
+            <article class="session rounded-3xl border border-white/10 bg-white/5 p-5" data-track="technology"
+              data-type="lab" data-speaker="marcus">
+              <div class="flex items-center justify-between"><span
+                  class="text-xs uppercase tracking-[0.3em] text-slate-300">16:30 • Tech Lab</span><span
+                  class="rounded-full bg-cyan-500/20 px-3 py-1 text-xs text-cyan-200">Hands-on Lab</span></div>
               <h3 class="mt-2 text-lg font-semibold text-white">Streaming infrastructure for global reach</h3>
               <p class="text-sm text-slate-300">Marcus Chen</p>
               <div class="mt-3 flex items-center gap-3 text-xs text-slate-300">
@@ -384,9 +602,13 @@
                 <button class="rounded-full bg-sky-500 px-3 py-2 text-white">Add to calendar</button>
               </div>
             </article>
-            <article class="session rounded-3xl border border-white/10 bg-white/5 p-5" data-track="networking" data-type="roundtable" data-speaker="multiple">
-              <div class="flex items-center justify-between"><span class="text-xs uppercase tracking-[0.3em] text-slate-300">18:00 • Various Rooms</span><span class="rounded-full bg-rose-500/20 px-3 py-1 text-xs text-rose-200">Networking</span></div>
-              <h3 class="mt-2 text-lg font-semibold text-white">Industry-specific roundtables (Corporate, Agency, Tech, Hospitality)</h3>
+            <article class="session rounded-3xl border border-white/10 bg-white/5 p-5" data-track="networking"
+              data-type="roundtable" data-speaker="multiple">
+              <div class="flex items-center justify-between"><span
+                  class="text-xs uppercase tracking-[0.3em] text-slate-300">18:00 • Various Rooms</span><span
+                  class="rounded-full bg-rose-500/20 px-3 py-1 text-xs text-rose-200">Networking</span></div>
+              <h3 class="mt-2 text-lg font-semibold text-white">Industry-specific roundtables (Corporate, Agency, Tech,
+                Hospitality)</h3>
               <p class="text-sm text-slate-300">AI-matched by industry & interests</p>
               <div class="mt-3 flex items-center gap-3 text-xs text-slate-300">
                 <button class="rounded-full bg-white/10 px-3 py-2" data-modal-open>Details</button>
@@ -397,26 +619,37 @@
         </div>
         <div class="mt-6 hidden space-y-4" data-tab-panel="day4">
           <div class="grid gap-4 md:grid-cols-2" data-session-list>
-            <article class="session rounded-3xl border border-white/10 bg-white/5 p-5" data-track="leadership" data-type="keynote" data-speaker="laila">
-              <div class="flex items-center justify-between"><span class="text-xs uppercase tracking-[0.3em] text-slate-300">10:00 • Main Hall</span><span class="rounded-full bg-sky-500/20 px-3 py-1 text-xs text-sky-200">Keynote</span></div>
-              <h3 class="mt-2 text-lg font-semibold text-white">The future of attendee engagement: AI + human connection</h3>
+            <article class="session rounded-3xl border border-white/10 bg-white/5 p-5" data-track="leadership"
+              data-type="keynote" data-speaker="laila">
+              <div class="flex items-center justify-between"><span
+                  class="text-xs uppercase tracking-[0.3em] text-slate-300">10:00 • Main Hall</span><span
+                  class="rounded-full bg-sky-500/20 px-3 py-1 text-xs text-sky-200">Keynote</span></div>
+              <h3 class="mt-2 text-lg font-semibold text-white">The future of attendee engagement: AI + human connection
+              </h3>
               <p class="text-sm text-slate-300">Dr. Laila Hassan</p>
               <div class="mt-3 flex items-center gap-3 text-xs text-slate-300">
                 <button class="rounded-full bg-white/10 px-3 py-2" data-modal-open>Details</button>
                 <button class="rounded-full bg-sky-500 px-3 py-2 text-white">Add to calendar</button>
               </div>
             </article>
-            <article class="session rounded-3xl border border-white/10 bg-white/5 p-5" data-track="hybrid" data-type="panel" data-speaker="multiple">
-              <div class="flex items-center justify-between"><span class="text-xs uppercase tracking-[0.3em] text-slate-300">12:00 • Forum</span><span class="rounded-full bg-emerald-500/20 px-3 py-1 text-xs text-emerald-200">Panel</span></div>
-              <h3 class="mt-2 text-lg font-semibold text-white">Monetizing virtual: Pricing strategies & revenue models</h3>
+            <article class="session rounded-3xl border border-white/10 bg-white/5 p-5" data-track="hybrid"
+              data-type="panel" data-speaker="multiple">
+              <div class="flex items-center justify-between"><span
+                  class="text-xs uppercase tracking-[0.3em] text-slate-300">12:00 • Forum</span><span
+                  class="rounded-full bg-emerald-500/20 px-3 py-1 text-xs text-emerald-200">Panel</span></div>
+              <h3 class="mt-2 text-lg font-semibold text-white">Monetizing virtual: Pricing strategies & revenue models
+              </h3>
               <p class="text-sm text-slate-300">4 event platform CEOs</p>
               <div class="mt-3 flex items-center gap-3 text-xs text-slate-300">
                 <button class="rounded-full bg-white/10 px-3 py-2" data-modal-open>Details</button>
                 <button class="rounded-full bg-sky-500 px-3 py-2 text-white">Add to calendar</button>
               </div>
             </article>
-            <article class="session rounded-3xl border border-white/10 bg-white/5 p-5" data-track="production" data-type="workshop" data-speaker="hassan">
-              <div class="flex items-center justify-between"><span class="text-xs uppercase tracking-[0.3em] text-slate-300">14:00 • Studio A</span><span class="rounded-full bg-purple-500/20 px-3 py-1 text-xs text-purple-200">Workshop</span></div>
+            <article class="session rounded-3xl border border-white/10 bg-white/5 p-5" data-track="production"
+              data-type="workshop" data-speaker="hassan">
+              <div class="flex items-center justify-between"><span
+                  class="text-xs uppercase tracking-[0.3em] text-slate-300">14:00 • Studio A</span><span
+                  class="rounded-full bg-purple-500/20 px-3 py-1 text-xs text-purple-200">Workshop</span></div>
               <h3 class="mt-2 text-lg font-semibold text-white">Projection mapping masterclass: Live demonstrations</h3>
               <p class="text-sm text-slate-300">Hassan El-Masri</p>
               <div class="mt-3 flex items-center gap-3 text-xs text-slate-300">
@@ -424,8 +657,11 @@
                 <button class="rounded-full bg-sky-500 px-3 py-2 text-white">Add to calendar</button>
               </div>
             </article>
-            <article class="session rounded-3xl border border-white/10 bg-white/5 p-5" data-track="certification" data-type="exam" data-speaker="multiple">
-              <div class="flex items-center justify-between"><span class="text-xs uppercase tracking-[0.3em] text-slate-300">15:30 • Testing Center</span><span class="rounded-full bg-violet-500/20 px-3 py-1 text-xs text-violet-200">Certification</span></div>
+            <article class="session rounded-3xl border border-white/10 bg-white/5 p-5" data-track="certification"
+              data-type="exam" data-speaker="multiple">
+              <div class="flex items-center justify-between"><span
+                  class="text-xs uppercase tracking-[0.3em] text-slate-300">15:30 • Testing Center</span><span
+                  class="rounded-full bg-violet-500/20 px-3 py-1 text-xs text-violet-200">Certification</span></div>
               <h3 class="mt-2 text-lg font-semibold text-white">CMP certification exams (all tracks)</h3>
               <p class="text-sm text-slate-300">Pre-registration required</p>
               <div class="mt-3 flex items-center gap-3 text-xs text-slate-300">
@@ -433,17 +669,24 @@
                 <button class="rounded-full bg-sky-500 px-3 py-2 text-white">Add to calendar</button>
               </div>
             </article>
-            <article class="session rounded-3xl border border-white/10 bg-white/5 p-5" data-track="design" data-type="showcase" data-speaker="multiple">
-              <div class="flex items-center justify-between"><span class="text-xs uppercase tracking-[0.3em] text-slate-300">16:30 • Exhibition Hall</span><span class="rounded-full bg-orange-500/20 px-3 py-1 text-xs text-orange-200">Showcase</span></div>
-              <h3 class="mt-2 text-lg font-semibold text-white">Immersive experience gallery: Walk-through demonstrations</h3>
+            <article class="session rounded-3xl border border-white/10 bg-white/5 p-5" data-track="design"
+              data-type="showcase" data-speaker="multiple">
+              <div class="flex items-center justify-between"><span
+                  class="text-xs uppercase tracking-[0.3em] text-slate-300">16:30 • Exhibition Hall</span><span
+                  class="rounded-full bg-orange-500/20 px-3 py-1 text-xs text-orange-200">Showcase</span></div>
+              <h3 class="mt-2 text-lg font-semibold text-white">Immersive experience gallery: Walk-through
+                demonstrations</h3>
               <p class="text-sm text-slate-300">25+ installations from sponsors & partners</p>
               <div class="mt-3 flex items-center gap-3 text-xs text-slate-300">
                 <button class="rounded-full bg-white/10 px-3 py-2" data-modal-open>Details</button>
                 <button class="rounded-full bg-sky-500 px-3 py-2 text-white">Add to calendar</button>
               </div>
             </article>
-            <article class="session rounded-3xl border border-white/10 bg-white/5 p-5" data-track="networking" data-type="social" data-speaker="multiple">
-              <div class="flex items-center justify-between"><span class="text-xs uppercase tracking-[0.3em] text-slate-300">19:00 • Grand Ballroom</span><span class="rounded-full bg-amber-500/20 px-3 py-1 text-xs text-amber-200">Closing Event</span></div>
+            <article class="session rounded-3xl border border-white/10 bg-white/5 p-5" data-track="networking"
+              data-type="social" data-speaker="multiple">
+              <div class="flex items-center justify-between"><span
+                  class="text-xs uppercase tracking-[0.3em] text-slate-300">19:00 • Grand Ballroom</span><span
+                  class="rounded-full bg-amber-500/20 px-3 py-1 text-xs text-amber-200">Closing Event</span></div>
               <h3 class="mt-2 text-lg font-semibold text-white">Closing gala & awards ceremony</h3>
               <p class="text-sm text-slate-300">All attendees • Black tie optional • Live performance</p>
               <div class="mt-3 flex items-center gap-3 text-xs text-slate-300">
@@ -473,7 +716,9 @@
 
   <footer class="border-t border-white/10 bg-slate-950/80 py-12">
     <div class="mx-auto grid max-w-7xl gap-8 px-4 lg:grid-cols-4 lg:px-8">
-      <div><a href="index.html" class="text-xl font-bold text-white">Eventia</a><p class="mt-3 text-sm text-slate-300">Premium experiences crafted with intent.</p></div>
+      <div><a href="index.html" class="text-xl font-bold text-white">Eventia</a>
+        <p class="mt-3 text-sm text-slate-300">Premium experiences crafted with intent.</p>
+      </div>
       <div>
         <h3 class="text-sm font-semibold uppercase tracking-widest text-slate-200">Explore</h3>
         <ul class="mt-3 space-y-2 text-sm text-slate-300">
@@ -485,14 +730,16 @@
       </div>
       <div>
         <h3 class="text-sm font-semibold uppercase tracking-widest text-slate-200">Contact</h3>
-        <p class="mt-3 text-sm text-slate-300">hello@eventia.com<br/>+1 (415) 555-0123</p>
+        <p class="mt-3 text-sm text-slate-300">hello@eventia.com<br />+1 (415) 555-0123</p>
       </div>
       <div>
         <h3 class="text-sm font-semibold uppercase tracking-widest text-slate-200">Newsletter</h3>
         <form data-validate novalidate class="mt-3 space-y-2">
-          <input type="email" name="email" required placeholder="you@email.com" class="w-full rounded-full border border-white/40 bg-white/10 px-4 py-3 text-sm text-white placeholder:text-slate-400 focus:border-white" />
+          <input type="email" name="email" required placeholder="you@email.com"
+            class="w-full rounded-full border border-white/40 bg-white/10 px-4 py-3 text-sm text-white placeholder:text-slate-400 focus:border-white" />
           <p class="hidden text-xs text-rose-300" data-error>Email is required.</p>
-          <button type="submit" class="w-full rounded-full bg-sky-500 px-4 py-3 text-sm font-semibold text-white transition hover:bg-sky-400">Join</button>
+          <button type="submit"
+            class="w-full rounded-full bg-sky-500 px-4 py-3 text-sm font-semibold text-white transition hover:bg-sky-400">Join</button>
           <p class="hidden text-xs text-emerald-300" data-success>Welcome aboard!</p>
         </form>
       </div>
@@ -500,9 +747,12 @@
     <div class="mt-8 text-center text-xs text-slate-400">© 2025 Eventia Summit.</div>
   </footer>
 
-  <button type="button" data-scroll-top class="fixed bottom-6 right-6 hidden h-12 w-12 items-center justify-center rounded-full bg-sky-500 text-white shadow-lg shadow-sky-500/40 transition hover:bg-sky-400" aria-label="Scroll to top"><i class="fa-solid fa-arrow-up"></i></button>
+  <button type="button" data-scroll-top
+    class="fixed bottom-6 right-6 hidden h-12 w-12 items-center justify-center rounded-full bg-sky-500 text-white shadow-lg shadow-sky-500/40 transition hover:bg-sky-400"
+    aria-label="Scroll to top"><i class="fa-solid fa-arrow-up"></i></button>
 
   <script src="js/rtl-toggle.js"></script>
   <script src="js/main.js" defer></script>
 </body>
+
 </html>
